@@ -1,0 +1,44 @@
+{
+  "name": "website-template",
+  "version": "1.0.0",
+  "description": "static website template",
+  "main": "index.html",
+  "scripts": {
+    "sync": "browser-sync start --directory --server --files '*.js, *.html, *.css'",
+    "sass:dev": "node-sass --watch src/scss --output dist/css",
+    "sass:prod": "node-sass src/scss --output dist/css --output-style compressed",
+    "wp:dev": "webpack --mode development --progress --watch",
+    "wp:prod": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gothaw/website-template.git"
+  },
+  "keywords": [
+    "static",
+    "website"
+  ],
+  "author": "Radoslaw Soltan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gothaw/website-template/issues"
+  },
+  "homepage": "https://github.com/gothaw/website-template#readme",
+  "devDependencies": {
+    "autoprefixer": "~9.4.10",
+    "browser-sync": "~2.26.7",
+    "css-loader": "~2.1.1",
+    "mini-css-extract-plugin": "~0.5.0",
+    "node-sass": "~4.9.4",
+    "optimize-css-assets-webpack-plugin": "~5.0.3",
+    "postcss-loader": "~3.0.0",
+    "sass-loader": "~7.1.0",
+    "terser-webpack-plugin": "~1.2.4",
+    "webpack": "~4.23.1",
+    "webpack-cli": "~3.1.2",
+    "webpack-dev-server": "~3.1.14"
+  },
+  "dependencies": {
+    "enquire.js": "~2.1.6"
+  }
+}
