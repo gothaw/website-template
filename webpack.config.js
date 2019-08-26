@@ -16,6 +16,7 @@ const optimization = {
 const entry = {
     'index': [
         './src/js/index.js',
+        './src/css/main.css',
         './src/scss/main.scss'
     ]
 };
@@ -30,6 +31,14 @@ const _module = {
                 "css-loader?url=false",
                 "postcss-loader",
                 "sass-loader"
+            ]
+        },
+        {
+            test: /\.css$/,
+            exclude: /node_modules/,
+            use: [
+                MiniCssExtractPlugin.loader,
+                "css-loader?url=false"
             ]
         }
     ]
