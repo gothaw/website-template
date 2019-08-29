@@ -1,2 +1,3 @@
-/* =================== Importing Bootstrap =================== */
-@import "lib/bootstrap.css";
+/* ==================== Importing Bootstrap and Bootswatch Theme - Flatly ==================== */
+@import "lib/bootswatch_theme_flatly/bootstrap.css";
+/* For the theme used see: https://bootswatch.com/flatly/  */
