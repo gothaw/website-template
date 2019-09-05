@@ -4,6 +4,9 @@
 # Idea folder
 .idea/
 
+# Videos
+
+dist/vid/
 
 # node_modules
 

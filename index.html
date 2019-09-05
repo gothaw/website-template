@@ -18,7 +18,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarColor01">
+    <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -38,9 +38,9 @@
 
 <div class="wrapper">
     <header>
-        <nav class="navbar">
-            <div>
-                <ul class="navbar-nav">
+        <nav class="navbar navbar-expand-lg">
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#">Home</a>
                     </li>
@@ -58,23 +58,35 @@
                     </li>
                 </ul>
             </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </nav>
+        <div class="header__video-wrapper">
+            <video class="header__video" autoplay loop muted src="dist/vid/home_video_hd.mp4"></video>
+        </div>
     </header>
-    <main class="container">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam aliquid aperiam autem consectetur
-        consequatur fuga impedit perspiciatis sapiente velit. Doloribus ea eos maiores porro quaerat quia quibusdam
-        rerum saepe.
 
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eligendi esse et eum in ipsum nesciunt
-        reiciendis, tempore velit voluptatum! A ab dolores in ipsam laboriosam pariatur quam vel velit?
+    <main class="container">
+        <p class="test">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam aliquid aperiam autem consectetur
+            consequatur fuga impedit perspiciatis sapiente velit. Doloribus ea eos maiores porro quaerat quia quibusdam
+            rerum saepe.
+
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eligendi esse et eum in ipsum nesciunt
+            reiciendis, tempore velit voluptatum! A ab dolores in ipsam laboriosam pariatur quam vel velit?
+        </p>
     </main> <!--/container-->
     <footer class="container">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam aliquid aperiam autem consectetur
-        consequatur fuga impedit perspiciatis sapiente velit. Doloribus ea eos maiores porro quaerat quia quibusdam
-        rerum saepe.
+        <p class="test">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam aliquid aperiam autem consectetur
+            consequatur fuga impedit perspiciatis sapiente velit. Doloribus ea eos maiores porro quaerat quia quibusdam
+            rerum saepe.
 
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eligendi esse et eum in ipsum nesciunt
-        reiciendis, tempore velit voluptatum! A ab dolores in ipsam laboriosam pariatur quam vel velit?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eligendi esse et eum in ipsum nesciunt
+            reiciendis, tempore velit voluptatum! A ab dolores in ipsam laboriosam pariatur quam vel velit?
+        </p>
     </footer> <!--/container-->
 
 </div> <!--/wrapper-->
