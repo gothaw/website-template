@@ -10746,9 +10746,26 @@ a.text-dark:hover, a.text-dark:focus {
 
 /* ==================== Importing Bootstrap and Bootswatch Theme - Flatly ==================== */
 /* For the theme used see: https://bootswatch.com/flatly/  */
-.header__video {
-  width: 100%;
-  height: auto; }
+/*========================================================================================================*/
+/*=========================================== Header Styling =============================================*/
+/*========================================================================================================*/
+.header {
+  position: relative; }
+  .header__video {
+    width: 100%;
+    height: auto; }
+
+.wrapper {
+  position: relative; }
+
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10; }
+  .navbar__menu {
+    margin: 0 auto; }
 
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
