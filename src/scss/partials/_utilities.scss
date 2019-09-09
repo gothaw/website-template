@@ -1,0 +1,71 @@
+//======================================================================================================
+//============================================= Fonts ==================================================
+//======================================================================================================
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+//======================================================================================================
+//=========================================== Variables ================================================
+//======================================================================================================
+
+$mobile: 767px;
+$tablet-lower: 768px;
+$tablet-upper: 991px;
+$desktop-lower: 992px;
+$desktop-upper: 1199px;
+$desktop-large: 1200px;
+
+$duration: (
+        v-fast: 0.2s,
+        fast: 0.3s,
+        medium: 0.5s,
+        slow: 0.7s,
+        v-slow: 1s
+);
+
+//======================================================================================================
+//============================================ Functions ===============================================
+//======================================================================================================
+
+//function returns a duration in seconds from $duration map using map-get
+@function duration($duration-value) {
+  @return map-get($duration, $duration-value)
+}
+
+//======================================================================================================
+//=============================================== Mixins ===============================================
+//======================================================================================================
+
+//=============================================== General ===============================================
+//mixin with media query for mobile
+@mixin mobile {
+  @media only screen and (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+//mixin with media query for tablet
+@mixin tablet {
+  @media only screen and (min-width: #{$tablet-lower}) and (max-width: #{$tablet-upper}) {
+    @content;
+  }
+}
+
+//mixin with media query for tablet and desktop
+@mixin tablet-and-desktop {
+  @media only screen and (min-width: #{$tablet-lower}) {
+    @content;
+  }
+}
+
+//mixin with media query for desktop
+@mixin desktop {
+  @media only screen and (min-width: #{$desktop-lower}) {
+    @content;
+  }
+}
+
+//mixin with media query for large desktop
+@mixin desktop-large {
+  @media only screen and (min-width: #{$desktop-large}) {
+    @content;
+  }
+}
