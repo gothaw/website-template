@@ -4,31 +4,52 @@
 /*=========================================== Navbar Styling =============================================*/
 /*========================================================================================================*/
 .navbar{
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 10;
   &__menu{
     margin: 0 auto;
     align-items: center;
     font-size: $menu-font-medium;
     font-family: Merriweather sans-serif;
     text-transform: uppercase;
+    letter-spacing: 1px;
   }
   &__logo{
 
   }
   .nav-link{
-    transition: duration(medium) all;
+    transition: duration(fast) all;
   }
   .nav-item{
     padding: 0 16px;
   }
 }
 /* ------------------- MOBILE SECTION ------------------- */
-
-
+@include mobile{
+  .navbar{
+    position: relative;
+    z-index: 10;
+  }
+}
 /* ------------------- TABLET SECTION ------------------- */
-
-
+@include tablet{
+ .navbar{
+    position: relative;
+    z-index: 10;
+  }
+}
 /* ------------- TABLET AND DESKTOP SECTION ------------- */
+@include tablet-and-desktop{
+
+}
+/* ------------------- DESKTOP SECTION ------------------ */
+@include desktop{
+  .navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+}
+/* ---------------- DESKTOP-LARGE SECTION --------------- */
+@include desktop-large{
+
+}
