@@ -10772,10 +10772,10 @@ a.text-dark:hover, a.text-dark:focus {
 .navbar__menu {
   margin: 0 auto;
   align-items: center;
-  font-size: 1.25em;
+  font-size: 1.4em;
   font-family: Merriweather sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px; }
+  letter-spacing: 2px;
+  text-transform: uppercase; }
 
 .navbar .nav-link {
   transition: 0.3s all; }

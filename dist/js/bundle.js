@@ -183,7 +183,19 @@ eval("/*! modernizr 3.3.1 (Custom Build) | MIT *\r\n * https://modernizr.com/dow
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_enquire_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lib/enquire.js */ \"./src/js/lib/enquire.js\");\n/* harmony import */ var _lib_enquire_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lib_enquire_js__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\n(function () {\r\n\r\n\r\n    const addBackgroundColourNavBar = () => {\r\n        _lib_enquire_js__WEBPACK_IMPORTED_MODULE_0___default.a.register('screen and (max-width: 991px)', {\r\n            match: function () {\r\n                console.log(\"Match\");\r\n            },\r\n            unmatch: function () {\r\n                console.log(\"Unmatch\");\r\n            }\r\n        });\r\n    };\r\n\r\n    const init = () => {\r\n        addBackgroundColourNavBar();\r\n    };\r\n\r\n    window.addEventListener('load',init)\r\n})();\n\n//# sourceURL=webpack:///./src/js/modules/_navbar.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib_enquire_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lib/enquire.js */ \"./src/js/lib/enquire.js\");\n/* harmony import */ var _lib_enquire_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lib_enquire_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _modules_variables_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/_variables.js */ \"./src/js/modules/_variables.js\");\n\r\n\r\n\r\n(function () {\r\n    // variables\r\n    const menuItem = document.querySelectorAll(\".nav-item\");\r\n    const menuLogo = document.querySelector(\".navbar__logo\");\r\n    // jQuery variables\r\n\r\n\r\n    const moveLogoToggleMenu = () => {\r\n        _lib_enquire_js__WEBPACK_IMPORTED_MODULE_0___default.a.register(`screen and (max-width: ${_modules_variables_js__WEBPACK_IMPORTED_MODULE_1__[\"breakpoints\"].tabletUpper}px)`,{\r\n            match: function () {\r\n                console.log(\"Hello it is a match\");\r\n            },\r\n            unmatch: function () {\r\n                console.log(\"Hello this does not match\");\r\n            }\r\n        });\r\n    };\r\n\r\n    const addBackgroundColourNavBar = () => {\r\n        _lib_enquire_js__WEBPACK_IMPORTED_MODULE_0___default.a.register(`screen and (max-width: ${_modules_variables_js__WEBPACK_IMPORTED_MODULE_1__[\"breakpoints\"].tabletUpper}px)`, {\r\n            match: function () {\r\n                console.log(\"Hello it is a match\");\r\n            },\r\n            unmatch: function () {\r\n                console.log(\"Hello this does not match\");\r\n            }\r\n        });\r\n    };\r\n\r\n    const init = () => {\r\n        addBackgroundColourNavBar();\r\n    };\r\n\r\n    window.addEventListener(\"load\", init)\r\n})();\n\n//# sourceURL=webpack:///./src/js/modules/_navbar.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/_variables.js":
+/*!**************************************!*\
+  !*** ./src/js/modules/_variables.js ***!
+  \**************************************/
+/*! exports provided: breakpoints */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"breakpoints\", function() { return breakpoints; });\n/**\r\n * @desc Media breakpoints in px. Used in functions using enquire.js.\r\n * @type {{desktopLower: number, desktopLarge: number, desktopUpper: number, mobile: number, tabletLower: number, tabletUpper: number}}\r\n */\r\nconst breakpoints = {\r\n    mobile: 767,\r\n    tabletLower: 768,\r\n    tabletUpper: 991,\r\n    desktopLower: 992,\r\n    desktopUpper: 1100,\r\n    desktopLarge: 1200\r\n};\n\n//# sourceURL=webpack:///./src/js/modules/_variables.js?");
 
 /***/ }),
 

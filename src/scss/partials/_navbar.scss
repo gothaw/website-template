@@ -7,10 +7,10 @@
   &__menu{
     margin: 0 auto;
     align-items: center;
-    font-size: $menu-font-medium;
+    font-size: menu-font-size(large);
     font-family: Merriweather sans-serif;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    letter-spacing: 1px;
   }
   &__logo{
 

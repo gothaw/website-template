@@ -12,8 +12,7 @@ $tablet-upper: 991px;
 $desktop-lower: 992px;
 $desktop-upper: 1199px;
 $desktop-large: 1200px;
-$menu-font-medium: 1.25em;
-$menu-font-small: 1em;
+
 $colors: (
         light-green: #18BC9C,
         dark-green: #2C3E50
@@ -24,6 +23,11 @@ $duration: (
         medium: 0.5s,
         slow: 0.7s,
         v-slow: 1s
+);
+$menu-font-size: (
+        large: 1.4em,
+        medium: 1.25em,
+        small: 1em
 );
 $text-font-size: (
         large: 1.5em,
@@ -43,21 +47,30 @@ $heading-font-size: (
 //======================================================================================================
 
 //function returns a color from $colors map using map-get
-@function color($color-name){
-  @return map-get($colors,$color-name)
+@function color($color-name) {
+  @return map-get($colors, $color-name)
 }
+
 //function returns a duration in seconds from $duration map using map-get
 @function duration($duration-value) {
   @return map-get($duration, $duration-value)
 }
+
+//function returns a font size from $menu-font-size map using map-get
+@function menu-font-size($font-size) {
+  @return map-get($menu-font-size, $font-size)
+}
+
 //function returns a font size from $text-font-size map using map-get
-@function text-font-size($font-size){
-  @return map-get($text-font-size,$font-size)
+@function text-font-size($font-size) {
+  @return map-get($text-font-size, $font-size)
 }
+
 //function returns a font size from $heading-font-size map using map-get
-@function heading-font-size($font-size){
-  @return map-get($heading-font-size,$font-size)
+@function heading-font-size($font-size) {
+  @return map-get($heading-font-size, $font-size)
 }
+
 //======================================================================================================
 //=============================================== Mixins ===============================================
 //======================================================================================================

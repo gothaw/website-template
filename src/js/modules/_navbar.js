@@ -1,15 +1,31 @@
 import enquire from "../lib/enquire.js"
+import {breakpoints} from "../modules/_variables.js";
 
 (function () {
+    // variables
+    const menuItem = document.querySelectorAll(".nav-item");
+    const menuLogo = document.querySelector(".navbar__logo");
+    // jQuery variables
 
 
-    const addBackgroundColourNavBar = () => {
-        enquire.register('screen and (max-width: 991px)', {
+    const moveLogoToggleMenu = () => {
+        enquire.register(`screen and (max-width: ${breakpoints.tabletUpper}px)`,{
             match: function () {
-                console.log("Match");
+                console.log("Hello it is a match");
             },
             unmatch: function () {
-                console.log("Unmatch");
+                console.log("Hello this does not match");
+            }
+        });
+    };
+
+    const addBackgroundColourNavBar = () => {
+        enquire.register(`screen and (max-width: ${breakpoints.tabletUpper}px)`, {
+            match: function () {
+                console.log("Hello it is a match");
+            },
+            unmatch: function () {
+                console.log("Hello this does not match");
             }
         });
     };
@@ -18,5 +34,5 @@ import enquire from "../lib/enquire.js"
         addBackgroundColourNavBar();
     };
 
-    window.addEventListener('load',init)
+    window.addEventListener("load", init)
 })();
