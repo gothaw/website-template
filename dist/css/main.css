@@ -10766,34 +10766,58 @@ a.text-dark:hover, a.text-dark:focus {
     background-color: black;
     opacity: 0.25; }
 
+/* ------------------- MOBILE SECTION ------------------- */
+/* ------------- MOBILE AND TABLET SECTION -------------- */
+/* ------------------- TABLET SECTION ------------------- */
+/* ------------- TABLET AND DESKTOP SECTION ------------- */
+/* ------------------- DESKTOP SECTION ------------------ */
+/* ---------------- DESKTOP-LARGE SECTION --------------- */
 /*========================================================================================================*/
 /*=========================================== Navbar Styling =============================================*/
 /*========================================================================================================*/
 .navbar__menu {
   margin: 0 auto;
   align-items: center;
-  font-size: 1.4em;
   font-family: Merriweather sans-serif;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase; }
 
 .navbar .nav-link {
   transition: 0.3s all; }
-
-.navbar .nav-item {
-  padding: 0 16px; }
+  .navbar .nav-link:hover {
+    color: white !important; }
+  .navbar .nav-link:focus {
+    color: white !important; }
 
 /* ------------------- MOBILE SECTION ------------------- */
 @media only screen and (max-width: 767px) {
+  .navbar__menu {
+    font-size: 1em; } }
+
+/* ------------- MOBILE AND TABLET SECTION -------------- */
+@media only screen and (max-width: 991px) {
   .navbar {
+    transition: 0.3s all;
     position: relative;
-    z-index: 10; } }
+    z-index: 10; }
+    .navbar__menu-wrapper {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: -100%;
+      transition: 0.5s all;
+      padding: 15px 0; }
+      .navbar__menu-wrapper--toggle-active {
+        background-color: #2C3E50;
+        left: 0; }
+    .navbar__toggle-button {
+      position: relative;
+      z-index: 20; } }
 
 /* ------------------- TABLET SECTION ------------------- */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .navbar {
-    position: relative;
-    z-index: 10; } }
+  .navbar__menu {
+    font-size: 1.25em; } }
 
 /* ------------- TABLET AND DESKTOP SECTION ------------- */
 /* ------------------- DESKTOP SECTION ------------------ */
@@ -10803,7 +10827,11 @@ a.text-dark:hover, a.text-dark:focus {
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 10; } }
+    z-index: 10; }
+    .navbar .nav-item {
+      padding: 0 25px; }
+    .navbar__menu {
+      font-size: 1.35em; } }
 
 /* ---------------- DESKTOP-LARGE SECTION --------------- */
 /*========================================================================================================*/
@@ -10811,4 +10839,7 @@ a.text-dark:hover, a.text-dark:focus {
 /*========================================================================================================*/
 .test {
   margin-bottom: 500px; }
+
+li {
+  list-style-type: none; }
 

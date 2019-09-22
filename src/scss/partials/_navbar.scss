@@ -3,53 +3,86 @@
 /*========================================================================================================*/
 /*=========================================== Navbar Styling =============================================*/
 /*========================================================================================================*/
-.navbar{
-  &__menu{
+.navbar {
+  &__menu {
     margin: 0 auto;
     align-items: center;
-    font-size: menu-font-size(large);
     font-family: Merriweather sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-transform: uppercase;
   }
-  &__logo{
-
-  }
-  .nav-link{
+  .nav-link {
     transition: duration(fast) all;
-  }
-  .nav-item{
-    padding: 0 16px;
+    &:hover {
+      color: color(white) !important;
+    }
+    &:focus {
+      color: color(white) !important;
+    }
   }
 }
+
 /* ------------------- MOBILE SECTION ------------------- */
-@include mobile{
+@include mobile {
+  .navbar__menu{
+    font-size: menu-font-size(small);
+  }
+}
+
+/* ------------- MOBILE AND TABLET SECTION -------------- */
+@include mobile-and-tablet {
   .navbar{
+    transition: duration(fast) all;
     position: relative;
     z-index: 10;
+    &__menu-wrapper{
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: -100%;
+      transition: duration(medium) all;
+      padding: 15px 0;
+      &--toggle-active{
+        background-color: color(dark-blue);
+        left: 0;
+      }
+    }
+    &__toggle-button{
+      position: relative;
+      z-index: 20;
+    }
   }
 }
+
 /* ------------------- TABLET SECTION ------------------- */
-@include tablet{
- .navbar{
-    position: relative;
-    z-index: 10;
+@include tablet {
+  .navbar__menu{
+    font-size: menu-font-size(medium);
   }
 }
+
 /* ------------- TABLET AND DESKTOP SECTION ------------- */
-@include tablet-and-desktop{
+@include tablet-and-desktop {
 
 }
+
 /* ------------------- DESKTOP SECTION ------------------ */
-@include desktop{
-  .navbar{
+@include desktop {
+  .navbar {
     position: sticky;
     top: 0;
     left: 0;
     z-index: 10;
+    .nav-item {
+      padding: 0 25px;
+    }
+    &__menu {
+      font-size: menu-font-size(large);
+    }
   }
 }
+
 /* ---------------- DESKTOP-LARGE SECTION --------------- */
-@include desktop-large{
+@include desktop-large {
 
 }

@@ -6,8 +6,6 @@
 .header{
   position: relative;
   margin-top: -126px;
-  &__video-wrapper{
-  }
   &__video{
     width: 100%;
     height: auto;
@@ -22,4 +20,34 @@
     background-color: black;
     opacity: 0.25;
   }
+}
+
+/* ------------------- MOBILE SECTION ------------------- */
+@include mobile {
+
+}
+
+/* ------------- MOBILE AND TABLET SECTION -------------- */
+@include mobile-and-tablet {
+
+}
+
+/* ------------------- TABLET SECTION ------------------- */
+@include tablet {
+
+}
+
+/* ------------- TABLET AND DESKTOP SECTION ------------- */
+@include tablet-and-desktop {
+
+}
+
+/* ------------------- DESKTOP SECTION ------------------ */
+@include desktop {
+
+}
+
+/* ---------------- DESKTOP-LARGE SECTION --------------- */
+@include desktop-large {
+
 }

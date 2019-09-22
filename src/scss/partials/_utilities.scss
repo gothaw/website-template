@@ -14,8 +14,9 @@ $desktop-upper: 1199px;
 $desktop-large: 1200px;
 
 $colors: (
+        white: white,
         light-green: #18BC9C,
-        dark-green: #2C3E50
+        dark-blue: #2C3E50
 );
 $duration: (
         v-fast: 0.2s,
@@ -25,7 +26,7 @@ $duration: (
         v-slow: 1s
 );
 $menu-font-size: (
-        large: 1.4em,
+        large: 1.35em,
         medium: 1.25em,
         small: 1em
 );
@@ -86,6 +87,13 @@ $heading-font-size: (
 //mixin with media query for tablet
 @mixin tablet {
   @media only screen and (min-width: #{$tablet-lower}) and (max-width: #{$tablet-upper}) {
+    @content;
+  }
+}
+
+//mixin with media query for mobile and tablet
+@mixin mobile-and-tablet {
+  @media only screen and (max-width: #{$tablet-upper}) {
     @content;
   }
 }
