@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic);
-@import url(https://fonts.googleapis.com/css?family=Merriweather&display=swap);
 /*!
  * Bootswatch v4.3.1
  * Homepage: https://bootswatch.com
@@ -10755,8 +10754,10 @@ a.text-dark:hover, a.text-dark:focus {
   margin-top: -126px; }
   .header__video {
     width: 100%;
-    height: auto;
-    display: block; }
+    height: 800px;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover; }
   .header__video-overlay {
     position: absolute;
     top: 0;
@@ -10778,7 +10779,6 @@ a.text-dark:hover, a.text-dark:focus {
 .navbar__menu {
   margin: 0 auto;
   align-items: center;
-  font-family: Merriweather sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase; }
 
@@ -10788,6 +10788,8 @@ a.text-dark:hover, a.text-dark:focus {
     color: white !important; }
   .navbar .nav-link:focus {
     color: white !important; }
+  .navbar .nav-link:active {
+    color: #258CD1 !important; }
 
 /* ------------------- MOBILE SECTION ------------------- */
 @media only screen and (max-width: 767px) {
@@ -10831,7 +10833,37 @@ a.text-dark:hover, a.text-dark:focus {
     .navbar .nav-item {
       padding: 0 25px; }
     .navbar__menu {
-      font-size: 1.35em; } }
+      font-size: 1.35em; }
+    .navbar .nav-link:not(.logo__link) {
+      position: relative; }
+      .navbar .nav-link:not(.logo__link)::before, .navbar .nav-link:not(.logo__link)::after {
+        position: absolute;
+        width: 45px;
+        height: 2px;
+        background-color: white;
+        content: '';
+        opacity: 0.2;
+        transition: all 0.3s;
+        pointer-events: none; }
+      .navbar .nav-link:not(.logo__link)::before {
+        top: 0;
+        left: 0;
+        transform: rotate(90deg);
+        transform-origin: 0 0; }
+      .navbar .nav-link:not(.logo__link)::after {
+        right: 0;
+        bottom: 0;
+        transform: rotate(90deg);
+        transform-origin: 100% 0; }
+      .navbar .nav-link:not(.logo__link):hover::before, .navbar .nav-link:not(.logo__link):hover::after {
+        background-color: #258CD1;
+        opacity: 1; }
+      .navbar .nav-link:not(.logo__link):hover::before {
+        left: 50%;
+        transform: rotate(0deg) translateX(-50%); }
+      .navbar .nav-link:not(.logo__link):hover::after {
+        right: 50%;
+        transform: rotate(0deg) translateX(50%); } }
 
 /* ---------------- DESKTOP-LARGE SECTION --------------- */
 /*========================================================================================================*/
