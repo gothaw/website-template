@@ -8,8 +8,9 @@
   margin-top: -126px;
   &__video{
     width: 100%;
-    height: auto;
+    height: 800px;
     display: block;
+    object-fit: cover;
   }
   &__video-overlay{
     position: absolute;
