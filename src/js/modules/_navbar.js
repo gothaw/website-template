@@ -9,6 +9,7 @@ import {breakpoints} from "../modules/_variables.js";
     const menuItems = document.querySelectorAll(".nav-item");
     const menuLogo = document.querySelector(".navbar__logo");
     const toggleButton = document.querySelector(".navbar-toggler[type=button][data-toggle]");
+    const toggleIcon = document.querySelector(".navbar__toggle-icon");
     // jQuery variables
 
     let toggleMenuActive = false;
@@ -32,11 +33,19 @@ import {breakpoints} from "../modules/_variables.js";
     /**
      * @name        toggleMenuActive
      * @desc        Function toggles navigation menu when user clicks on toggle button. Media queries handled by css using @media.
+     *              Changes the toggleIcon between hamburger and close icon (using fontawesome classes).
      */
     const toggleNavigationMenu = () => {
         toggleButton.addEventListener("click", function () {
             menuWrapper.classList.toggle("navbar__menu-wrapper--toggle-active");
             toggleMenuActive = !toggleMenuActive;
+            if (toggleMenuActive) {
+                toggleIcon.classList.remove("fa-bars");
+                toggleIcon.classList.add("fa-times");
+            } else {
+                toggleIcon.classList.add("fa-bars");
+                toggleIcon.classList.remove("fa-times");
+            }
         });
     };
 

@@ -1,3 +1,6 @@
 /* ==================== Importing Bootstrap and Bootswatch Theme - Flatly ==================== */
 @import "lib/bootswatch_theme_flatly/bootstrap.css";
 /* For the theme used see: https://bootswatch.com/flatly/  */
+
+/* ==================== Importing Fontawesome ==================== */
+@import "lib/fontawesome/css/all.css";
