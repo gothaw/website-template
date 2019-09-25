@@ -4,12 +4,14 @@ import {breakpoints} from "../modules/_variables.js";
 
 (function () {
     // variables
+    const navBar = document.querySelector(".navbar");
     const menu = document.querySelector(".navbar__menu");
     const menuWrapper = document.querySelector(".navbar__menu-wrapper");
     const menuItems = document.querySelectorAll(".nav-item");
     const menuLogo = document.querySelector(".navbar__logo");
     const toggleButton = document.querySelector(".navbar-toggler[type=button][data-toggle]");
     const toggleIcon = document.querySelector(".navbar__toggle-icon");
+    const headerBanner = document.querySelector(".header");
     // jQuery variables
 
     let toggleMenuActive = false;
@@ -49,9 +51,30 @@ import {breakpoints} from "../modules/_variables.js";
         });
     };
 
+    /**
+     * @name        toggleMenuBackgroundColor
+     * @desc        Function toggles background color for the navigation bar if user scrolls below the banner of the website.
+     */
+    const toggleMenuBackgroundColor = () => {
+        enquire.register(`screen and (min-width: ${breakpoints.desktopLower}px)`, {
+            match: function () {
+                setTimeout(function () {
+                    let scrollTop = $(window).scrollTop();
+                    if (scrollTop > headerBanner.offsetHeight - navBar.offsetHeight) {
+                        navBar.classList.add("navbar--bg-color");
+                    } else {
+                        navBar.classList.remove("navbar--bg-color");
+                    }
+                    toggleMenuBackgroundColor();
+                }, 330);
+            }
+        });
+    };
+
     const init = () => {
         moveLogoToggleMenu();
         toggleNavigationMenu();
+        toggleMenuBackgroundColor()
     };
 
     window.addEventListener("load", init)
