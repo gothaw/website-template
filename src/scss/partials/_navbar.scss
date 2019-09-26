@@ -103,12 +103,6 @@
     padding: 15px 30px;
   }
 }
-
-/* ------------- TABLET AND DESKTOP SECTION ------------- */
-@include tablet-and-desktop {
-
-}
-
 /* ------------------- DESKTOP SECTION ------------------ */
 @include desktop {
   .navbar {
@@ -117,7 +111,7 @@
     left: 0;
     z-index: 10;
     padding: 8px 16px;
-    transition: duration(medium) all;
+    transition: duration(medium) background-color;
     &--bg-color{
       background-color: color(dark-blue);
     }
@@ -175,9 +169,4 @@
       }
     }
   }
-}
-
-/* ---------------- DESKTOP-LARGE SECTION --------------- */
-@include desktop-large {
-
 }

@@ -15177,7 +15177,7 @@ readers do not read off random characters that represent icons */
 /*========================================================================================================*/
 .header {
   position: relative;
-  margin-top: -104px; }
+  margin-top: -110px; }
   .header__video {
     width: 100%;
     height: 800px;
@@ -15194,11 +15194,22 @@ readers do not read off random characters that represent icons */
     opacity: 0.25; }
 
 /* ------------------- MOBILE SECTION ------------------- */
+@media only screen and (max-width: 767px) {
+  .header__video {
+    height: 400px; } }
+
 /* ------------- MOBILE AND TABLET SECTION -------------- */
 /* ------------------- TABLET SECTION ------------------- */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header__video {
+    height: 600px; } }
+
 /* ------------- TABLET AND DESKTOP SECTION ------------- */
 /* ------------------- DESKTOP SECTION ------------------ */
-/* ---------------- DESKTOP-LARGE SECTION --------------- */
+@media only screen and (min-width: 992px) {
+  .header__video {
+    height: 800px; } }
+
 /*========================================================================================================*/
 /*=========================================== Navbar Styling =============================================*/
 /*========================================================================================================*/
@@ -15274,7 +15285,6 @@ readers do not read off random characters that represent icons */
   .navbar__menu-wrapper {
     padding: 15px 30px; } }
 
-/* ------------- TABLET AND DESKTOP SECTION ------------- */
 /* ------------------- DESKTOP SECTION ------------------ */
 @media only screen and (min-width: 992px) {
   .navbar {
@@ -15284,7 +15294,7 @@ readers do not read off random characters that represent icons */
     left: 0;
     z-index: 10;
     padding: 8px 16px;
-    transition: 0.5s all; }
+    transition: 0.5s background-color; }
     .navbar--bg-color {
       background-color: #2C3E50; }
     .navbar .nav-item {
@@ -15324,7 +15334,6 @@ readers do not read off random characters that represent icons */
       .navbar .nav-link:not(.logo__link):active {
         color: #258CD1 !important; } }
 
-/* ---------------- DESKTOP-LARGE SECTION --------------- */
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
 /*========================================================================================================*/

@@ -5,7 +5,7 @@
 /*========================================================================================================*/
 .header{
   position: relative;
-  margin-top: -104px;
+  margin-top: -110px;
   &__video{
     width: 100%;
     height: 800px;
@@ -25,7 +25,9 @@
 
 /* ------------------- MOBILE SECTION ------------------- */
 @include mobile {
-
+  .header__video{
+    height: 400px;
+  }
 }
 
 /* ------------- MOBILE AND TABLET SECTION -------------- */
@@ -35,7 +37,9 @@
 
 /* ------------------- TABLET SECTION ------------------- */
 @include tablet {
-
+  .header__video{
+    height: 600px;
+  }
 }
 
 /* ------------- TABLET AND DESKTOP SECTION ------------- */
@@ -45,10 +49,7 @@
 
 /* ------------------- DESKTOP SECTION ------------------ */
 @include desktop {
-
-}
-
-/* ---------------- DESKTOP-LARGE SECTION --------------- */
-@include desktop-large {
-
+  .header__video{
+    height: 800px;
+  }
 }

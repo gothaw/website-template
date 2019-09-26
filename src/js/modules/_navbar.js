@@ -66,7 +66,7 @@ import {breakpoints} from "../modules/_variables.js";
                         navBar.classList.remove("navbar--bg-color");
                     }
                     toggleMenuBackgroundColor();
-                }, 330);
+                }, 100);
             }
         });
     };
