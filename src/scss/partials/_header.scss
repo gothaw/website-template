@@ -25,8 +25,12 @@
 
 /* ------------------- MOBILE SECTION ------------------- */
 @include mobile {
-  .header__video{
-    height: 400px;
+  .header{
+    background: url("../../../dist/img/header-poster/header-video-poster-mobile.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    &__video{
+      height: 400px;
+    }
   }
 }
 
@@ -37,8 +41,12 @@
 
 /* ------------------- TABLET SECTION ------------------- */
 @include tablet {
-  .header__video{
-    height: 600px;
+  .header{
+    background: url("../../../dist/img/header-poster/header-video-poster-tablet.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    &__video{
+      height: 600px;
+    }
   }
 }
 
@@ -49,7 +57,11 @@
 
 /* ------------------- DESKTOP SECTION ------------------ */
 @include desktop {
-  .header__video{
-    height: 800px;
+  .header{
+    background: url("../../../dist/img/header-poster/header-video-poster-desktop.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    &__video{
+      height: 800px;
+    }
   }
 }
