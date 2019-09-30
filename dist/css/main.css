@@ -15192,6 +15192,22 @@ readers do not read off random characters that represent icons */
     height: 100%;
     background-color: black;
     opacity: 0.25; }
+  .header__video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 5; }
+    .header__video-controls .video-controls__control {
+      color: white;
+      font-size: 12px;
+      padding: 4px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0.25rem;
+      margin-right: 5px;
+      transition: 0.5s color;
+      cursor: pointer; }
+      .header__video-controls .video-controls__control:hover {
+        color: #258CD1; }
 
 /* ------------------- MOBILE SECTION ------------------- */
 @media only screen and (max-width: 767px) {
@@ -15199,7 +15215,9 @@ readers do not read off random characters that represent icons */
     background: url("../../../dist/img/header-poster/header-video-poster-mobile.jpg") no-repeat 50% 50%;
     background-size: cover; }
     .header__video {
-      height: 400px; } }
+      height: 400px; }
+    .header__video-controls {
+      padding: 0 0 16px 16px; } }
 
 /* ------------- MOBILE AND TABLET SECTION -------------- */
 /* ------------------- TABLET SECTION ------------------- */
@@ -15211,6 +15229,10 @@ readers do not read off random characters that represent icons */
       height: 600px; } }
 
 /* ------------- TABLET AND DESKTOP SECTION ------------- */
+@media only screen and (min-width: 768px) {
+  .header__video-controls {
+    padding: 0 0 31px 31px; } }
+
 /* ------------------- DESKTOP SECTION ------------------ */
 @media only screen and (min-width: 992px) {
   .header {
@@ -15225,8 +15247,7 @@ readers do not read off random characters that represent icons */
 .navbar__menu {
   margin: 0 auto;
   align-items: center;
-  letter-spacing: 1px;
-  text-transform: uppercase; }
+  letter-spacing: 1px; }
 
 .navbar .nav-link {
   transition: 0.3s all; }
@@ -15259,7 +15280,10 @@ readers do not read off random characters that represent icons */
         left: 0; }
     .navbar__toggle-button {
       position: relative;
-      z-index: 20; }
+      z-index: 20;
+      transition: 0.3s color; }
+      .navbar__toggle-button:hover {
+        color: #258CD1; }
     .navbar__toggle-icon {
       font-size: 25px; }
     .navbar .nav-item {

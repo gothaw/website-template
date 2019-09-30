@@ -12,7 +12,6 @@ import {breakpoints} from "../modules/_variables.js";
     const toggleButton = document.querySelector(".navbar-toggler[type=button][data-toggle]");
     const toggleIcon = document.querySelector(".navbar__toggle-icon");
     const headerBanner = document.querySelector(".header");
-    // jQuery variables
 
     let toggleMenuActive = false;
 

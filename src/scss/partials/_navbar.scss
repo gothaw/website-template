@@ -8,15 +8,16 @@
     margin: 0 auto;
     align-items: center;
     letter-spacing: 1px;
-    text-transform: uppercase;
   }
 
   .nav-link {
     transition: duration(fast) all;
-    &:hover{
+
+    &:hover {
       color: color(white) !important;
     }
-    &:focus{
+
+    &:focus {
       color: color(white) !important;
     }
   }
@@ -27,7 +28,7 @@
   .navbar__menu {
     font-size: menu-font-size(small);
   }
-  .navbar__menu-wrapper{
+  .navbar__menu-wrapper {
     padding: 15px;
   }
 }
@@ -38,30 +39,41 @@
     transition: duration(fast) all;
     position: relative;
     z-index: 10;
+
     &__menu-wrapper {
       position: absolute;
       width: 100%;
       top: 0;
       left: -100%;
       transition: duration(medium) all;
+
       &--toggle-active {
         background-color: color(dark-blue);
         left: 0;
       }
     }
+
     &__toggle-button {
       position: relative;
       z-index: 20;
+      transition: duration(fast) color;
+
+      &:hover {
+        color: color(light-blue);
+      }
     }
-    &__toggle-icon{
+
+    &__toggle-icon {
       font-size: 25px;
     }
-    .nav-item{
+
+    .nav-item {
       position: relative;
       width: 100%;
       text-align: center;
       transition: duration(medium) all;
-      &:active:not(.navbar__logo){
+
+      &:active:not(.navbar__logo) {
         background-color: color(light-blue);
       }
 
@@ -96,13 +108,14 @@
   .navbar__menu {
     font-size: menu-font-size(medium);
   }
-  .navbar__toggle-button{
+  .navbar__toggle-button {
     margin: 15px 0 0 15px;
   }
-  .navbar__menu-wrapper{
+  .navbar__menu-wrapper {
     padding: 15px 30px;
   }
 }
+
 /* ------------------- DESKTOP SECTION ------------------ */
 @include desktop {
   .navbar {
@@ -112,17 +125,22 @@
     z-index: 10;
     padding: 8px 16px;
     transition: duration(medium) background-color;
-    &--bg-color{
+
+    &--bg-color {
       background-color: color(dark-blue);
     }
+
     .nav-item {
       padding: 0 25px;
     }
+
     &__menu {
       font-size: menu-font-size(large);
     }
+
     .nav-link:not(.logo__link) {
       position: relative;
+
       &::before, &::after {
         position: absolute;
         width: 45px;
@@ -164,7 +182,7 @@
         transform: rotate(0deg) translateX(50%);
       }
 
-      &:active{
+      &:active {
         color: color(light-blue) !important;
       }
     }

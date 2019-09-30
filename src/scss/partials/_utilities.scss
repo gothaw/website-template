@@ -14,7 +14,7 @@ $colors: (
         light-green: #18BC9C,
         light-blue: #258CD1,
         dark-blue: #2C3E50,
-        transparent-white: rgba(255,255,255,0.2),
+        transparent-white: rgba(255, 255, 255, 0.2),
 );
 $duration: (
         v-fast: 0.2s,
@@ -114,5 +114,20 @@ $heading-font-size: (
 @mixin desktop-large {
   @media only screen and (min-width: #{$desktop-large}) {
     @content;
+  }
+}
+
+//mixin for video controls buttons
+@mixin video-controls {
+  color: color(white);
+  font-size: 12px;
+  padding: 4px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.25rem;
+  margin-right: 5px;
+  transition: duration(medium) color;
+  cursor: pointer;
+  &:hover{
+    color: color(light-blue);
   }
 }

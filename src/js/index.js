@@ -6,3 +6,4 @@ import "./lib/modernizr-custom.js";
 
 // Custom JS
 import "./modules/_navbar.js";
+import "./modules/_header.js";

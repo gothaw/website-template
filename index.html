@@ -32,7 +32,7 @@
         <button class="navbar-toggler navbar__toggle-button" type="button" data-toggle="collapse" data-target="#navbarColor01"
                 aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span>
-                <i class="fas fa-bars navbar__toggle-icon"></i>
+                <i class="fas fa-bars navbar__toggle-icon"></i> <!--/navbar__toggle-icon-->
             </span>
         </button> <!--/navbar__toggle-button-->
         <div class="navbar-collapse navbar__menu-wrapper">
@@ -61,7 +61,18 @@
         <div class="header__video-wrapper">
             <video class="header__video" autoplay loop src="dist/vid/header_video.mp4" preload="none"></video> <!--/header__video-->
         </div> <!--/header__video-wrapper-->
-        <div class="header__video-overlay"></div>
+        <div class="header__video-overlay"></div> <!--/header__video-overlay-->
+        <div class="header__video-controls d-flex">
+            <div class="video-controls__control" data-control="play-pause">
+                <i class="fas fa-play"></i>
+            </div> <!--/video-controls__control -->
+            <div class="video-controls__control" data-control="stop">
+                <i class="fas fa-stop"></i>
+            </div> <!--/video-controls__control -->
+            <div class="video-controls__control" data-control="fast-forward">
+                <i class="fas fa-fast-forward"></i>
+            </div> <!--/video-controls__control -->
+        </div> <!--/header__video-controls-->
     </header> <!--/header-->
 
     <main class="container">
