@@ -16,9 +16,9 @@ import {breakpoints} from "../modules/_variables.js";
     let toggleMenuActive = false;
 
     /**
-     * @name        moveLogoToggleMenu
-     * @desc        Function prepends logo image before menu links for mobile and tablet.
-     *              For desktop, logo is appended after second menu link. Uses enquire.js.
+     * @name            moveLogoToggleMenu
+     * @desc            Function prepends logo image before menu links for mobile and tablet.
+     *                  For desktop, logo is appended after second menu link. Uses enquire.js.
      */
     const moveLogoToggleMenu = () => {
         enquire.register(`screen and (max-width: ${breakpoints.tabletUpper}px)`, {
@@ -32,9 +32,9 @@ import {breakpoints} from "../modules/_variables.js";
     };
 
     /**
-     * @name        toggleMenuActive
-     * @desc        Function toggles navigation menu when user clicks on toggle button. Media queries handled by css using @media.
-     *              Changes the toggleIcon between hamburger and close icon (using fontawesome classes).
+     * @name            toggleMenuActive
+     * @desc            Function toggles navigation menu when user clicks on toggle button. Media queries handled by css using @media.
+     *                  Changes the toggleIcon between hamburger and close icon (using fontawesome classes).
      */
     const toggleNavigationMenu = () => {
         toggleButton.addEventListener("click", function () {
