@@ -9,7 +9,7 @@
 
     /**
      * @name            playAndPauseVideo
-     * @desc            Plays and pauses header video.
+     * @desc            Plays and pauses header video. Resets the video to normal speed.
      */
     const playAndPauseVideo = () => {
         bannerVideo.playbackRate = 1;
@@ -27,37 +27,37 @@
 
     /**
      * @name            stopVideo
-     * @desc            Stops header video is video is playing.
+     * @desc            Stops header video and resets the video to normal speed.
      */
     const stopVideo = () => {
-        if (videoPlaying) {
-            playAndPauseIcon.classList.remove("fa-pause");
-            playAndPauseIcon.classList.add("fa-play");
-            bannerVideo.pause();
-            bannerVideo.playbackRate = 1;
-            bannerVideo.currentTime = 0;
-            videoPlaying = false;
-        }
-    };
-
-    /**
-     * @name            rewindVideo
-     * @desc
-     */
-    const rewindVideo = () => {
-        if (videoPlaying) {
-            setTimeout(function () {
-
-            }, 100);
-        }
+        playAndPauseIcon.classList.remove("fa-pause");
+        playAndPauseIcon.classList.add("fa-play");
+        bannerVideo.pause();
+        bannerVideo.playbackRate = 1;
+        bannerVideo.currentTime = 0;
+        videoPlaying = false;
     };
 
     /**
      * @name            fastForwardVideo
-     * @desc            Fast forwards the video. It increases video speed by 0.5 each time the button is clicked to the maximum of 4.0 x normal speed.
+     * @desc            Fast forwards the video. It sets the video speed to 6.0 x normal speed.
      */
     const fastForwardVideo = () => {
-        if (bannerVideo.playbackRate < 4.0) {
+        bannerVideo.playbackRate = 6.0;
+        if (!videoPlaying) {
+            playAndPauseIcon.classList.remove("fa-play");
+            playAndPauseIcon.classList.add("fa-pause");
+            bannerVideo.play();
+            videoPlaying = true;
+        }
+    };
+
+    /**
+     * @name            forwardVideo
+     * @desc            Forwards the video. It increases video speed by 0.5 each time the button is clicked to the maximum of 6.0 x normal speed.
+     */
+    const forwardVideo = () => {
+        if (bannerVideo.playbackRate < 6.0) {
             bannerVideo.playbackRate += 0.5;
         }
         if (!videoPlaying) {
@@ -83,10 +83,10 @@
                     case 'stop':
                         stopVideo();
                         break;
-                    case 'backward':
-                        rewindVideo();
-                        break;
                     case 'forward':
+                        forwardVideo();
+                        break;
+                    case 'fast-forward':
                         fastForwardVideo();
                         break;
                 }

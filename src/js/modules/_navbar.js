@@ -14,6 +14,7 @@ import {breakpoints} from "../modules/_variables.js";
     const headerBanner = document.querySelector(".header");
 
     let toggleMenuActive = false;
+    let scrollTop = 0;
 
     /**
      * @name            moveLogoToggleMenu
@@ -58,7 +59,9 @@ import {breakpoints} from "../modules/_variables.js";
         enquire.register(`screen and (min-width: ${breakpoints.desktopLower}px)`, {
             match: function () {
                 setTimeout(function () {
-                    let scrollTop = $(window).scrollTop();
+                    scrollTop = window.scrollY;
+                }, 500);
+                setTimeout(function () {
                     if (scrollTop > headerBanner.offsetHeight - navBar.offsetHeight) {
                         navBar.classList.add("navbar--bg-color");
                     } else {
@@ -73,7 +76,7 @@ import {breakpoints} from "../modules/_variables.js";
     const init = () => {
         moveLogoToggleMenu();
         toggleNavigationMenu();
-        toggleMenuBackgroundColor()
+        toggleMenuBackgroundColor();
     };
 
     window.addEventListener("load", init)
