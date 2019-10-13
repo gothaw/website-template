@@ -8,22 +8,11 @@
     let videoPlaying = false;
 
     /**
-     * @name            videoStop
+     * @name            playAndPauseVideo
+     * @desc            Plays and pauses header video.
      */
-    const videoStop = () => {
-        if (videoPlaying) {
-            playAndPauseIcon.classList.remove("fa-pause");
-            playAndPauseIcon.classList.add("fa-play");
-            bannerVideo.pause();
-            videoPlaying = false;
-        }
-        bannerVideo.currentTime = 0;
-    };
-
-    /**
-     * @name            videoPlayAndPause
-     */
-    const videoPlayAndPause = () => {
+    const playAndPauseVideo = () => {
+        bannerVideo.playbackRate = 1;
         if (!videoPlaying) {
             playAndPauseIcon.classList.remove("fa-play");
             playAndPauseIcon.classList.add("fa-pause");
@@ -37,20 +26,68 @@
     };
 
     /**
-     * @name            bannerVideoControls
+     * @name            stopVideo
+     * @desc            Stops header video is video is playing.
      */
-    const bannerVideoControls = () => {
+    const stopVideo = () => {
+        if (videoPlaying) {
+            playAndPauseIcon.classList.remove("fa-pause");
+            playAndPauseIcon.classList.add("fa-play");
+            bannerVideo.pause();
+            bannerVideo.playbackRate = 1;
+            bannerVideo.currentTime = 0;
+            videoPlaying = false;
+        }
+    };
+
+    /**
+     * @name            rewindVideo
+     * @desc
+     */
+    const rewindVideo = () => {
+        if (videoPlaying) {
+            setTimeout(function () {
+
+            }, 100);
+        }
+    };
+
+    /**
+     * @name            fastForwardVideo
+     * @desc            Fast forwards the video. It increases video speed by 0.5 each time the button is clicked to the maximum of 4.0 x normal speed.
+     */
+    const fastForwardVideo = () => {
+        if (bannerVideo.playbackRate < 4.0) {
+            bannerVideo.playbackRate += 0.5;
+        }
+        if (!videoPlaying) {
+            playAndPauseIcon.classList.remove("fa-play");
+            playAndPauseIcon.classList.add("fa-pause");
+            bannerVideo.play();
+            videoPlaying = true;
+        }
+    };
+
+    /**
+     * @name            bindVideoControls
+     * @desc            Function binds video controls using switch statement.
+     */
+    const bindVideoControls = () => {
         for (let control of videoControls) {
             control.addEventListener("click", function () {
                 const controlName = control.getAttribute("data-control");
                 switch (controlName) {
                     case 'play-pause':
-                        videoPlayAndPause();
+                        playAndPauseVideo();
                         break;
                     case 'stop':
-                        videoStop();
+                        stopVideo();
                         break;
-                    case 'fast-forward':
+                    case 'backward':
+                        rewindVideo();
+                        break;
+                    case 'forward':
+                        fastForwardVideo();
                         break;
                 }
             })
@@ -58,7 +95,7 @@
     };
 
     const init = () => {
-        bannerVideoControls()
+        bindVideoControls()
     };
 
     window.addEventListener("load", init);
