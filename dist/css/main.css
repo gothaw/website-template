@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap);
 /*!
  * Bootswatch v4.3.1
  * Homepage: https://bootswatch.com
@@ -15172,9 +15173,9 @@ readers do not read off random characters that represent icons */
 /* For the theme used see: https://bootswatch.com/flatly/  */
 
 /* ==================== Importing Fontawesome ==================== */
-/*========================================================================================================*/
-/*=========================================== Header Styling =============================================*/
-/*========================================================================================================*/
+/*======================================================================================================*/
+/*======================================= Header Video Styling =========================================*/
+/*======================================================================================================*/
 .header {
   position: relative;
   margin-top: -110px; }
@@ -15219,7 +15220,6 @@ readers do not read off random characters that represent icons */
     .header__video-controls {
       padding: 0 0 16px 16px; } }
 
-/* ------------- MOBILE AND TABLET SECTION -------------- */
 /* ------------------- TABLET SECTION ------------------- */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header {
@@ -15241,6 +15241,40 @@ readers do not read off random characters that represent icons */
     .header__video {
       height: 800px; } }
 
+/*======================================================================================================*/
+/*======================================= Header Title Styling =========================================*/
+/*======================================================================================================*/
+.header {
+  position: relative;
+  margin-top: -110px; }
+  .header__title-wrapper {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .header__title, .header__subtitle {
+    text-align: center;
+    color: white;
+    font-family: 'Kaushan Script', cursive; }
+  .header__title {
+    width: 700px;
+    margin: 0 auto; }
+    .header__title .st1 {
+      fill: none;
+      stroke: white;
+      stroke-width: 3;
+      stroke-miterlimit: 10; }
+  .header__svg-title path:nth-child(1) {
+    stroke-dasharray: 100px;
+    stroke-dashoffset: 50px; }
+  .header__subtitle {
+    margin: 0 auto; }
+
+/* ------------------- MOBILE SECTION ------------------- */
+/* ------------- MOBILE AND TABLET SECTION -------------- */
+/* ------------------- TABLET SECTION ------------------- */
+/* ------------- TABLET AND DESKTOP SECTION ------------- */
+/* ------------------- DESKTOP SECTION ------------------ */
 /*========================================================================================================*/
 /*=========================================== Navbar Styling =============================================*/
 /*========================================================================================================*/

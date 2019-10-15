@@ -40,10 +40,10 @@
 
     /**
      * @name            fastForwardVideo
-     * @desc            Fast forwards the video. It sets the video speed to 6.0 x normal speed.
+     * @desc            Fast forwards the video. It sets the video speed to 5.0 x normal speed.
      */
     const fastForwardVideo = () => {
-        bannerVideo.playbackRate = 6.0;
+        bannerVideo.playbackRate = 5.0;
         if (!videoPlaying) {
             playAndPauseIcon.classList.remove("fa-play");
             playAndPauseIcon.classList.add("fa-pause");
@@ -54,10 +54,10 @@
 
     /**
      * @name            forwardVideo
-     * @desc            Forwards the video. It increases video speed by 0.5 each time the button is clicked to the maximum of 6.0 x normal speed.
+     * @desc            Forwards the video. It increases video speed by 0.5 each time the button is clicked to the maximum of 5.0 x normal speed.
      */
     const forwardVideo = () => {
-        if (bannerVideo.playbackRate < 6.0) {
+        if (bannerVideo.playbackRate < 5.0) {
             bannerVideo.playbackRate += 0.5;
         }
         if (!videoPlaying) {

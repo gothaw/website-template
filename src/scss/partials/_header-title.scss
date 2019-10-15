@@ -1,0 +1,114 @@
+//============================================= Imports ==================================================
+@import '_utilities';
+/*======================================================================================================*/
+/*======================================= Header Title Styling =========================================*/
+/*======================================================================================================*/
+.header {
+  position: relative;
+  margin-top: -110px;
+
+  &__title-wrapper {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__title, &__subtitle {
+    text-align: center;
+    color: color(white);
+    font-family: 'Kaushan Script', cursive;
+  }
+
+  &__title {
+    width: 700px;
+    margin: 0 auto;
+
+    .st1 {
+      fill: none;
+      stroke: color(white);
+      stroke-width: 3;
+      stroke-miterlimit: 10;
+    }
+  }
+
+  &__svg-title path:nth-child(1) {
+    stroke-dasharray: 100px;
+    stroke-dashoffset: 50px;
+  }
+
+  &__svg-title path:nth-child(2) {
+
+  }
+
+  &__svg-title path:nth-child(3) {
+
+  }
+
+  &__svg-title path:nth-child(4) {
+
+  }
+
+  &__svg-title path:nth-child(5) {
+
+  }
+
+  &__svg-title path:nth-child(6) {
+
+  }
+
+  &__svg-title path:nth-child(7) {
+
+  }
+
+  &__svg-title path:nth-child(8) {
+
+  }
+
+  &__svg-title path:nth-child(9) {
+
+  }
+
+  &__svg-title path:nth-child(10) {
+
+  }
+
+  &__subtitle {
+    margin: 0 auto;
+  }
+
+
+}
+
+/* ------------------- MOBILE SECTION ------------------- */
+@include mobile {
+  .header {
+
+  }
+}
+
+/* ------------- MOBILE AND TABLET SECTION -------------- */
+@include mobile-and-tablet {
+
+}
+
+/* ------------------- TABLET SECTION ------------------- */
+@include tablet {
+  .header {
+
+  }
+}
+
+/* ------------- TABLET AND DESKTOP SECTION ------------- */
+@include tablet-and-desktop {
+  .header {
+
+  }
+}
+
+/* ------------------- DESKTOP SECTION ------------------ */
+@include desktop {
+  .header {
+
+  }
+}
