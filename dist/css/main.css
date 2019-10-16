@@ -15173,6 +15173,35 @@ readers do not read off random characters that represent icons */
 /* For the theme used see: https://bootswatch.com/flatly/  */
 
 /* ==================== Importing Fontawesome ==================== */
+@-webkit-keyframes svg-line-animation {
+  to {
+    stroke-dashoffset: 0; } }
+@keyframes svg-line-animation {
+  to {
+    stroke-dashoffset: 0; } }
+
+@-webkit-keyframes svg-fill-animation {
+  from {
+    fill: transparent; }
+  to {
+    fill: white; } }
+
+@keyframes svg-fill-animation {
+  from {
+    fill: transparent; }
+  to {
+    fill: white; } }
+
+@keyframes svg-line-animation {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes svg-fill-animation {
+  from {
+    fill: transparent; }
+  to {
+    fill: white; } }
+
 /*======================================================================================================*/
 /*======================================= Header Video Styling =========================================*/
 /*======================================================================================================*/
@@ -15241,6 +15270,16 @@ readers do not read off random characters that represent icons */
     .header__video {
       height: 800px; } }
 
+@keyframes svg-line-animation {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes svg-fill-animation {
+  from {
+    fill: transparent; }
+  to {
+    fill: white; } }
+
 /*======================================================================================================*/
 /*======================================= Header Title Styling =========================================*/
 /*======================================================================================================*/
@@ -15260,13 +15299,63 @@ readers do not read off random characters that represent icons */
     width: 700px;
     margin: 0 auto; }
     .header__title .st1 {
-      fill: none;
       stroke: white;
       stroke-width: 3;
       stroke-miterlimit: 10; }
+  .header__svg-title {
+    fill: transparent;
+    -webkit-animation: svg-fill-animation 0.5s ease forwards 2.5s;
+            animation: svg-fill-animation 0.5s ease forwards 2.5s; }
   .header__svg-title path:nth-child(1) {
-    stroke-dasharray: 100px;
-    stroke-dashoffset: 50px; }
+    stroke-dasharray: 298.16956px;
+    stroke-dashoffset: 298.16956px;
+    -webkit-animation: svg-line-animation 1.5s ease forwards 0.1s;
+            animation: svg-line-animation 1.5s ease forwards 0.1s; }
+  .header__svg-title path:nth-child(2) {
+    stroke-dasharray: 282.69971px;
+    stroke-dashoffset: 282.69971px;
+    -webkit-animation: svg-line-animation 1.5s ease forwards 0.2s;
+            animation: svg-line-animation 1.5s ease forwards 0.2s; }
+  .header__svg-title path:nth-child(3) {
+    stroke-dasharray: 240.48438px;
+    stroke-dashoffset: 240.48438px;
+    -webkit-animation: svg-line-animation 1.5s ease forwards 0.3s;
+            animation: svg-line-animation 1.5s ease forwards 0.3s; }
+  .header__svg-title path:nth-child(4) {
+    stroke-dasharray: 301.03491px;
+    stroke-dashoffset: 301.03491px;
+    -webkit-animation: svg-line-animation 1.5s ease forwards 0.4s;
+            animation: svg-line-animation 1.5s ease forwards 0.4s; }
+  .header__svg-title path:nth-child(5) {
+    stroke-dasharray: 555.95526px;
+    stroke-dashoffset: 555.95526px;
+    -webkit-animation: svg-line-animation 1.5s ease forwards 0.5s;
+            animation: svg-line-animation 1.5s ease forwards 0.5s; }
+  .header__svg-title path:nth-child(6) {
+    stroke-dasharray: 773.15503px;
+    stroke-dashoffset: 773.15503px;
+    -webkit-animation: svg-line-animation 1.5s ease forwards 0.6s;
+            animation: svg-line-animation 1.5s ease forwards 0.6s; }
+  .header__svg-title path:nth-child(7) {
+    stroke-dasharray: 301.04214px;
+    stroke-dashoffset: 301.04214px;
+    -webkit-animation: svg-line-animation 1.5s ease forwards 0.7s;
+            animation: svg-line-animation 1.5s ease forwards 0.7s; }
+  .header__svg-title path:nth-child(8) {
+    stroke-dasharray: 398.48352px;
+    stroke-dashoffset: 398.48352px;
+    -webkit-animation: svg-line-animation 1.5s ease forwards 0.8s;
+            animation: svg-line-animation 1.5s ease forwards 0.8s; }
+  .header__svg-title path:nth-child(9) {
+    stroke-dasharray: 190.26265px;
+    stroke-dashoffset: 190.26265px;
+    -webkit-animation: svg-line-animation 1.5s ease forwards 0.9s;
+            animation: svg-line-animation 1.5s ease forwards 0.9s; }
+  .header__svg-title path:nth-child(10) {
+    stroke-dasharray: 333.19864px;
+    stroke-dashoffset: 333.19864px;
+    -webkit-animation: svg-line-animation 1.5s ease forwards 1s;
+            animation: svg-line-animation 1.5s ease forwards 1s; }
   .header__subtitle {
     margin: 0 auto; }
 
@@ -15275,6 +15364,16 @@ readers do not read off random characters that represent icons */
 /* ------------------- TABLET SECTION ------------------- */
 /* ------------- TABLET AND DESKTOP SECTION ------------- */
 /* ------------------- DESKTOP SECTION ------------------ */
+@keyframes svg-line-animation {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes svg-fill-animation {
+  from {
+    fill: transparent; }
+  to {
+    fill: white; } }
+
 /*========================================================================================================*/
 /*=========================================== Navbar Styling =============================================*/
 /*========================================================================================================*/
