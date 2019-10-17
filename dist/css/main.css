@@ -15192,6 +15192,18 @@ readers do not read off random characters that represent icons */
   to {
     fill: white; } }
 
+@-webkit-keyframes subtitle-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1.0; } }
+
+@keyframes subtitle-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1.0; } }
+
 @keyframes svg-line-animation {
   to {
     stroke-dashoffset: 0; } }
@@ -15201,6 +15213,12 @@ readers do not read off random characters that represent icons */
     fill: transparent; }
   to {
     fill: white; } }
+
+@keyframes subtitle-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1.0; } }
 
 /*======================================================================================================*/
 /*======================================= Header Video Styling =========================================*/
@@ -15280,6 +15298,12 @@ readers do not read off random characters that represent icons */
   to {
     fill: white; } }
 
+@keyframes subtitle-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1.0; } }
+
 /*======================================================================================================*/
 /*======================================= Header Title Styling =========================================*/
 /*======================================================================================================*/
@@ -15297,73 +15321,100 @@ readers do not read off random characters that represent icons */
     font-family: 'Kaushan Script', cursive; }
   .header__title {
     width: 700px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    fill: transparent;
+    -webkit-animation: svg-fill-animation 1s ease forwards 2s;
+            animation: svg-fill-animation 1s ease forwards 2s; }
     .header__title .st1 {
       stroke: white;
       stroke-width: 3;
       stroke-miterlimit: 10; }
-  .header__svg-title {
-    fill: transparent;
-    -webkit-animation: svg-fill-animation 0.5s ease forwards 2.5s;
-            animation: svg-fill-animation 0.5s ease forwards 2.5s; }
-  .header__svg-title path:nth-child(1) {
+  .header__svg-title-paths path:nth-child(1) {
     stroke-dasharray: 298.16956px;
     stroke-dashoffset: 298.16956px;
-    -webkit-animation: svg-line-animation 1.5s ease forwards 0.1s;
-            animation: svg-line-animation 1.5s ease forwards 0.1s; }
-  .header__svg-title path:nth-child(2) {
+    -webkit-animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 0.1s;
+            animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 0.1s; }
+  .header__svg-title-paths path:nth-child(2) {
     stroke-dasharray: 282.69971px;
     stroke-dashoffset: 282.69971px;
-    -webkit-animation: svg-line-animation 1.5s ease forwards 0.2s;
-            animation: svg-line-animation 1.5s ease forwards 0.2s; }
-  .header__svg-title path:nth-child(3) {
+    -webkit-animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 0.2s;
+            animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 0.2s; }
+  .header__svg-title-paths path:nth-child(3) {
     stroke-dasharray: 240.48438px;
     stroke-dashoffset: 240.48438px;
-    -webkit-animation: svg-line-animation 1.5s ease forwards 0.3s;
-            animation: svg-line-animation 1.5s ease forwards 0.3s; }
-  .header__svg-title path:nth-child(4) {
+    -webkit-animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 0.3s;
+            animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 0.3s; }
+  .header__svg-title-paths path:nth-child(4) {
     stroke-dasharray: 301.03491px;
     stroke-dashoffset: 301.03491px;
-    -webkit-animation: svg-line-animation 1.5s ease forwards 0.4s;
-            animation: svg-line-animation 1.5s ease forwards 0.4s; }
-  .header__svg-title path:nth-child(5) {
+    -webkit-animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 0.4s;
+            animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 0.4s; }
+  .header__svg-title-paths path:nth-child(5) {
     stroke-dasharray: 555.95526px;
     stroke-dashoffset: 555.95526px;
-    -webkit-animation: svg-line-animation 1.5s ease forwards 0.5s;
-            animation: svg-line-animation 1.5s ease forwards 0.5s; }
-  .header__svg-title path:nth-child(6) {
+    -webkit-animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 0.5s;
+            animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 0.5s; }
+  .header__svg-title-paths path:nth-child(6) {
     stroke-dasharray: 773.15503px;
     stroke-dashoffset: 773.15503px;
-    -webkit-animation: svg-line-animation 1.5s ease forwards 0.6s;
-            animation: svg-line-animation 1.5s ease forwards 0.6s; }
-  .header__svg-title path:nth-child(7) {
+    -webkit-animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 0.6s;
+            animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 0.6s; }
+  .header__svg-title-paths path:nth-child(7) {
     stroke-dasharray: 301.04214px;
     stroke-dashoffset: 301.04214px;
-    -webkit-animation: svg-line-animation 1.5s ease forwards 0.7s;
-            animation: svg-line-animation 1.5s ease forwards 0.7s; }
-  .header__svg-title path:nth-child(8) {
+    -webkit-animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 0.7s;
+            animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 0.7s; }
+  .header__svg-title-paths path:nth-child(8) {
     stroke-dasharray: 398.48352px;
     stroke-dashoffset: 398.48352px;
-    -webkit-animation: svg-line-animation 1.5s ease forwards 0.8s;
-            animation: svg-line-animation 1.5s ease forwards 0.8s; }
-  .header__svg-title path:nth-child(9) {
+    -webkit-animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 0.8s;
+            animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 0.8s; }
+  .header__svg-title-paths path:nth-child(9) {
     stroke-dasharray: 190.26265px;
     stroke-dashoffset: 190.26265px;
-    -webkit-animation: svg-line-animation 1.5s ease forwards 0.9s;
-            animation: svg-line-animation 1.5s ease forwards 0.9s; }
-  .header__svg-title path:nth-child(10) {
+    -webkit-animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 0.9s;
+            animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 0.9s; }
+  .header__svg-title-paths path:nth-child(10) {
     stroke-dasharray: 333.19864px;
     stroke-dashoffset: 333.19864px;
-    -webkit-animation: svg-line-animation 1.5s ease forwards 1s;
-            animation: svg-line-animation 1.5s ease forwards 1s; }
+    -webkit-animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 1s;
+            animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 1s; }
   .header__subtitle {
-    margin: 0 auto; }
+    color: white;
+    opacity: 0;
+    -webkit-animation: subtitle-animation 1s ease-in-out forwards 2.5s;
+            animation: subtitle-animation 1s ease-in-out forwards 2.5s; }
 
 /* ------------------- MOBILE SECTION ------------------- */
-/* ------------- MOBILE AND TABLET SECTION -------------- */
+@media only screen and (max-width: 767px) {
+  .header__title-wrapper {
+    top: 52%; }
+  .header__title {
+    max-width: 250px; }
+  .header__subtitle {
+    margin: 15px auto 0;
+    font-size: 1.5rem; } }
+
 /* ------------------- TABLET SECTION ------------------- */
-/* ------------- TABLET AND DESKTOP SECTION ------------- */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header__title-wrapper {
+    top: 47%; }
+  .header__title {
+    width: 450px; }
+  .header__subtitle {
+    margin: 20px auto 0;
+    font-size: 2rem; } }
+
 /* ------------------- DESKTOP SECTION ------------------ */
+@media only screen and (min-width: 992px) {
+  .header__title-wrapper {
+    top: 47%; }
+  .header__title {
+    width: 650px; }
+  .header__subtitle {
+    margin: 25px auto 0;
+    font-size: 2.5rem; } }
+
 @keyframes svg-line-animation {
   to {
     stroke-dashoffset: 0; } }
@@ -15373,6 +15424,12 @@ readers do not read off random characters that represent icons */
     fill: transparent; }
   to {
     fill: white; } }
+
+@keyframes subtitle-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1.0; } }
 
 /*========================================================================================================*/
 /*=========================================== Navbar Styling =============================================*/

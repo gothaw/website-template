@@ -23,6 +23,9 @@
   &__title {
     width: 700px;
     margin: 0 auto;
+    fill: transparent;
+    animation: svg-fill-animation duration(v-slow) ease forwards 2s;
+
     .st1 {
       stroke: color(white);
       stroke-width: 3;
@@ -30,56 +33,72 @@
     }
   }
 
-  &__svg-title{
-    fill: transparent;
-    animation: svg-fill-animation 0.5s ease forwards 2.5s;
-  }
-
   @for $i from 1 through 10 {
-    &__svg-title path:nth-child(#{$i}) {
+    &__svg-title-paths path:nth-child(#{$i}) {
       stroke-dasharray: #{nth($svg-title-path-lengths, $i)}px;
       stroke-dashoffset: #{nth($svg-title-path-lengths, $i)}px;
-      animation: svg-line-animation 1.5s ease forwards #{0.1*$i}s;
+      animation: svg-line-animation duration(v-slow) cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards #{0.1*$i}s;
     }
   }
 
-
   &__subtitle {
-    margin: 0 auto;
+    color: color(white);
+    opacity: 0;
+    animation: subtitle-animation duration(v-slow) ease-in-out forwards 2.5s;
   }
-
 
 }
 
 /* ------------------- MOBILE SECTION ------------------- */
 @include mobile {
   .header {
+    &__title-wrapper {
+      top: 52%;
+    }
 
+    &__title {
+      max-width: 250px;
+    }
+
+    &__subtitle {
+      margin: 15px auto 0;
+      font-size: subtitle-font-size(small)
+    }
   }
-}
-
-/* ------------- MOBILE AND TABLET SECTION -------------- */
-@include mobile-and-tablet {
-
 }
 
 /* ------------------- TABLET SECTION ------------------- */
 @include tablet {
   .header {
+    &__title-wrapper {
+      top: 47%;
+    }
 
-  }
-}
+    &__title {
+      width: 450px;
+    }
 
-/* ------------- TABLET AND DESKTOP SECTION ------------- */
-@include tablet-and-desktop {
-  .header {
-
+    &__subtitle {
+      margin: 20px auto 0;
+      font-size: subtitle-font-size(medium)
+    }
   }
 }
 
 /* ------------------- DESKTOP SECTION ------------------ */
 @include desktop {
   .header {
+    &__title-wrapper {
+      top: 47%;
+    }
 
+    &__title {
+      width: 650px;
+    }
+
+    &__subtitle {
+      margin: 25px auto 0;
+      font-size: subtitle-font-size(large);
+    }
   }
 }

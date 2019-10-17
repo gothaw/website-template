@@ -39,11 +39,10 @@ $text-font-size: (
         small: 1.0em,
         v-small: 0.875em
 );
-$heading-font-size: (
-        large: 2.7em,
-        medium: 2.2em,
-        small: 1.9em,
-        v-small: 1.5em
+$subtitle-font-size: (
+        large: 2.5rem,
+        medium: 2.0rem,
+        small: 1.5rem
 );
 
 // Path lengths in pixels for the letters in svg title: Lorem Media
@@ -75,8 +74,8 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
 }
 
 //function returns a font size from $heading-font-size map using map-get
-@function heading-font-size($font-size) {
-  @return map-get($heading-font-size, $font-size)
+@function subtitle-font-size($font-size) {
+  @return map-get($subtitle-font-size, $font-size)
 }
 
 //======================================================================================================
@@ -145,16 +144,27 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
 //============================================ Keyframes ===============================================
 //======================================================================================================
 
-@keyframes svg-line-animation{
-  to{
+@keyframes svg-line-animation {
+  to {
     stroke-dashoffset: 0;
   }
 }
+
 @keyframes svg-fill-animation {
-  from{
+  from {
     fill: transparent;
   }
-  to{
+  to {
     fill: color(white);
   }
 }
+
+@keyframes subtitle-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
