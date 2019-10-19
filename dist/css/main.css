@@ -15192,13 +15192,13 @@ readers do not read off random characters that represent icons */
   to {
     fill: white; } }
 
-@-webkit-keyframes subtitle-animation {
+@-webkit-keyframes opacity-animation {
   0% {
     opacity: 0; }
   100% {
     opacity: 1.0; } }
 
-@keyframes subtitle-animation {
+@keyframes opacity-animation {
   0% {
     opacity: 0; }
   100% {
@@ -15214,7 +15214,7 @@ readers do not read off random characters that represent icons */
   to {
     fill: white; } }
 
-@keyframes subtitle-animation {
+@keyframes opacity-animation {
   0% {
     opacity: 0; }
   100% {
@@ -15298,7 +15298,7 @@ readers do not read off random characters that represent icons */
   to {
     fill: white; } }
 
-@keyframes subtitle-animation {
+@keyframes opacity-animation {
   0% {
     opacity: 0; }
   100% {
@@ -15325,7 +15325,7 @@ readers do not read off random characters that represent icons */
     fill: transparent;
     -webkit-animation: svg-fill-animation 1s ease forwards 2s;
             animation: svg-fill-animation 1s ease forwards 2s; }
-    .header__title .st1 {
+    .header__title path {
       stroke: white;
       stroke-width: 3;
       stroke-miterlimit: 10; }
@@ -15382,8 +15382,25 @@ readers do not read off random characters that represent icons */
   .header__subtitle {
     color: white;
     opacity: 0;
-    -webkit-animation: subtitle-animation 1s ease-in-out forwards 2.5s;
-            animation: subtitle-animation 1s ease-in-out forwards 2.5s; }
+    -webkit-animation: opacity-animation 1s ease-in-out forwards 2.5s;
+            animation: opacity-animation 1s ease-in-out forwards 2.5s; }
+  .header__button-wrapper button {
+    opacity: 0;
+    -webkit-animation: opacity-animation 1s ease-in-out forwards 3s;
+            animation: opacity-animation 1s ease-in-out forwards 3s;
+    margin-top: 25px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: 0.3s all; }
+    .header__button-wrapper button:hover {
+      opacity: 1;
+      border-color: #258CD1 !important;
+      background-color: transparent !important; }
+    .header__button-wrapper button:active {
+      color: #258CD1 !important;
+      background-color: transparent !important; }
+    .header__button-wrapper button:focus {
+      box-shadow: none !important; }
 
 /* ------------------- MOBILE SECTION ------------------- */
 @media only screen and (max-width: 767px) {
@@ -15393,7 +15410,9 @@ readers do not read off random characters that represent icons */
     max-width: 250px; }
   .header__subtitle {
     margin: 15px auto 0;
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+  .header__button-wrapper button {
+    font-size: 1em; } }
 
 /* ------------------- TABLET SECTION ------------------- */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -15425,7 +15444,7 @@ readers do not read off random characters that represent icons */
   to {
     fill: white; } }
 
-@keyframes subtitle-animation {
+@keyframes opacity-animation {
   0% {
     opacity: 0; }
   100% {

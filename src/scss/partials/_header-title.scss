@@ -26,7 +26,7 @@
     fill: transparent;
     animation: svg-fill-animation duration(v-slow) ease forwards 2s;
 
-    .st1 {
+    path {
       stroke: color(white);
       stroke-width: 3;
       stroke-miterlimit: 10;
@@ -44,7 +44,31 @@
   &__subtitle {
     color: color(white);
     opacity: 0;
-    animation: subtitle-animation duration(v-slow) ease-in-out forwards 2.5s;
+    animation: opacity-animation duration(v-slow) ease-in-out forwards 2.5s;
+  }
+
+  &__button-wrapper button {
+    opacity: 0;
+    animation: opacity-animation duration(v-slow) ease-in-out forwards 3s;
+    margin-top: 25px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: duration(fast) all;
+
+    &:hover {
+      opacity: 1;
+      border-color: color(light-blue) !important;
+      background-color: transparent !important;
+    }
+
+    &:active {
+      color: color(light-blue) !important;
+      background-color: transparent !important;
+    }
+
+    &:focus {
+      box-shadow: none !important;
+    }
   }
 
 }
@@ -63,6 +87,10 @@
     &__subtitle {
       margin: 15px auto 0;
       font-size: subtitle-font-size(small)
+    }
+
+    &__button-wrapper button {
+      font-size: 1em;
     }
   }
 }
