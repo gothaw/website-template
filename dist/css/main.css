@@ -15388,7 +15388,6 @@ readers do not read off random characters that represent icons */
     opacity: 0;
     -webkit-animation: opacity-animation 1s ease-in-out forwards 3s;
             animation: opacity-animation 1s ease-in-out forwards 3s;
-    margin-top: 25px;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, 0.2);
     transition: 0.3s all; }
@@ -15410,9 +15409,7 @@ readers do not read off random characters that represent icons */
     max-width: 250px; }
   .header__subtitle {
     margin: 15px auto 0;
-    font-size: 1.5rem; }
-  .header__button-wrapper button {
-    font-size: 1em; } }
+    font-size: 1.5em; } }
 
 /* ------------------- TABLET SECTION ------------------- */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -15422,7 +15419,7 @@ readers do not read off random characters that represent icons */
     width: 450px; }
   .header__subtitle {
     margin: 20px auto 0;
-    font-size: 2rem; } }
+    font-size: 2em; } }
 
 /* ------------------- DESKTOP SECTION ------------------ */
 @media only screen and (min-width: 992px) {
@@ -15432,7 +15429,7 @@ readers do not read off random characters that represent icons */
     width: 650px; }
   .header__subtitle {
     margin: 25px auto 0;
-    font-size: 2.5rem; } }
+    font-size: 2.5em; } }
 
 @keyframes svg-line-animation {
   to {
@@ -15538,7 +15535,7 @@ readers do not read off random characters that represent icons */
     padding: 8px 16px;
     transition: 0.5s background-color; }
     .navbar--bg-color {
-      background-color: #2C3E50; }
+      background-color: rgba(44, 62, 80, 0.85); }
     .navbar .nav-item {
       padding: 0 25px; }
     .navbar__menu {
@@ -15576,12 +15573,76 @@ readers do not read off random characters that represent icons */
       .navbar .nav-link:not(.logo__link):active {
         color: #258CD1 !important; } }
 
+@keyframes svg-line-animation {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes svg-fill-animation {
+  from {
+    fill: transparent; }
+  to {
+    fill: white; } }
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1.0; } }
+
+/*======================================================================================================*/
+/*=================================== Home Introduction Styling ========================================*/
+/*======================================================================================================*/
+@media only screen and (max-width: 767px) {
+  .intro {
+    padding-top: 3rem; } }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .intro {
+    padding-top: 4.5rem; } }
+
+@media only screen and (min-width: 992px) {
+  .intro {
+    padding-top: 6rem; } }
+
+.intro__carousel-controls {
+  font-size: 1.8rem;
+  color: #2C3E50; }
+  .intro__carousel-controls i {
+    transition: all 0.5s; }
+  .intro__carousel-controls i:hover:not(.fas) {
+    color: #258CD1;
+    cursor: pointer; }
+
+@media only screen and (max-width: 767px) {
+  .intro .carousel__title {
+    font-size: 1.8em; } }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .intro .carousel__title {
+    font-size: 2em; } }
+
+@media only screen and (min-width: 992px) {
+  .intro .carousel__title {
+    font-size: 2.5em; } }
+
+@media only screen and (min-width: 768px) {
+  .intro .carousel__text {
+    font-size: 1.2em; } }
+
+/* ------------------- MOBILE SECTION ------------------- */
+/* --------------- MOBILE AND TABLET SECTION ------------ */
+/* ------------------- TABLET SECTION ------------------- */
+/* ------------------- DESKTOP SECTION ------------------ */
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
 /*========================================================================================================*/
-.test {
-  margin-bottom: 500px; }
-
 li {
   list-style-type: none; }
+
+@media only screen and (max-width: 767px) {
+  .btn-lg {
+    font-size: 1em; } }
+
+.test {
+  margin: 250px 0; }
 

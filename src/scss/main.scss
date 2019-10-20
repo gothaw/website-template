@@ -3,12 +3,20 @@
 @import "partials/header-video";
 @import "partials/header-title";
 @import "partials/navbar";
+@import "partials/home-intro";
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
 /*========================================================================================================*/
-.test{
-  margin-bottom: 500px;
-}
-li{
+li {
   list-style-type: none;
+}
+
+.btn-lg {
+  @include mobile {
+    font-size: 1em;
+  }
+}
+
+.test {
+  margin: 250px 0;
 }

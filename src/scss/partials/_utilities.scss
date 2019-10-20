@@ -19,6 +19,7 @@ $colors: (
         light-green: #18BC9C,
         light-blue: #258CD1,
         dark-blue: #2C3E50,
+        dark-blue-transparent: rgba(44, 62, 80, 0.85),
         transparent-white: rgba(255, 255, 255, 0.2),
 );
 $duration: (
@@ -34,15 +35,18 @@ $menu-font-size: (
         small: 1em
 );
 $text-font-size: (
-        large: 1.5em,
-        medium: 1.2em,
-        small: 1.0em,
-        v-small: 0.875em
+        large: 1.2em,
+        medium: 1.0em,
 );
 $subtitle-font-size: (
-        large: 2.5rem,
-        medium: 2.0rem,
-        small: 1.5rem
+        large: 2.5em,
+        medium: 2.0em,
+        small: 1.5em
+);
+$section-title: (
+        large: 2.5em,
+        medium: 2.0em,
+        small: 1.8em
 );
 
 // Path lengths in pixels for the letters in svg title: Lorem Media
@@ -76,6 +80,11 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
 //function returns a font size from $heading-font-size map using map-get
 @function subtitle-font-size($font-size) {
   @return map-get($subtitle-font-size, $font-size)
+}
+
+//function returns a font size from $section-title map using map-get
+@function section-title-font-size($font-size) {
+  @return map-get($section-title, $font-size)
 }
 
 //======================================================================================================
@@ -137,6 +146,42 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
   cursor: pointer;
   &:hover {
     color: color(light-blue);
+  }
+}
+
+//mixin for top spacing between website sections
+@mixin section-spacing {
+  @include mobile {
+    padding-top: 3rem;
+  }
+  @include tablet {
+    padding-top: 4.5rem;
+  }
+  @include desktop {
+    padding-top: 6rem;
+  }
+}
+
+//mixin for section title font size
+@mixin section-title-font-size {
+  @include mobile {
+    font-size: section-title-font-size(small);
+  }
+  @include tablet {
+    font-size: section-title-font-size(medium);
+  }
+  @include desktop {
+    font-size: section-title-font-size(large);
+  }
+}
+
+//mixin for website section text font size
+@mixin text-font-size {
+  @include mobile {
+    font-size: text-font-size(small);
+  }
+  @include tablet-and-desktop {
+    font-size: text-font-size(large);
   }
 }
 

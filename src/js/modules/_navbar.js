@@ -53,7 +53,7 @@ import {breakpoints} from "../modules/_variables.js";
 
     /**
      * @name        toggleMenuBackgroundColor
-     * @desc        Function toggles background color for the navigation bar if user scrolls below the banner of the website.
+     * @desc        Function toggles background color for the navigation bar if user scrolls on SVG title.
      */
     const toggleMenuBackgroundColor = () => {
         enquire.register(`screen and (min-width: ${breakpoints.desktopLower}px)`, {
@@ -62,7 +62,7 @@ import {breakpoints} from "../modules/_variables.js";
                     scrollTop = window.scrollY;
                 }, 500);
                 setTimeout(function () {
-                    if (scrollTop > headerBanner.offsetHeight - navBar.offsetHeight) {
+                    if (scrollTop > headerBanner.offsetHeight - navBar.offsetHeight - 500) {
                         navBar.classList.add("navbar--bg-color");
                     } else {
                         navBar.classList.remove("navbar--bg-color");
