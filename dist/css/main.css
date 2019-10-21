@@ -15609,9 +15609,29 @@ readers do not read off random characters that represent icons */
   color: #2C3E50; }
   .intro__carousel-controls i {
     transition: all 0.5s; }
-  .intro__carousel-controls i:hover:not(.fas) {
+  .intro__carousel-controls i:hover:not(.icon-selected) {
     color: #258CD1;
     cursor: pointer; }
+
+.intro__carousel-wrapper {
+  width: 100%;
+  overflow: hidden; }
+
+.intro__carousel {
+  position: relative;
+  width: 100%; }
+
+.intro .carousel__item {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  transition: left 0.7s; }
+
+.intro .carousel__item--selected {
+  position: relative;
+  top: 0;
+  left: 0; }
 
 @media only screen and (max-width: 767px) {
   .intro .carousel__title {
@@ -15630,9 +15650,15 @@ readers do not read off random characters that represent icons */
     font-size: 1.2em; } }
 
 /* ------------------- MOBILE SECTION ------------------- */
-/* --------------- MOBILE AND TABLET SECTION ------------ */
+@media only screen and (max-width: 767px) {
+  .intro__img-wrapper {
+    margin-top: 3rem; } }
+
 /* ------------------- TABLET SECTION ------------------- */
-/* ------------------- DESKTOP SECTION ------------------ */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .intro__img-wrapper {
+    margin-top: 4.5rem; } }
+
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
 /*========================================================================================================*/

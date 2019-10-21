@@ -5,42 +5,66 @@
 /*======================================================================================================*/
 .intro {
   @include section-spacing;
-  &__carousel-controls{
+
+  &__carousel-controls {
     font-size: 1.8rem;
     color: color(dark-blue);
-    i{
+
+    i {
       transition: all duration(medium);
     }
-    i:hover:not(.fas){
+
+    i:hover:not(.icon-selected) {
       color: color(light-blue);
       cursor: pointer;
     }
   }
-  .carousel__title{
-    @include section-title-font-size;
+
+  &__carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
   }
-  .carousel__text{
-    @include text-font-size;
+
+  &__carousel {
+    position: relative;
+    width: 100%;
+  }
+
+  .carousel {
+    &__item {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      transition: left duration(slow);
+    }
+    &__item--selected{
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    &__title {
+      @include section-title-font-size;
+    }
+
+    &__text {
+      @include text-font-size;
+    }
+
   }
 }
+
 /* ------------------- MOBILE SECTION ------------------- */
 @include mobile {
-
-}
-
-/* --------------- MOBILE AND TABLET SECTION ------------ */
-@include mobile-and-tablet {
-  .intro{
-
+  .intro__img-wrapper {
+    margin-top: 3rem;
   }
 }
 
 /* ------------------- TABLET SECTION ------------------- */
 @include tablet {
-
-}
-
-/* ------------------- DESKTOP SECTION ------------------ */
-@include desktop {
-
+  .intro__img-wrapper {
+    margin-top: 4.5rem;
+  }
 }

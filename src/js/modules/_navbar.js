@@ -60,8 +60,6 @@ import {breakpoints} from "../modules/_variables.js";
             match: function () {
                 setTimeout(function () {
                     scrollTop = window.scrollY;
-                }, 500);
-                setTimeout(function () {
                     if (scrollTop > headerBanner.offsetHeight - navBar.offsetHeight - 500) {
                         navBar.classList.add("navbar--bg-color");
                     } else {
