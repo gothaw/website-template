@@ -7,14 +7,14 @@
   @include section-spacing;
 
   &__carousel-controls {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: color(dark-blue);
 
     i {
-      transition: all duration(medium);
+      transition: color duration(fast);
     }
 
-    i:hover:not(.icon-selected) {
+    i:hover:not(.fas) {
       color: color(light-blue);
       cursor: pointer;
     }
@@ -27,21 +27,22 @@
 
   &__carousel {
     position: relative;
-    width: 100%;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    display: flex;
+    transition: left duration(fast);
   }
 
   .carousel {
     &__item {
-      position: absolute;
-      top: 0;
-      left: -100%;
       width: 100%;
-      transition: left duration(slow);
+      transition: opacity duration(v-slow);
+      opacity: 0.1;
     }
     &__item--selected{
-      position: relative;
-      top: 0;
-      left: 0;
+      opacity: 1;
     }
 
     &__title {

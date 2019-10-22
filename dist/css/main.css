@@ -15605,11 +15605,11 @@ readers do not read off random characters that represent icons */
     padding-top: 6rem; } }
 
 .intro__carousel-controls {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #2C3E50; }
   .intro__carousel-controls i {
-    transition: all 0.5s; }
-  .intro__carousel-controls i:hover:not(.icon-selected) {
+    transition: color 0.3s; }
+  .intro__carousel-controls i:hover:not(.fas) {
     color: #258CD1;
     cursor: pointer; }
 
@@ -15619,19 +15619,20 @@ readers do not read off random characters that represent icons */
 
 .intro__carousel {
   position: relative;
-  width: 100%; }
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  display: flex;
+  transition: left 0.3s; }
 
 .intro .carousel__item {
-  position: absolute;
-  top: 0;
-  left: -100%;
   width: 100%;
-  transition: left 0.7s; }
+  transition: opacity 1s;
+  opacity: 0.1; }
 
 .intro .carousel__item--selected {
-  position: relative;
-  top: 0;
-  left: 0; }
+  opacity: 1; }
 
 @media only screen and (max-width: 767px) {
   .intro .carousel__title {
