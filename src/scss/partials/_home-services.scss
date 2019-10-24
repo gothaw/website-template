@@ -1,0 +1,42 @@
+//============================================= Imports ==================================================
+@import '_utilities';
+/*======================================================================================================*/
+/*====================================== Home Services Styling =========================================*/
+/*======================================================================================================*/
+.home__services{
+  @include section-spacing;
+  .services__home-description{
+    background-color: color(dark-blue);
+    color: color(white);
+  }
+  .services__home-title{
+    @include section-title-font-size;
+  }
+  .services__home-text{
+    @include text-font-size;
+  }
+}
+
+/* ------------------- MOBILE SECTION ------------------- */
+@include mobile {
+
+}
+
+/* ------------- MOBILE AND TABLET SECTION -------------- */
+@include mobile-and-tablet {
+  .home__services{
+    .services__home-text{
+      padding-top: 24px;
+    }
+  }
+}
+
+/* ------------------- TABLET SECTION ------------------- */
+@include tablet {
+
+}
+
+/* ----------------- DESKTOP SECTION ------------------- */
+@include desktop {
+
+}

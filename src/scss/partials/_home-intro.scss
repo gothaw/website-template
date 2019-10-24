@@ -59,13 +59,13 @@
 /* ------------------- MOBILE SECTION ------------------- */
 @include mobile {
   .intro__img-wrapper {
-    margin-top: 3rem;
+    margin-top: 20px;
   }
 }
 
 /* ------------------- TABLET SECTION ------------------- */
 @include tablet {
   .intro__img-wrapper {
-    margin-top: 4.5rem;
+    margin-top: 40px;
   }
 }

@@ -15653,13 +15653,72 @@ readers do not read off random characters that represent icons */
 /* ------------------- MOBILE SECTION ------------------- */
 @media only screen and (max-width: 767px) {
   .intro__img-wrapper {
-    margin-top: 3rem; } }
+    margin-top: 20px; } }
 
 /* ------------------- TABLET SECTION ------------------- */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .intro__img-wrapper {
-    margin-top: 4.5rem; } }
+    margin-top: 40px; } }
 
+@keyframes svg-line-animation {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes svg-fill-animation {
+  from {
+    fill: transparent; }
+  to {
+    fill: white; } }
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1.0; } }
+
+/*======================================================================================================*/
+/*====================================== Home Services Styling =========================================*/
+/*======================================================================================================*/
+@media only screen and (max-width: 767px) {
+  .home__services {
+    padding-top: 3rem; } }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .home__services {
+    padding-top: 4.5rem; } }
+
+@media only screen and (min-width: 992px) {
+  .home__services {
+    padding-top: 6rem; } }
+
+.home__services .services__home-description {
+  background-color: #2C3E50;
+  color: white; }
+
+@media only screen and (max-width: 767px) {
+  .home__services .services__home-title {
+    font-size: 1.8em; } }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .home__services .services__home-title {
+    font-size: 2em; } }
+
+@media only screen and (min-width: 992px) {
+  .home__services .services__home-title {
+    font-size: 2.5em; } }
+
+@media only screen and (min-width: 768px) {
+  .home__services .services__home-text {
+    font-size: 1.2em; } }
+
+/* ------------------- MOBILE SECTION ------------------- */
+/* ------------- MOBILE AND TABLET SECTION -------------- */
+@media only screen and (max-width: 991px) {
+  .home__services .services__home-text {
+    padding-top: 24px; } }
+
+/* ------------------- TABLET SECTION ------------------- */
+/* ----------------- DESKTOP SECTION ------------------- */
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
 /*========================================================================================================*/
