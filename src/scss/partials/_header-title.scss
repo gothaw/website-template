@@ -7,20 +7,20 @@
   position: relative;
   margin-top: -110px;
 
-  &__title-wrapper {
+  &__heading-wrapper {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
-  &__title, &__subtitle {
+  &__heading, &__subheading {
     text-align: center;
     color: color(white);
     font-family: 'Kaushan Script', cursive;
   }
 
-  &__title {
+  &__heading {
     width: 700px;
     margin: 0 auto;
     fill: transparent;
@@ -41,8 +41,7 @@
     }
   }
 
-  &__subtitle {
-    color: color(white);
+  &__subheading {
     opacity: 0;
     animation: opacity-animation duration(v-slow) ease-in-out forwards 2.5s;
   }
@@ -75,17 +74,17 @@
 /* ------------------- MOBILE SECTION ------------------- */
 @include mobile {
   .header {
-    &__title-wrapper {
+    &__heading-wrapper {
       top: 52%;
     }
 
-    &__title {
+    &__heading {
       max-width: 250px;
     }
 
-    &__subtitle {
+    &__subheading {
       margin: 15px auto 0;
-      font-size: subtitle-font-size(small)
+      font-size: subtitle-font-size(small);
     }
   }
 }
@@ -93,17 +92,17 @@
 /* ------------------- TABLET SECTION ------------------- */
 @include tablet {
   .header {
-    &__title-wrapper {
+    &__heading-wrapper {
       top: 47%;
     }
 
-    &__title {
+    &__heading {
       width: 450px;
     }
 
     &__subtitle {
       margin: 20px auto 0;
-      font-size: subtitle-font-size(medium)
+      font-size: subtitle-font-size(medium);
     }
   }
 }
@@ -111,15 +110,15 @@
 /* ------------------- DESKTOP SECTION ------------------ */
 @include desktop {
   .header {
-    &__title-wrapper {
+    &__heading-wrapper {
       top: 47%;
     }
 
-    &__title {
+    &__heading {
       width: 650px;
     }
 
-    &__subtitle {
+    &__subheading {
       margin: 25px auto 0;
       font-size: subtitle-font-size(large);
     }

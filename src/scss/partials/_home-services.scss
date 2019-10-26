@@ -3,49 +3,70 @@
 /*======================================================================================================*/
 /*====================================== Home Services Styling =========================================*/
 /*======================================================================================================*/
-.home__services{
+.home-services {
   @include section-spacing;
-  .services__home-description{
+
+  &__description {
     background-color: color(dark-blue);
     color: color(white);
+
+    .description__heading {
+      @include section-title-font-size;
+    }
+
+    .description__text {
+      @include text-font-size;
+    }
   }
-  .services__home-title{
-    @include section-title-font-size;
-  }
-  .services__home-text{
-    @include text-font-size;
-  }
-  .services__home-video-wrapper{
+
+  &__video-wrapper {
     position: relative;
   }
-  .services__home-video{
+
+  &__video {
     width: 100%;
     display: block;
     object-fit: cover;
   }
-  .services__home-video-controls{
+
+  &__video-controls {
     @include video-controls-wrapper;
-    .home-video-controls__control{
+
+    .video-controls__control {
       @include video-controls;
     }
+  }
+
+  &__video-heading-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__video-heading {
+    @include subheading;
   }
 }
 
 /* ------------------- MOBILE SECTION ------------------- */
 @include mobile {
-  .services__home-video-wrapper{
-    background: url("../../../dist/img/services-videos-posters/services-video-1-poster-mobile.jpg") no-repeat 50% 50%;
-    background-size: cover;
-  }
-  .services__home-video{
-    height: 350px;
+  .home-services {
+    &__video-wrapper {
+      background: url("../../../dist/img/services-videos-posters/services-video-1-poster-mobile.jpg") no-repeat 50% 50%;
+      background-size: cover;
+    }
+
+    &__video {
+      height: 350px;
+    }
   }
 }
 
 /* ------------- MOBILE AND TABLET SECTION -------------- */
 @include mobile-and-tablet {
-  .home__services{
-    .services__home-text{
+  .home-services {
+    .description__text {
       padding-top: 24px;
     }
   }
@@ -53,22 +74,28 @@
 
 /* ------------------- TABLET SECTION ------------------- */
 @include tablet {
-  .services__home-video-wrapper{
-    background: url("../../../dist/img/services-videos-posters/services-video-1-poster-tablet.jpg") no-repeat 50% 50%;
-    background-size: cover;
-  }
-  .services__home-video{
-    height: 450px;
+  .home-services {
+    &__video-wrapper {
+      background: url("../../../dist/img/services-videos-posters/services-video-1-poster-tablet.jpg") no-repeat 50% 50%;
+      background-size: cover;
+    }
+
+    &__video {
+      height: 450px;
+    }
   }
 }
 
 /* ----------------- DESKTOP SECTION ------------------- */
 @include desktop {
-  .services__home-video-wrapper{
-    background: url("../../../dist/img/services-videos-posters/services-video-1-poster-desktop.jpg") no-repeat 50% 50%;
-    background-size: cover;
-  }
-  .services__home-video{
-    height: 700px;
+  .home-services {
+    &__video-wrapper {
+      background: url("../../../dist/img/services-videos-posters/services-video-1-poster-desktop.jpg") no-repeat 50% 50%;
+      background-size: cover;
+    }
+
+    &__video {
+      height: 700px;
+    }
   }
 }

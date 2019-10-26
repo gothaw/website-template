@@ -39,6 +39,7 @@ $text-font-size: (
         medium: 1.0em,
 );
 $subtitle-font-size: (
+        v-large: 3.0em,
         large: 2.5em,
         medium: 2.0em,
         small: 1.5em
@@ -173,6 +174,22 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
   }
   @include desktop {
     padding-top: 6rem;
+  }
+}
+
+//mixin for a subheading over videos or images
+@mixin subheading {
+  text-align: center;
+  color: color(white);
+  font-family: 'Kaushan Script', cursive;
+  @include mobile{
+    font-size: subtitle-font-size(small);
+  }
+  @include tablet{
+    font-size: subtitle-font-size(medium);
+  }
+  @include desktop{
+    font-size: subtitle-font-size(v-large);
   }
 }
 

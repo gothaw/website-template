@@ -15308,22 +15308,22 @@ readers do not read off random characters that represent icons */
 .header {
   position: relative;
   margin-top: -110px; }
-  .header__title-wrapper {
+  .header__heading-wrapper {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%); }
-  .header__title, .header__subtitle {
+  .header__heading, .header__subheading {
     text-align: center;
     color: white;
     font-family: 'Kaushan Script', cursive; }
-  .header__title {
+  .header__heading {
     width: 700px;
     margin: 0 auto;
     fill: transparent;
     -webkit-animation: svg-fill-animation 1s ease forwards 2s;
             animation: svg-fill-animation 1s ease forwards 2s; }
-    .header__title path {
+    .header__heading path {
       stroke: white;
       stroke-width: 3;
       stroke-miterlimit: 10; }
@@ -15377,8 +15377,7 @@ readers do not read off random characters that represent icons */
     stroke-dashoffset: 333.19864px;
     -webkit-animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 1s;
             animation: svg-line-animation 1s cubic-bezier(0.4, 0.8, 0.7, 0.3) forwards 1s; }
-  .header__subtitle {
-    color: white;
+  .header__subheading {
     opacity: 0;
     -webkit-animation: opacity-animation 1s ease-in-out forwards 2.5s;
             animation: opacity-animation 1s ease-in-out forwards 2.5s; }
@@ -15401,19 +15400,19 @@ readers do not read off random characters that represent icons */
 
 /* ------------------- MOBILE SECTION ------------------- */
 @media only screen and (max-width: 767px) {
-  .header__title-wrapper {
+  .header__heading-wrapper {
     top: 52%; }
-  .header__title {
+  .header__heading {
     max-width: 250px; }
-  .header__subtitle {
+  .header__subheading {
     margin: 15px auto 0;
     font-size: 1.5em; } }
 
 /* ------------------- TABLET SECTION ------------------- */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .header__title-wrapper {
+  .header__heading-wrapper {
     top: 47%; }
-  .header__title {
+  .header__heading {
     width: 450px; }
   .header__subtitle {
     margin: 20px auto 0;
@@ -15421,11 +15420,11 @@ readers do not read off random characters that represent icons */
 
 /* ------------------- DESKTOP SECTION ------------------ */
 @media only screen and (min-width: 992px) {
-  .header__title-wrapper {
+  .header__heading-wrapper {
     top: 47%; }
-  .header__title {
+  .header__heading {
     width: 650px; }
-  .header__subtitle {
+  .header__subheading {
     margin: 25px auto 0;
     font-size: 2.5em; } }
 
@@ -15678,58 +15677,54 @@ readers do not read off random characters that represent icons */
 /*====================================== Home Services Styling =========================================*/
 /*======================================================================================================*/
 @media only screen and (max-width: 767px) {
-  .home__services {
+  .home-services {
     padding-top: 3rem; } }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .home__services {
+  .home-services {
     padding-top: 4.5rem; } }
 
 @media only screen and (min-width: 992px) {
-  .home__services {
+  .home-services {
     padding-top: 6rem; } }
 
-.home__services .services__home-description {
+.home-services__description {
   background-color: #2C3E50;
   color: white; }
+  @media only screen and (max-width: 767px) {
+    .home-services__description .description__heading {
+      font-size: 1.8em; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .home-services__description .description__heading {
+      font-size: 2em; } }
+  @media only screen and (min-width: 992px) {
+    .home-services__description .description__heading {
+      font-size: 2.5em; } }
+  @media only screen and (min-width: 768px) {
+    .home-services__description .description__text {
+      font-size: 1.2em; } }
 
-@media only screen and (max-width: 767px) {
-  .home__services .services__home-title {
-    font-size: 1.8em; } }
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .home__services .services__home-title {
-    font-size: 2em; } }
-
-@media only screen and (min-width: 992px) {
-  .home__services .services__home-title {
-    font-size: 2.5em; } }
-
-@media only screen and (min-width: 768px) {
-  .home__services .services__home-text {
-    font-size: 1.2em; } }
-
-.home__services .services__home-video-wrapper {
+.home-services__video-wrapper {
   position: relative; }
 
-.home__services .services__home-video {
+.home-services__video {
   width: 100%;
   display: block;
   -o-object-fit: cover;
      object-fit: cover; }
 
-.home__services .services__home-video-controls {
+.home-services__video-controls {
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 5; }
   @media only screen and (max-width: 767px) {
-    .home__services .services__home-video-controls {
+    .home-services__video-controls {
       padding: 0 0 16px 16px; } }
   @media only screen and (min-width: 768px) {
-    .home__services .services__home-video-controls {
+    .home-services__video-controls {
       padding: 0 0 31px 31px; } }
-  .home__services .services__home-video-controls .home-video-controls__control {
+  .home-services__video-controls .video-controls__control {
     color: white;
     font-size: 12px;
     padding: 4px 12px;
@@ -15738,36 +15733,56 @@ readers do not read off random characters that represent icons */
     margin-right: 5px;
     transition: 0.5s color;
     cursor: pointer; }
-    .home__services .services__home-video-controls .home-video-controls__control:hover {
+    .home-services__video-controls .video-controls__control:hover {
       color: #258CD1; }
+
+.home-services__video-heading-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.home-services__video-heading {
+  text-align: center;
+  color: white;
+  font-family: 'Kaushan Script', cursive; }
+  @media only screen and (max-width: 767px) {
+    .home-services__video-heading {
+      font-size: 1.5em; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .home-services__video-heading {
+      font-size: 2em; } }
+  @media only screen and (min-width: 992px) {
+    .home-services__video-heading {
+      font-size: 3em; } }
 
 /* ------------------- MOBILE SECTION ------------------- */
 @media only screen and (max-width: 767px) {
-  .services__home-video-wrapper {
+  .home-services__video-wrapper {
     background: url("../../../dist/img/services-videos-posters/services-video-1-poster-mobile.jpg") no-repeat 50% 50%;
     background-size: cover; }
-  .services__home-video {
+  .home-services__video {
     height: 350px; } }
 
 /* ------------- MOBILE AND TABLET SECTION -------------- */
 @media only screen and (max-width: 991px) {
-  .home__services .services__home-text {
+  .home-services .description__text {
     padding-top: 24px; } }
 
 /* ------------------- TABLET SECTION ------------------- */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .services__home-video-wrapper {
+  .home-services__video-wrapper {
     background: url("../../../dist/img/services-videos-posters/services-video-1-poster-tablet.jpg") no-repeat 50% 50%;
     background-size: cover; }
-  .services__home-video {
+  .home-services__video {
     height: 450px; } }
 
 /* ----------------- DESKTOP SECTION ------------------- */
 @media only screen and (min-width: 992px) {
-  .services__home-video-wrapper {
+  .home-services__video-wrapper {
     background: url("../../../dist/img/services-videos-posters/services-video-1-poster-desktop.jpg") no-repeat 50% 50%;
     background-size: cover; }
-  .services__home-video {
+  .home-services__video {
     height: 700px; } }
 
 /*========================================================================================================*/
