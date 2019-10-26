@@ -9,7 +9,6 @@
 
   &__video {
     width: 100%;
-    height: 800px;
     display: block;
     object-fit: cover;
   }
@@ -25,10 +24,7 @@
   }
 
   &__video-controls {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 5;
+    @include video-controls-wrapper;
 
     .video-controls__control {
       @include video-controls;
@@ -39,15 +35,11 @@
 /* ------------------- MOBILE SECTION ------------------- */
 @include mobile {
   .header {
-    background: url("../../../dist/img/header-poster/header-video-poster-mobile.jpg") no-repeat 50% 50%;
+    background: url("../../../dist/img/header-poster/header-video-1-poster-mobile.jpg") no-repeat 50% 50%;
     background-size: cover;
 
     &__video {
       height: 400px;
-    }
-
-    &__video-controls {
-      padding: 0 0 16px 16px;
     }
   }
 }
@@ -55,7 +47,7 @@
 /* ------------------- TABLET SECTION ------------------- */
 @include tablet {
   .header {
-    background: url("../../../dist/img/header-poster/header-video-poster-tablet.jpg") no-repeat 50% 50%;
+    background: url("../../../dist/img/header-poster/header-video-1-poster-tablet.jpg") no-repeat 50% 50%;
     background-size: cover;
 
     &__video {
@@ -64,19 +56,10 @@
   }
 }
 
-/* ------------- TABLET AND DESKTOP SECTION ------------- */
-@include tablet-and-desktop {
-  .header {
-    &__video-controls {
-      padding: 0 0 31px 31px;
-    }
-  }
-}
-
 /* ------------------- DESKTOP SECTION ------------------ */
 @include desktop {
   .header {
-    background: url("../../../dist/img/header-poster/header-video-poster-desktop.jpg") no-repeat 50% 50%;
+    background: url("../../../dist/img/header-poster/header-video-1-poster-desktop.jpg") no-repeat 50% 50%;
     background-size: cover;
 
     &__video {

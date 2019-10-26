@@ -15,11 +15,31 @@
   .services__home-text{
     @include text-font-size;
   }
+  .services__home-video-wrapper{
+    position: relative;
+  }
+  .services__home-video{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  .services__home-video-controls{
+    @include video-controls-wrapper;
+    .home-video-controls__control{
+      @include video-controls;
+    }
+  }
 }
 
 /* ------------------- MOBILE SECTION ------------------- */
 @include mobile {
-
+  .services__home-video-wrapper{
+    background: url("../../../dist/img/services-videos-posters/services-video-1-poster-mobile.jpg") no-repeat 50% 50%;
+    background-size: cover;
+  }
+  .services__home-video{
+    height: 350px;
+  }
 }
 
 /* ------------- MOBILE AND TABLET SECTION -------------- */
@@ -33,10 +53,22 @@
 
 /* ------------------- TABLET SECTION ------------------- */
 @include tablet {
-
+  .services__home-video-wrapper{
+    background: url("../../../dist/img/services-videos-posters/services-video-1-poster-tablet.jpg") no-repeat 50% 50%;
+    background-size: cover;
+  }
+  .services__home-video{
+    height: 450px;
+  }
 }
 
 /* ----------------- DESKTOP SECTION ------------------- */
 @include desktop {
-
+  .services__home-video-wrapper{
+    background: url("../../../dist/img/services-videos-posters/services-video-1-poster-desktop.jpg") no-repeat 50% 50%;
+    background-size: cover;
+  }
+  .services__home-video{
+    height: 700px;
+  }
 }

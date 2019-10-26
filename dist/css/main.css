@@ -15228,7 +15228,6 @@ readers do not read off random characters that represent icons */
   margin-top: -110px; }
   .header__video {
     width: 100%;
-    height: 800px;
     display: block;
     -o-object-fit: cover;
        object-fit: cover; }
@@ -15245,6 +15244,12 @@ readers do not read off random characters that represent icons */
     bottom: 0;
     left: 0;
     z-index: 5; }
+    @media only screen and (max-width: 767px) {
+      .header__video-controls {
+        padding: 0 0 16px 16px; } }
+    @media only screen and (min-width: 768px) {
+      .header__video-controls {
+        padding: 0 0 31px 31px; } }
     .header__video-controls .video-controls__control {
       color: white;
       font-size: 12px;
@@ -15260,30 +15265,23 @@ readers do not read off random characters that represent icons */
 /* ------------------- MOBILE SECTION ------------------- */
 @media only screen and (max-width: 767px) {
   .header {
-    background: url("../../../dist/img/header-poster/header-video-poster-mobile.jpg") no-repeat 50% 50%;
+    background: url("../../../dist/img/header-poster/header-video-1-poster-mobile.jpg") no-repeat 50% 50%;
     background-size: cover; }
     .header__video {
-      height: 400px; }
-    .header__video-controls {
-      padding: 0 0 16px 16px; } }
+      height: 400px; } }
 
 /* ------------------- TABLET SECTION ------------------- */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header {
-    background: url("../../../dist/img/header-poster/header-video-poster-tablet.jpg") no-repeat 50% 50%;
+    background: url("../../../dist/img/header-poster/header-video-1-poster-tablet.jpg") no-repeat 50% 50%;
     background-size: cover; }
     .header__video {
       height: 600px; } }
 
-/* ------------- TABLET AND DESKTOP SECTION ------------- */
-@media only screen and (min-width: 768px) {
-  .header__video-controls {
-    padding: 0 0 31px 31px; } }
-
 /* ------------------- DESKTOP SECTION ------------------ */
 @media only screen and (min-width: 992px) {
   .header {
-    background: url("../../../dist/img/header-poster/header-video-poster-desktop.jpg") no-repeat 50% 50%;
+    background: url("../../../dist/img/header-poster/header-video-1-poster-desktop.jpg") no-repeat 50% 50%;
     background-size: cover; }
     .header__video {
       height: 800px; } }
@@ -15711,14 +15709,67 @@ readers do not read off random characters that represent icons */
   .home__services .services__home-text {
     font-size: 1.2em; } }
 
+.home__services .services__home-video-wrapper {
+  position: relative; }
+
+.home__services .services__home-video {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+.home__services .services__home-video-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5; }
+  @media only screen and (max-width: 767px) {
+    .home__services .services__home-video-controls {
+      padding: 0 0 16px 16px; } }
+  @media only screen and (min-width: 768px) {
+    .home__services .services__home-video-controls {
+      padding: 0 0 31px 31px; } }
+  .home__services .services__home-video-controls .home-video-controls__control {
+    color: white;
+    font-size: 12px;
+    padding: 4px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.25rem;
+    margin-right: 5px;
+    transition: 0.5s color;
+    cursor: pointer; }
+    .home__services .services__home-video-controls .home-video-controls__control:hover {
+      color: #258CD1; }
+
 /* ------------------- MOBILE SECTION ------------------- */
+@media only screen and (max-width: 767px) {
+  .services__home-video-wrapper {
+    background: url("../../../dist/img/services-videos-posters/services-video-1-poster-mobile.jpg") no-repeat 50% 50%;
+    background-size: cover; }
+  .services__home-video {
+    height: 350px; } }
+
 /* ------------- MOBILE AND TABLET SECTION -------------- */
 @media only screen and (max-width: 991px) {
   .home__services .services__home-text {
     padding-top: 24px; } }
 
 /* ------------------- TABLET SECTION ------------------- */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .services__home-video-wrapper {
+    background: url("../../../dist/img/services-videos-posters/services-video-1-poster-tablet.jpg") no-repeat 50% 50%;
+    background-size: cover; }
+  .services__home-video {
+    height: 450px; } }
+
 /* ----------------- DESKTOP SECTION ------------------- */
+@media only screen and (min-width: 992px) {
+  .services__home-video-wrapper {
+    background: url("../../../dist/img/services-videos-posters/services-video-1-poster-desktop.jpg") no-repeat 50% 50%;
+    background-size: cover; }
+  .services__home-video {
+    height: 700px; } }
+
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
 /*========================================================================================================*/
