@@ -15743,6 +15743,8 @@ readers do not read off random characters that represent icons */
   transform: translate(-50%, -50%); }
 
 .home-services__video-heading {
+  opacity: 0;
+  transition: opacity 2s;
   text-align: center;
   color: white;
   font-family: 'Kaushan Script', cursive; }
@@ -15755,6 +15757,11 @@ readers do not read off random characters that represent icons */
   @media only screen and (min-width: 992px) {
     .home-services__video-heading {
       font-size: 3em; } }
+  .home-services__video-heading--show {
+    opacity: 1; }
+
+.home-services__img-wrapper {
+  text-align: center; }
 
 /* ------------------- MOBILE SECTION ------------------- */
 @media only screen and (max-width: 767px) {
@@ -15767,7 +15774,9 @@ readers do not read off random characters that represent icons */
 /* ------------- MOBILE AND TABLET SECTION -------------- */
 @media only screen and (max-width: 991px) {
   .home-services .description__text {
-    padding-top: 24px; } }
+    padding-top: 24px; }
+  .home-services__gallery-wrapper {
+    flex-wrap: wrap; } }
 
 /* ------------------- TABLET SECTION ------------------- */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -15776,6 +15785,12 @@ readers do not read off random characters that represent icons */
     background-size: cover; }
   .home-services__video {
     height: 450px; } }
+
+/* --------------TABLET AND DESKTOP SECTION ------------ */
+@media only screen and (min-width: 768px) {
+  .home-services__gallery-wrapper {
+    display: flex;
+    justify-content: space-between; } }
 
 /* ----------------- DESKTOP SECTION ------------------- */
 @media only screen and (min-width: 992px) {

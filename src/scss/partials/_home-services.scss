@@ -45,7 +45,17 @@
   }
 
   &__video-heading {
+    opacity: 0;
+    transition: opacity duration(x-slow);
     @include subheading;
+
+    &--show {
+      opacity: 1;
+    }
+  }
+
+  &__img-wrapper {
+    text-align: center;
   }
 }
 
@@ -69,6 +79,10 @@
     .description__text {
       padding-top: 24px;
     }
+
+    &__gallery-wrapper {
+      flex-wrap: wrap;
+    }
   }
 }
 
@@ -82,6 +96,20 @@
 
     &__video {
       height: 450px;
+    }
+
+    &__img-wrapper {
+      //width: 50%;
+    }
+  }
+}
+
+/* --------------TABLET AND DESKTOP SECTION ------------ */
+@include tablet-and-desktop {
+  .home-services {
+    &__gallery-wrapper {
+      display: flex;
+      justify-content: space-between;
     }
   }
 }

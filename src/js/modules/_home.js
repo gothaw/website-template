@@ -1,17 +1,22 @@
 (function () {
     // variables
+    // Carousel Variables
     const carousel = document.querySelector(".intro__carousel");
     const carouselItems = document.querySelectorAll(".carousel__item");
     const carouselControls = document.querySelectorAll(".intro__carousel-controls i");
+    // Home services variables
     const homeServices = document.querySelector(".home-services");
     const servicesVideo = document.querySelector(".home-services__video");
     const videoControls = homeServices.querySelectorAll(".video-controls__control[data-control]");
     const playAndPauseIcon = homeServices.querySelector(".video-controls__control[data-control=play-pause] .fas");
+    const homeServicesVideoHeading = homeServices.querySelector(".home-services__video-heading");
 
     // Index of the Carousel Item/Carousel Control that is currently shown/highlighted
     let currentIndex = 0;
 
     let servicesVideoPlaying = false;
+
+    let homeServicesVideoHeadingShown = false;
 
     /**
      * @name        getChildIndexInParent
@@ -113,10 +118,23 @@
         }
     };
 
+    const animateHeadings = () => {
+        setTimeout(function () {
+           if(homeServicesVideoHeading.getBoundingClientRect().top<window.innerHeight){
+               homeServicesVideoHeading.classList.add("home-services__video-heading--show");
+               homeServicesVideoHeadingShown = true;
+           }
+           if(!homeServicesVideoHeadingShown) {
+               animateHeadings();
+           }
+        }, 500);
+    };
+
 
     const init = () => {
         animateCarousel();
         bindVideoControls();
+        animateHeadings()
     };
 
     window.addEventListener("load", init);
