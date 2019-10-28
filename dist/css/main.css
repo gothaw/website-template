@@ -15761,7 +15761,25 @@ readers do not read off random characters that represent icons */
     opacity: 1; }
 
 .home-services__img-wrapper {
-  text-align: center; }
+  position: relative;
+  text-align: center;
+  cursor: pointer; }
+  .home-services__img-wrapper:hover .home-services__img-overlay {
+    opacity: 1; }
+
+.home-services__img-overlay {
+  background-color: rgba(44, 62, 80, 0.85);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  color: white;
+  transition: opacity 0.7s;
+  opacity: 0; }
+  @media only screen and (min-width: 768px) {
+    .home-services__img-overlay span {
+      font-size: 1.2em; } }
 
 /* ------------------- MOBILE SECTION ------------------- */
 @media only screen and (max-width: 767px) {
@@ -15784,7 +15802,9 @@ readers do not read off random characters that represent icons */
     background: url("../../../dist/img/services-videos-posters/services-video-1-poster-tablet.jpg") no-repeat 50% 50%;
     background-size: cover; }
   .home-services__video {
-    height: 450px; } }
+    height: 450px; }
+  .home-services__img-wrapper {
+    width: 50%; } }
 
 /* --------------TABLET AND DESKTOP SECTION ------------ */
 @media only screen and (min-width: 768px) {
@@ -15798,7 +15818,9 @@ readers do not read off random characters that represent icons */
     background: url("../../../dist/img/services-videos-posters/services-video-1-poster-desktop.jpg") no-repeat 50% 50%;
     background-size: cover; }
   .home-services__video {
-    height: 700px; } }
+    height: 700px; }
+  .home-services__img-wrapper {
+    width: 100%; } }
 
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
@@ -15809,6 +15831,10 @@ li {
 @media only screen and (max-width: 767px) {
   .btn-lg {
     font-size: 1em; } }
+
+.img-responsive {
+  width: 100%;
+  height: auto; }
 
 .test {
   margin: 250px 0; }

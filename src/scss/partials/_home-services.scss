@@ -55,7 +55,21 @@
   }
 
   &__img-wrapper {
+    position: relative;
     text-align: center;
+    cursor: pointer;
+    &:hover .home-services__img-overlay{
+      opacity: 1;
+    }
+  }
+
+  &__img-overlay {
+    @include img-overlay;
+    transition: opacity duration(slow);
+    opacity: 0;
+    span{
+      @include text-font-size;
+    }
   }
 }
 
@@ -99,7 +113,7 @@
     }
 
     &__img-wrapper {
-      //width: 50%;
+      width: 50%;
     }
   }
 }
@@ -124,6 +138,10 @@
 
     &__video {
       height: 700px;
+    }
+
+    &__img-wrapper {
+      width: 100%;
     }
   }
 }
