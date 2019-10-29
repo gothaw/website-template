@@ -15764,22 +15764,61 @@ readers do not read off random characters that represent icons */
   position: relative;
   text-align: center;
   cursor: pointer; }
-  .home-services__img-wrapper:hover .home-services__img-overlay {
-    opacity: 1; }
 
 .home-services__img-overlay {
-  background-color: rgba(44, 62, 80, 0.85);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 15px;
   color: white;
-  transition: opacity 0.7s;
-  opacity: 0; }
+  padding: 15px; }
+  @media only screen and (max-width: 767px) {
+    .home-services__img-overlay {
+      background-color: #2C3E50; } }
+  @media only screen and (min-width: 768px) {
+    .home-services__img-overlay {
+      background-color: rgba(44, 62, 80, 0.85);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      transition: opacity 0.7s;
+      opacity: 0; } }
   @media only screen and (min-width: 768px) {
     .home-services__img-overlay span {
       font-size: 1.2em; } }
+
+.home-services__lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0 50px; }
+  .home-services__lightbox .lightbox__img-wrapper {
+    position: relative;
+    margin: 65px auto 0; }
+  .home-services__lightbox .lightbox__description {
+    text-align: center;
+    color: white;
+    padding-top: 35px;
+    width: 80%;
+    margin: 0 auto; }
+    @media only screen and (min-width: 768px) {
+      .home-services__lightbox .lightbox__description span, .home-services__lightbox .lightbox__description p {
+        font-size: 1.2em; } }
+    .home-services__lightbox .lightbox__description p {
+      padding-top: 10px; }
+  .home-services__lightbox .lightbox__arrow {
+    color: white;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    padding: 10px;
+    transform: translateY(-50%);
+    font-size: 2.2em; }
+    .home-services__lightbox .lightbox__arrow--left {
+      left: -75px; }
+    .home-services__lightbox .lightbox__arrow--right {
+      right: -75px; }
 
 /* ------------------- MOBILE SECTION ------------------- */
 @media only screen and (max-width: 767px) {
@@ -15810,7 +15849,9 @@ readers do not read off random characters that represent icons */
 @media only screen and (min-width: 768px) {
   .home-services__gallery-wrapper {
     display: flex;
-    justify-content: space-between; } }
+    justify-content: space-between; }
+  .home-services__img-wrapper:hover .home-services__img-overlay {
+    opacity: 1; } }
 
 /* ----------------- DESKTOP SECTION ------------------- */
 @media only screen and (min-width: 992px) {
@@ -15820,7 +15861,9 @@ readers do not read off random characters that represent icons */
   .home-services__video {
     height: 700px; }
   .home-services__img-wrapper {
-    width: 100%; } }
+    width: 100%; }
+  .home-services .lightbox__img-wrapper {
+    max-width: 1025px; } }
 
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
