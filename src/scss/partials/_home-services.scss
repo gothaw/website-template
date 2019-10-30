@@ -62,6 +62,7 @@
 
   &__img-overlay {
     @include img-overlay;
+
     span {
       @include text-font-size;
     }
@@ -80,24 +81,25 @@
 
     .lightbox__img-wrapper {
       position: relative;
-      margin: 65px auto 0;
+      margin: 75px auto 0;
     }
 
-    .lightbox__description{
+    .lightbox__description {
       text-align: center;
       color: color(white);
       padding-top: 35px;
-      width: 80%;
       margin: 0 auto;
-      span, p{
+
+      span, p {
         @include text-font-size;
       }
-      p{
+
+      p {
         padding-top: 10px;
       }
     }
 
-    .lightbox__arrow{
+    .lightbox__arrow {
       color: color(white);
       position: absolute;
       top: 50%;
@@ -105,12 +107,24 @@
       padding: 10px;
       transform: translateY(-50%);
       font-size: 2.2em;
-      &--left{
-        left: -75px;
+
+      &--left {
+        left: -45px;
       }
-      &--right{
-        right: -75px;
+
+      &--right {
+        right: -45px;
       }
+    }
+
+    .lightbox__close {
+      position: absolute;
+      top: 25px;
+      right: 35px;
+      color: color(white);
+      font-size: 2.2em;
+      cursor: pointer;
+      padding: 10px;
     }
   }
 }
@@ -191,7 +205,11 @@
     }
 
     .lightbox__img-wrapper {
-      max-width: 1025px;
+      max-width: 900px;
+    }
+
+    .lightbox__description {
+      max-width: 900px;
     }
   }
 }

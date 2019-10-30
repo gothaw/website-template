@@ -136,35 +136,6 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
   }
 }
 
-//mixin for video controls wrapper
-@mixin video-controls-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 5;
-  @include mobile{
-    padding: 0 0 16px 16px;
-  }
-  @include tablet-and-desktop{
-    padding: 0 0 31px 31px;
-  }
-}
-
-//mixin for video controls buttons
-@mixin video-controls {
-  color: color(white);
-  font-size: 12px;
-  padding: 4px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0.25rem;
-  margin-right: 5px;
-  transition: duration(medium) color;
-  cursor: pointer;
-  &:hover {
-    color: color(light-blue);
-  }
-}
-
 //mixin for top spacing between website sections
 @mixin section-spacing {
   @include mobile {
@@ -217,6 +188,37 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
   }
 }
 
+//============================================== Video ================================================
+
+//mixin for video controls wrapper
+@mixin video-controls-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  @include mobile{
+    padding: 0 0 16px 16px;
+  }
+  @include tablet-and-desktop{
+    padding: 0 0 31px 31px;
+  }
+}
+
+//mixin for video controls buttons
+@mixin video-controls {
+  color: color(white);
+  font-size: 12px;
+  padding: 4px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.25rem;
+  margin-right: 5px;
+  transition: duration(medium) color;
+  cursor: pointer;
+  &:hover {
+    color: color(light-blue);
+  }
+}
+
 //============================================= Gallery ===============================================
 
 //mixin for image overlay
@@ -236,6 +238,8 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
     opacity: 0;
   }
 }
+
+//=========================================== Lightbox ==============================================
 
 //======================================================================================================
 //============================================ Keyframes ===============================================

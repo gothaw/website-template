@@ -15795,12 +15795,11 @@ readers do not read off random characters that represent icons */
   padding: 0 50px; }
   .home-services__lightbox .lightbox__img-wrapper {
     position: relative;
-    margin: 65px auto 0; }
+    margin: 75px auto 0; }
   .home-services__lightbox .lightbox__description {
     text-align: center;
     color: white;
     padding-top: 35px;
-    width: 80%;
     margin: 0 auto; }
     @media only screen and (min-width: 768px) {
       .home-services__lightbox .lightbox__description span, .home-services__lightbox .lightbox__description p {
@@ -15816,9 +15815,17 @@ readers do not read off random characters that represent icons */
     transform: translateY(-50%);
     font-size: 2.2em; }
     .home-services__lightbox .lightbox__arrow--left {
-      left: -75px; }
+      left: -45px; }
     .home-services__lightbox .lightbox__arrow--right {
-      right: -75px; }
+      right: -45px; }
+  .home-services__lightbox .lightbox__close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: white;
+    font-size: 2.2em;
+    cursor: pointer;
+    padding: 10px; }
 
 /* ------------------- MOBILE SECTION ------------------- */
 @media only screen and (max-width: 767px) {
@@ -15863,7 +15870,9 @@ readers do not read off random characters that represent icons */
   .home-services__img-wrapper {
     width: 100%; }
   .home-services .lightbox__img-wrapper {
-    max-width: 1025px; } }
+    max-width: 900px; }
+  .home-services .lightbox__description {
+    max-width: 900px; } }
 
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
