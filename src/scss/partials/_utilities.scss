@@ -154,13 +154,13 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
   text-align: center;
   color: color(white);
   font-family: 'Kaushan Script', cursive;
-  @include mobile{
+  @include mobile {
     font-size: subtitle-font-size(small);
   }
-  @include tablet{
+  @include tablet {
     font-size: subtitle-font-size(medium);
   }
-  @include desktop{
+  @include desktop {
     font-size: subtitle-font-size(v-large);
   }
 }
@@ -196,10 +196,10 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
   bottom: 0;
   left: 0;
   z-index: 5;
-  @include mobile{
+  @include mobile {
     padding: 0 0 16px 16px;
   }
-  @include tablet-and-desktop{
+  @include tablet-and-desktop {
     padding: 0 0 31px 31px;
   }
 }
@@ -225,10 +225,10 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
 @mixin img-overlay {
   color: color(white);
   padding: 15px;
-  @include mobile{
+  @include mobile {
     background-color: color(dark-blue);
   }
-  @include tablet-and-desktop{
+  @include tablet-and-desktop {
     background-color: color(dark-blue-transparent);
     position: absolute;
     bottom: 0;
@@ -239,7 +239,68 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
   }
 }
 
-//=========================================== Lightbox ==============================================
+//============================================= Lightbox ===============================================
+
+@mixin lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0 50px;
+}
+
+@mixin lightbox-img-wrapper {
+  position: relative;
+  margin: 75px auto 0;
+  @include desktop {
+    max-width: 900px;
+  }
+}
+
+@mixin lightbox-description {
+  text-align: center;
+  color: color(white);
+  padding-top: 35px;
+  margin: 0 auto;
+  &-text {
+    padding-top: 10px;
+  }
+  @include desktop {
+    max-width: 900px;
+  }
+}
+
+@mixin lightbox-arrow {
+  color: color(white);
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  padding: 10px;
+  transform: translateY(-50%);
+  font-size: 2.2em;
+
+  &--left {
+    left: -45px;
+  }
+
+  &--right {
+    right: -45px;
+  }
+}
+
+@mixin lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: color(white);
+  font-size: 2.2em;
+  cursor: pointer;
+  padding: 10px;
+}
 
 //======================================================================================================
 //============================================ Keyframes ===============================================

@@ -15785,6 +15785,7 @@ readers do not read off random characters that represent icons */
       font-size: 1.2em; } }
 
 .home-services__lightbox {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -15796,16 +15797,22 @@ readers do not read off random characters that represent icons */
   .home-services__lightbox .lightbox__img-wrapper {
     position: relative;
     margin: 75px auto 0; }
+    @media only screen and (min-width: 992px) {
+      .home-services__lightbox .lightbox__img-wrapper {
+        max-width: 900px; } }
   .home-services__lightbox .lightbox__description {
     text-align: center;
     color: white;
     padding-top: 35px;
     margin: 0 auto; }
-    @media only screen and (min-width: 768px) {
-      .home-services__lightbox .lightbox__description span, .home-services__lightbox .lightbox__description p {
-        font-size: 1.2em; } }
-    .home-services__lightbox .lightbox__description p {
+    .home-services__lightbox .lightbox__description-text {
       padding-top: 10px; }
+    @media only screen and (min-width: 992px) {
+      .home-services__lightbox .lightbox__description {
+        max-width: 900px; } }
+    @media only screen and (min-width: 768px) {
+      .home-services__lightbox .lightbox__description-subheading, .home-services__lightbox .lightbox__description-text {
+        font-size: 1.2em; } }
   .home-services__lightbox .lightbox__arrow {
     color: white;
     position: absolute;
@@ -15868,11 +15875,7 @@ readers do not read off random characters that represent icons */
   .home-services__video {
     height: 700px; }
   .home-services__img-wrapper {
-    width: 100%; }
-  .home-services .lightbox__img-wrapper {
-    max-width: 900px; }
-  .home-services .lightbox__description {
-    max-width: 900px; } }
+    width: 100%; } }
 
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/

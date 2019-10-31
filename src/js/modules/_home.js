@@ -1,3 +1,5 @@
+import {getChildIndexInParent} from "../modules/_utilities.js";
+
 (function () {
     // variables
     // Carousel Variables
@@ -17,16 +19,6 @@
     let servicesVideoPlaying = false;
 
     let homeServicesVideoHeadingShown = false;
-
-    /**
-     * @name        getChildIndexInParent
-     * @param       element
-     * @desc        Function gets index of the element with respect to its parent.
-     * @returns     {int}
-     */
-    const getChildIndexInParent = (element) => {
-        return Array.from(element.parentNode.children).indexOf(element);
-    };
 
     /**
      * @name        animateCarouselControls
@@ -61,7 +53,7 @@
     const animateCarousel = () => {
         for (let control of carouselControls) {
             control.addEventListener("click", function () {
-                let indexOfSelectedItem = getChildIndexInParent(control);
+                const indexOfSelectedItem = getChildIndexInParent(control);
                 showCarouselItem(indexOfSelectedItem, currentIndex);
                 animateCarouselControls(indexOfSelectedItem, currentIndex);
                 currentIndex = indexOfSelectedItem;
