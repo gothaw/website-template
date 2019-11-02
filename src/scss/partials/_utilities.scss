@@ -250,18 +250,19 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  padding: 0 50px;
+  padding: 75px 50px 0;
 }
 
 @mixin lightbox-img-wrapper {
   position: relative;
-  margin: 75px auto 0;
+  margin: 0 auto;
   @include desktop {
     max-width: 900px;
   }
 }
 
 @mixin lightbox-description {
+  display: none;
   text-align: center;
   color: color(white);
   padding-top: 35px;
@@ -269,8 +270,11 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
   &-text {
     padding-top: 10px;
   }
+  &--show{
+    display: block;
+  }
   @include desktop {
-    max-width: 900px;
+    max-width: 1000px;
   }
 }
 

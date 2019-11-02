@@ -110,6 +110,9 @@ import {getChildIndexInParent} from "../modules/_utilities.js";
         }
     };
 
+    /**
+     * move to separate file
+     */
     const animateHeadings = () => {
         setTimeout(function () {
            if(homeServicesVideoHeading.getBoundingClientRect().top<window.innerHeight){
