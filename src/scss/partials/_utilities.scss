@@ -250,7 +250,13 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  padding: 75px 50px 0;
+  overflow-y: auto;
+  @include mobile {
+    padding: 50px 50px 0;
+  }
+  @include tablet-and-desktop {
+    padding: 75px 50px 0;
+  }
 }
 
 @mixin lightbox-img-wrapper {
@@ -270,7 +276,7 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
   &-text {
     padding-top: 10px;
   }
-  &--show{
+  &--show {
     display: block;
   }
   @include desktop {
@@ -283,27 +289,44 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
   position: absolute;
   top: 50%;
   cursor: pointer;
-  padding: 10px;
   transform: translateY(-50%);
   font-size: 2.2em;
+  @include mobile {
+    padding: 15px;
+    &--left {
+      left: -50px;
+    }
 
-  &--left {
-    left: -45px;
+    &--right {
+      right: -50px;
+    }
   }
+  @include tablet-and-desktop {
+    padding: 10px;
+    &--left {
+      left: -45px;
+    }
 
-  &--right {
-    right: -45px;
+    &--right {
+      right: -45px;
+    }
   }
 }
 
 @mixin lightbox-close {
   position: absolute;
-  top: 25px;
-  right: 35px;
   color: color(white);
   font-size: 2.2em;
   cursor: pointer;
   padding: 10px;
+  @include mobile {
+    top: 5px;
+    right: 15px;
+  }
+  @include tablet-and-desktop {
+    top: 25px;
+    right: 35px;
+  }
 }
 
 //======================================================================================================

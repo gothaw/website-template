@@ -114,7 +114,7 @@
       padding-top: 24px;
     }
 
-    &__gallery-wrapper {
+    &__gallery {
       flex-wrap: wrap;
     }
   }
@@ -141,7 +141,7 @@
 /* --------------TABLET AND DESKTOP SECTION ------------ */
 @include tablet-and-desktop {
   .home-services {
-    &__gallery-wrapper {
+    &__gallery {
       display: flex;
       justify-content: space-between;
     }
