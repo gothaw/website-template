@@ -251,6 +251,7 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   overflow-y: auto;
+  overflow-x: hidden;
   @include mobile {
     padding: 50px 50px 0;
   }
@@ -294,21 +295,41 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
   @include mobile {
     padding: 15px;
     &--left {
-      left: -50px;
+      transition: left duration(v-fast);
+      left: -47px;
+    }
+
+    &--left:active {
+      left: -51px;
     }
 
     &--right {
-      right: -50px;
+      transition: right duration(v-fast);
+      right: -47px;
+    }
+
+    &--right:active {
+      right: -51px;
     }
   }
   @include tablet-and-desktop {
     padding: 10px;
     &--left {
+      transition: left duration(v-fast);
       left: -45px;
     }
 
+    &--left:active {
+      left: -50px;
+    }
+
     &--right {
+      transition: right duration(v-fast);
       right: -45px;
+    }
+
+    &--right:active {
+      right: -50px;
     }
   }
 }
