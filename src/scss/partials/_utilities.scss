@@ -139,13 +139,13 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
 //mixin for top spacing between website sections
 @mixin section-spacing {
   @include mobile {
-    padding-top: 3rem;
+    padding-top: 4rem;
   }
   @include tablet {
-    padding-top: 4.5rem;
+    padding-top: 6rem;
   }
   @include desktop {
-    padding-top: 6rem;
+    padding-top: 8rem;
   }
 }
 

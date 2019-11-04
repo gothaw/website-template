@@ -96,6 +96,10 @@
 /* ------------------- MOBILE SECTION ------------------- */
 @include mobile {
   .home-services {
+    .description__text {
+      padding-top: 12px;
+    }
+
     &__video-wrapper {
       background: url("../../../dist/img/services-videos-posters/services-video-1-poster-mobile.jpg") no-repeat 50% 50%;
       background-size: cover;
@@ -110,10 +114,6 @@
 /* ------------- MOBILE AND TABLET SECTION -------------- */
 @include mobile-and-tablet {
   .home-services {
-    .description__text {
-      padding-top: 24px;
-    }
-
     &__gallery {
       flex-wrap: wrap;
     }
@@ -123,6 +123,10 @@
 /* ------------------- TABLET SECTION ------------------- */
 @include tablet {
   .home-services {
+    .description__text {
+      padding-top: 24px;
+    }
+
     &__video-wrapper {
       background: url("../../../dist/img/services-videos-posters/services-video-1-poster-tablet.jpg") no-repeat 50% 50%;
       background-size: cover;

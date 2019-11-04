@@ -15591,15 +15591,15 @@ readers do not read off random characters that represent icons */
 /*======================================================================================================*/
 @media only screen and (max-width: 767px) {
   .intro {
-    padding-top: 3rem; } }
+    padding-top: 4rem; } }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .intro {
-    padding-top: 4.5rem; } }
+    padding-top: 6rem; } }
 
 @media only screen and (min-width: 992px) {
   .intro {
-    padding-top: 6rem; } }
+    padding-top: 8rem; } }
 
 .intro__carousel-controls {
   font-size: 2rem;
@@ -15678,15 +15678,15 @@ readers do not read off random characters that represent icons */
 /*======================================================================================================*/
 @media only screen and (max-width: 767px) {
   .home-services {
-    padding-top: 3rem; } }
+    padding-top: 4rem; } }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .home-services {
-    padding-top: 4.5rem; } }
+    padding-top: 6rem; } }
 
 @media only screen and (min-width: 992px) {
   .home-services {
-    padding-top: 6rem; } }
+    padding-top: 8rem; } }
 
 .home-services__description {
   background-color: #2C3E50;
@@ -15873,6 +15873,8 @@ readers do not read off random characters that represent icons */
 
 /* ------------------- MOBILE SECTION ------------------- */
 @media only screen and (max-width: 767px) {
+  .home-services .description__text {
+    padding-top: 12px; }
   .home-services__video-wrapper {
     background: url("../../../dist/img/services-videos-posters/services-video-1-poster-mobile.jpg") no-repeat 50% 50%;
     background-size: cover; }
@@ -15881,13 +15883,13 @@ readers do not read off random characters that represent icons */
 
 /* ------------- MOBILE AND TABLET SECTION -------------- */
 @media only screen and (max-width: 991px) {
-  .home-services .description__text {
-    padding-top: 24px; }
   .home-services__gallery {
     flex-wrap: wrap; } }
 
 /* ------------------- TABLET SECTION ------------------- */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .home-services .description__text {
+    padding-top: 24px; }
   .home-services__video-wrapper {
     background: url("../../../dist/img/services-videos-posters/services-video-1-poster-tablet.jpg") no-repeat 50% 50%;
     background-size: cover; }
@@ -15914,6 +15916,66 @@ readers do not read off random characters that represent icons */
   .home-services__img-wrapper {
     width: 100%; } }
 
+@keyframes svg-line-animation {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes svg-fill-animation {
+  from {
+    fill: transparent; }
+  to {
+    fill: white; } }
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1.0; } }
+
+/*======================================================================================================*/
+/*======================================= Home Clients Styling =========================================*/
+/*======================================================================================================*/
+@media only screen and (max-width: 767px) {
+  .clients {
+    padding-top: 4rem; } }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .clients {
+    padding-top: 6rem; } }
+
+@media only screen and (min-width: 992px) {
+  .clients {
+    padding-top: 8rem; } }
+
+@media only screen and (max-width: 767px) {
+  .clients .description__heading {
+    font-size: 1.8em; } }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .clients .description__heading {
+    font-size: 2em; } }
+
+@media only screen and (min-width: 992px) {
+  .clients .description__heading {
+    font-size: 2.5em; } }
+
+@media only screen and (min-width: 768px) {
+  .clients .description__text {
+    font-size: 1.2em; } }
+
+/* ------------------- MOBILE SECTION ------------------- */
+@media only screen and (max-width: 767px) {
+  .clients .description__text {
+    padding-top: 12px; } }
+
+/* ------------- MOBILE AND TABLET SECTION -------------- */
+/* ------------------- TABLET SECTION ------------------- */
+/* --------------TABLET AND DESKTOP SECTION ------------ */
+@media only screen and (min-width: 768px) {
+  .clients .description__text {
+    padding-top: 24px; } }
+
+/* ----------------- DESKTOP SECTION ------------------- */
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
 /*========================================================================================================*/
