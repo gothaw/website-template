@@ -15966,16 +15966,79 @@ readers do not read off random characters that represent icons */
 /* ------------------- MOBILE SECTION ------------------- */
 @media only screen and (max-width: 767px) {
   .clients .description__text {
-    padding-top: 12px; } }
+    padding-top: 12px; }
+  .clients__logo-wrapper {
+    padding: 35px 5% 0;
+    text-align: center; }
+  .clients__logo {
+    max-width: 100px; } }
 
-/* ------------- MOBILE AND TABLET SECTION -------------- */
-/* ------------------- TABLET SECTION ------------------- */
 /* --------------TABLET AND DESKTOP SECTION ------------ */
 @media only screen and (min-width: 768px) {
   .clients .description__text {
-    padding-top: 24px; } }
+    padding-top: 24px; }
+  .clients__logo-wrapper {
+    padding: 45px 30px 0; } }
+
+@keyframes svg-line-animation {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes svg-fill-animation {
+  from {
+    fill: transparent; }
+  to {
+    fill: white; } }
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1.0; } }
+
+/*======================================================================================================*/
+/*===================================== Home Milestones Styling ========================================*/
+/*======================================================================================================*/
+@media only screen and (max-width: 767px) {
+  .milestones {
+    padding-top: 4rem; } }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .milestones {
+    padding-top: 6rem; } }
+
+@media only screen and (min-width: 992px) {
+  .milestones {
+    padding-top: 8rem; } }
+
+.milestones__inner {
+  background-color: #2C3E50; }
+
+.milestones .stat__text {
+  color: white;
+  padding-top: 20px; }
+
+/* ------------------- MOBILE SECTION ------------------- */
+@media only screen and (max-width: 767px) {
+  .milestones__stat:nth-child(1) {
+    padding-bottom: 35px; }
+  .milestones .stat__img-wrapper {
+    padding: 0 15%; }
+    .milestones .stat__img-wrapper .stat__img {
+      max-width: 100px; }
+  .milestones .stat__text {
+    padding-top: 10px; } }
+
+/* ------------------- TABLET SECTION ------------------- */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .milestones .stat__img-wrapper {
+    padding: 0 30px; } }
 
 /* ----------------- DESKTOP SECTION ------------------- */
+@media only screen and (min-width: 992px) {
+  .milestones .stat__img-wrapper {
+    padding: 0 60px; } }
+
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
 /*========================================================================================================*/

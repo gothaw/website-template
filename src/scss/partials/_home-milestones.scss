@@ -1,49 +1,51 @@
 //============================================= Imports ==================================================
 @import '_utilities';
 /*======================================================================================================*/
-/*======================================= Home Clients Styling =========================================*/
+/*===================================== Home Milestones Styling ========================================*/
 /*======================================================================================================*/
-.clients {
+.milestones {
   @include section-spacing;
-
-  .description__heading {
-    @include section-title-font-size;
+  &__inner{
+    background-color: color(dark-blue);
   }
-
-  .description__text {
-    @include text-font-size;
+  .stat__text{
+    color: color(white);
+    padding-top: 20px;
   }
 }
 
 /* ------------------- MOBILE SECTION ------------------- */
 @include mobile {
-  .clients {
-    .description__text {
-      padding-top: 12px;
+  .milestones {
+    &__stat:nth-child(1){
+      padding-bottom: 35px;
+    }
+    .stat__img-wrapper{
+      padding: 0 15%;
+      .stat__img{
+        max-width: 100px;
+      }
+    }
+    .stat__text{
+      padding-top: 10px;
     }
   }
 }
 
-/* ------------- MOBILE AND TABLET SECTION -------------- */
-@include mobile-and-tablet {
-
-}
-
 /* ------------------- TABLET SECTION ------------------- */
 @include tablet {
-
-}
-
-/* --------------TABLET AND DESKTOP SECTION ------------ */
-@include tablet-and-desktop {
-  .clients {
-    .description__text {
-      padding-top: 24px;
+  .milestones {
+    .stat__img-wrapper{
+      padding: 0 30px;
     }
   }
 }
 
 /* ----------------- DESKTOP SECTION ------------------- */
 @include desktop {
-
+  .milestones {
+    .stat__img-wrapper{
+      padding: 0 60px;
+    }
+  }
 }

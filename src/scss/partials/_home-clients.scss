@@ -1,0 +1,44 @@
+//============================================= Imports ==================================================
+@import '_utilities';
+/*======================================================================================================*/
+/*======================================= Home Clients Styling =========================================*/
+/*======================================================================================================*/
+.clients {
+  @include section-spacing;
+
+  .description__heading {
+    @include section-title-font-size;
+  }
+
+  .description__text {
+    @include text-font-size;
+  }
+}
+
+/* ------------------- MOBILE SECTION ------------------- */
+@include mobile {
+  .clients {
+    .description__text {
+      padding-top: 12px;
+    }
+    &__logo-wrapper {
+      padding: 35px 5% 0;
+      text-align: center;
+    }
+    &__logo{
+      max-width: 100px;
+    }
+  }
+}
+
+/* --------------TABLET AND DESKTOP SECTION ------------ */
+@include tablet-and-desktop {
+  .clients {
+    .description__text {
+      padding-top: 24px;
+    }
+    &__logo-wrapper {
+      padding: 45px 30px 0;
+    }
+  }
+}
