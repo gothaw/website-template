@@ -12,6 +12,15 @@ import {getChildIndexInParent} from "../modules/_utilities.js";
     const videoControls = homeServices.querySelectorAll(".video-controls__control[data-control]");
     const playAndPauseIcon = homeServices.querySelector(".video-controls__control[data-control=play-pause] .fas");
     const homeServicesVideoHeading = homeServices.querySelector(".home-services__video-heading");
+    // Home milestones variables
+    const milestones = document.querySelector(".milestones__inner");
+    const milestoneCounters = milestones.querySelectorAll(".stat__count");
+    const milestoneCountersValues = {
+        clients: 43,
+        projects: 55,
+        videos: 312,
+        photos: 4.2
+    };
 
     // Index of the Carousel Item/Carousel Control that is currently shown/highlighted
     let currentIndex = 0;
@@ -115,21 +124,49 @@ import {getChildIndexInParent} from "../modules/_utilities.js";
      */
     const animateHeadings = () => {
         setTimeout(function () {
-           if(homeServicesVideoHeading.getBoundingClientRect().top<window.innerHeight){
-               homeServicesVideoHeading.classList.add("home-services__video-heading--show");
-               homeServicesVideoHeadingShown = true;
-           }
-           if(!homeServicesVideoHeadingShown) {
-               animateHeadings();
-           }
+            if (homeServicesVideoHeading.getBoundingClientRect().top < window.innerHeight) {
+                homeServicesVideoHeading.classList.add("home-services__video-heading--show");
+                homeServicesVideoHeadingShown = true;
+            }
+            if (!homeServicesVideoHeadingShown) {
+                animateHeadings();
+            }
         }, 500);
+    };
+
+    const checkIfMilestonesAreVisible = () => {
+        setTimeout(function () {
+            if (milestones.getBoundingClientRect().top < window.innerHeight) {
+                animateMilestoneCounters(milestoneCounters[0], milestoneCountersValues.clients);
+                animateMilestoneCounters(milestoneCounters[1], milestoneCountersValues.projects);
+                animateMilestoneCounters(milestoneCounters[2], milestoneCountersValues.videos);
+                animateMilestoneCounters(milestoneCounters[3], milestoneCountersValues.photos);
+            } else {
+                checkIfMilestonesAreVisible();
+            }
+        }, 200)
+    };
+
+    const animateMilestoneCounters = (counter, limit) => {
+        let i = 1;
+        const increaseCount = () => {
+            setTimeout(function () {
+                counter.innerHTML = i.toString();
+                if (i < limit) {
+                    i++;
+                    increaseCount();
+                }
+            }, 1000/limit)
+        };
+        increaseCount();
     };
 
 
     const init = () => {
         animateCarousel();
         bindVideoControls();
-        animateHeadings()
+        animateHeadings();
+        checkIfMilestonesAreVisible();
     };
 
     window.addEventListener("load", init);
