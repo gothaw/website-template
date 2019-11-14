@@ -1,0 +1,51 @@
+//============================================= Imports ==================================================
+@import '_utilities';
+/*======================================================================================================*/
+/*======================================= Home Contact Styling =========================================*/
+/*======================================================================================================*/
+.home-contact {
+
+  &__img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+  }
+  &__img {
+    position: relative;
+    object-fit: cover;
+    //top: -25%;
+    //left: 0;
+  }
+
+  &__heading-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__heading {
+    @include subheading;
+  }
+}
+
+/* ------------------- MOBILE SECTION ------------------- */
+@include mobile {
+  .home-contact {
+
+  }
+}
+
+/* ------------------- TABLET SECTION ------------------- */
+@include tablet {
+  .home-contact {
+
+  }
+}
+
+/* ----------------- DESKTOP SECTION ------------------- */
+@include desktop {
+  .home-contact {
+
+  }
+}
