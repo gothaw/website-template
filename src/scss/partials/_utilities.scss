@@ -19,6 +19,7 @@ $colors: (
         light-green: #18BC9C,
         light-blue: #258CD1,
         dark-blue: #2C3E50,
+        light-red: #E21B1B,
         dark-blue-transparent: rgba(44, 62, 80, 0.85),
         transparent-white: rgba(255, 255, 255, 0.2),
 );
@@ -187,6 +188,31 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
     font-size: text-font-size(large);
   }
 }
+
+//=========================== Read More Button Over Videos and Images =================================
+
+@mixin read-more-btn-img-video($hover-active-color: color(light-blue)) {
+  opacity: 0;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: duration(fast) all;
+
+  &:hover {
+    opacity: 1;
+    border-color: $hover-active-color !important;
+    background-color: transparent !important;
+  }
+
+  &:active {
+    color: $hover-active-color !important;
+    background-color: transparent !important;
+  }
+
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
 
 //============================================== Video ================================================
 
