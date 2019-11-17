@@ -45,13 +45,7 @@
   }
 
   &__video-heading {
-    opacity: 0;
-    transition: opacity duration(x-slow);
     @include subheading;
-
-    &--show {
-      opacity: 1;
-    }
   }
 
   &__img-wrapper {

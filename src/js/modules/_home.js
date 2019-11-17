@@ -6,12 +6,6 @@ import {getChildIndexInParent} from "../modules/_utilities.js";
     const carousel = document.querySelector(".intro__carousel");
     const carouselItems = document.querySelectorAll(".carousel__item");
     const carouselControls = document.querySelectorAll(".intro__carousel-controls i");
-    // Home services variables
-    const homeServices = document.querySelector(".home-services");
-    const servicesVideo = document.querySelector(".home-services__video");
-    const videoControls = homeServices.querySelectorAll(".video-controls__control[data-control]");
-    const playAndPauseIcon = homeServices.querySelector(".video-controls__control[data-control=play-pause] .fas");
-    const homeServicesVideoHeading = homeServices.querySelector(".home-services__video-heading");
     // Home milestones variables
     const milestones = document.querySelector(".milestones__inner");
     const milestoneCounters = milestones.querySelectorAll(".stat__count");
@@ -24,10 +18,6 @@ import {getChildIndexInParent} from "../modules/_utilities.js";
 
     // Index of the Carousel Item/Carousel Control that is currently shown/highlighted
     let currentIndex = 0;
-
-    let servicesVideoPlaying = false;
-
-    let homeServicesVideoHeadingShown = false;
 
     /**
      * @name        animateCarouselControls
@@ -68,70 +58,6 @@ import {getChildIndexInParent} from "../modules/_utilities.js";
                 currentIndex = indexOfSelectedItem;
             })
         }
-    };
-
-    /**
-     * @name            playAndPauseVideo
-     * @desc            Plays and pauses services video.
-     */
-    const playAndPauseVideo = () => {
-        if (!servicesVideoPlaying) {
-            playAndPauseIcon.classList.remove("fa-play");
-            playAndPauseIcon.classList.add("fa-pause");
-            servicesVideo.play();
-        } else {
-            playAndPauseIcon.classList.remove("fa-pause");
-            playAndPauseIcon.classList.add("fa-play");
-            servicesVideo.pause();
-        }
-        servicesVideoPlaying = !servicesVideoPlaying;
-    };
-
-    /**
-     * @name            stopVideo
-     * @desc            Stops services video.
-     */
-    const stopVideo = () => {
-        playAndPauseIcon.classList.remove("fa-pause");
-        playAndPauseIcon.classList.add("fa-play");
-        servicesVideo.pause();
-        servicesVideo.currentTime = 0;
-        servicesVideoPlaying = false;
-    };
-
-    /**
-     * @name            bindVideoControls
-     * @desc            Function binds services video controls using switch statement.
-     */
-    const bindVideoControls = () => {
-        for (let control of videoControls) {
-            control.addEventListener("click", function () {
-                const controlName = control.getAttribute("data-control");
-                switch (controlName) {
-                    case 'play-pause':
-                        playAndPauseVideo();
-                        break;
-                    case 'stop':
-                        stopVideo();
-                        break;
-                }
-            })
-        }
-    };
-
-    /**
-     * move to separate file
-     */
-    const animateHeadings = () => {
-        setTimeout(function () {
-            if (homeServicesVideoHeading.getBoundingClientRect().top < window.innerHeight) {
-                homeServicesVideoHeading.classList.add("home-services__video-heading--show");
-                homeServicesVideoHeadingShown = true;
-            }
-            if (!homeServicesVideoHeadingShown) {
-                animateHeadings();
-            }
-        }, 500);
     };
 
     /**
@@ -193,8 +119,6 @@ import {getChildIndexInParent} from "../modules/_utilities.js";
 
     const init = () => {
         animateCarousel();
-        bindVideoControls();
-        animateHeadings();
         checkIfMilestonesAreVisible();
     };
 

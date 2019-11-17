@@ -26,6 +26,14 @@ li {
   height: auto;
 }
 
+.text-show-animation{
+  opacity: 0;
+  transition: opacity duration(x-slow);
+  &__show{
+    opacity: 1;
+  }
+}
+
 .test {
   margin: 250px 0;
 }

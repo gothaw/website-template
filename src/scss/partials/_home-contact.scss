@@ -3,24 +3,20 @@
 /*======================================================================================================*/
 /*======================================= Home Contact Styling =========================================*/
 /*======================================================================================================*/
-.home-contact {
 
+// Using spacer image mixin
+
+.home-contact {
   &__img-wrapper {
-    position: relative;
-    overflow: hidden;
+    @include spacer-image-wrapper;
   }
 
   &__img {
-    object-fit: cover;
-    width: 100%;
+    @include spacer-image(400px, 600px, 800px);
   }
 
   &__heading-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
+    @include spacer-image-heading-wrapper;
   }
 
   &__heading {
@@ -29,44 +25,10 @@
   }
 
   &__button-wrapper button {
-    animation: opacity-animation duration(v-slow) ease-in-out forwards;
     @include read-more-btn-img-video;
   }
 
   &__img-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-}
-
-/* ------------------- MOBILE SECTION ------------------- */
-@include mobile {
-  .home-contact {
-    &__img {
-      height: 400px;
-    }
-  }
-}
-
-/* ------------------- TABLET SECTION ------------------- */
-@include tablet {
-  .home-contact {
-    &__img {
-      height: 600px;
-    }
-  }
-}
-
-/* ----------------- DESKTOP SECTION ------------------- */
-@include desktop {
-  .home-contact {
-    &__img {
-      height: 800px;
-    }
+    @include spacer-image-overlay;
   }
 }

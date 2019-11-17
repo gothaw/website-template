@@ -15382,9 +15382,9 @@ readers do not read off random characters that represent icons */
     -webkit-animation: opacity-animation 1s ease-in-out forwards 2.5s;
             animation: opacity-animation 1s ease-in-out forwards 2.5s; }
   .header__button-wrapper button {
+    opacity: 0;
     -webkit-animation: opacity-animation 1s ease-in-out forwards 3s;
             animation: opacity-animation 1s ease-in-out forwards 3s;
-    opacity: 0;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, 0.2);
     transition: 0.3s all; }
@@ -15743,8 +15743,6 @@ readers do not read off random characters that represent icons */
   transform: translate(-50%, -50%); }
 
 .home-services__video-heading {
-  opacity: 0;
-  transition: opacity 2s;
   text-align: center;
   color: white;
   font-family: 'Kaushan Script', cursive; }
@@ -15757,8 +15755,6 @@ readers do not read off random characters that represent icons */
   @media only screen and (min-width: 992px) {
     .home-services__video-heading {
       font-size: 3em; } }
-  .home-services__video-heading--show {
-    opacity: 1; }
 
 .home-services__img-wrapper {
   position: relative;
@@ -16066,6 +16062,15 @@ readers do not read off random characters that represent icons */
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%; }
+  @media only screen and (max-width: 767px) {
+    .home-contact__img {
+      height: 400px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .home-contact__img {
+      height: 600px; } }
+  @media only screen and (min-width: 992px) {
+    .home-contact__img {
+      height: 800px; } }
 
 .home-contact__heading-wrapper {
   position: absolute;
@@ -16090,9 +16095,6 @@ readers do not read off random characters that represent icons */
       font-size: 3em; } }
 
 .home-contact__button-wrapper button {
-  -webkit-animation: opacity-animation 1s ease-in-out forwards;
-          animation: opacity-animation 1s ease-in-out forwards;
-  opacity: 0;
   background-color: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
   transition: 0.3s all; }
@@ -16115,21 +16117,6 @@ readers do not read off random characters that represent icons */
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.2); }
 
-/* ------------------- MOBILE SECTION ------------------- */
-@media only screen and (max-width: 767px) {
-  .home-contact__img {
-    height: 400px; } }
-
-/* ------------------- TABLET SECTION ------------------- */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .home-contact__img {
-    height: 600px; } }
-
-/* ----------------- DESKTOP SECTION ------------------- */
-@media only screen and (min-width: 992px) {
-  .home-contact__img {
-    height: 800px; } }
-
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
 /*========================================================================================================*/
@@ -16143,6 +16130,12 @@ li {
 .img-responsive {
   width: 100%;
   height: auto; }
+
+.text-show-animation {
+  opacity: 0;
+  transition: opacity 2s; }
+  .text-show-animation__show {
+    opacity: 1; }
 
 .test {
   margin: 250px 0; }
