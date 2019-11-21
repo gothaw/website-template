@@ -16138,21 +16138,31 @@ readers do not read off random characters that represent icons */
 /*======================================================================================================*/
 .footer {
   background-color: #2C3E50;
-  color: white; }
+  color: white;
+  padding: 35px 0; }
   @media only screen and (min-width: 768px) {
     .footer__text {
       font-size: 1.2em; } }
+  .footer__icons {
+    font-size: 1.4em; }
+    .footer__icons a {
+      color: white; }
+    .footer__icons i {
+      padding-right: 8px; }
+  .footer__item p {
+    margin-bottom: 5px; }
 
 /* ------------------- MOBILE SECTION ------------------- */
+@media only screen and (max-width: 767px) {
+  .footer__item {
+    padding-top: 15px; } }
+
 /* ------------------- TABLET SECTION ------------------- */
-/* ------------------- DESKTOP SECTION ------------------ */
-@media only screen and (min-width: 992px) {
-  .footer {
-    padding: 35px 0; }
-    .footer__icons {
-      font-size: 1.4em; }
-      .footer__icons i {
-        padding-right: 8px; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .footer__item:nth-child(3) {
+    padding-top: 20px; }
+  .footer__item:nth-child(4) {
+    padding-top: 20px; } }
 
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/

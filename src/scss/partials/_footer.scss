@@ -7,33 +7,44 @@
 .footer {
   background-color: color(dark-blue);
   color: color(white);
+  padding: 35px 0;
+
   &__text {
     @include text-font-size;
+  }
+
+  &__icons {
+    font-size: 1.4em;
+    a {
+      color: color(white);
+    }
+    i {
+      padding-right: 8px;
+    }
+  }
+
+  &__item{
+    p {
+      margin-bottom: 5px;
+    }
   }
 }
 
 /* ------------------- MOBILE SECTION ------------------- */
 @include mobile {
   .footer {
-
+    &__item {
+      padding-top: 15px;
+    }
   }
 }
 
 /* ------------------- TABLET SECTION ------------------- */
 @include tablet {
   .footer {
-
-  }
-}
-
-/* ------------------- DESKTOP SECTION ------------------ */
-@include desktop {
-  .footer {
-    padding: 35px 0;
-    &__icons {
-      font-size: 1.4em;
-      i {
-        padding-right: 8px;
+    @for $i from 3 through 4 {
+      &__item:nth-child(#{$i}){
+        padding-top: 20px;
       }
     }
   }
