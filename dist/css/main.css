@@ -16117,6 +16117,43 @@ readers do not read off random characters that represent icons */
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.2); }
 
+@keyframes svg-line-animation {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes svg-fill-animation {
+  from {
+    fill: transparent; }
+  to {
+    fill: white; } }
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1.0; } }
+
+/*======================================================================================================*/
+/*=============================================== Footer ===============================================*/
+/*======================================================================================================*/
+.footer {
+  background-color: #2C3E50;
+  color: white; }
+  @media only screen and (min-width: 768px) {
+    .footer__text {
+      font-size: 1.2em; } }
+
+/* ------------------- MOBILE SECTION ------------------- */
+/* ------------------- TABLET SECTION ------------------- */
+/* ------------------- DESKTOP SECTION ------------------ */
+@media only screen and (min-width: 992px) {
+  .footer {
+    padding: 35px 0; }
+    .footer__icons {
+      font-size: 1.4em; }
+      .footer__icons i {
+        padding-right: 8px; } }
+
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
 /*========================================================================================================*/
