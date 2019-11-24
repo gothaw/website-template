@@ -49,3 +49,10 @@
     }
   }
 }
+
+/* ----------------- DESKTOP SECTION ------------------ */
+@include desktop {
+  .footer {
+    padding: 55px 0;
+  }
+}

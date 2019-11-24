@@ -3,28 +3,30 @@
  */
 (function () {
 
-    const homeServicesVideoHeading = document.querySelector(".home-services__video-heading");
+    const textShowAnimation = document.querySelectorAll(".text-show-animation");
 
-    let homeServicesVideoHeadingShown = false;
+    // array which holds intervals for text show animation
+    let intervalArray = [];
 
     /**
-     * move to separate file
+     * @name        animateText
+     * @desc        Function checks if text is visible in the viewport using setInterval and getBoundingClientRect().
+     *              If text is visible it adds a css class with animation and clears the interval.
      */
-    const animateHeadings = () => {
-        setTimeout(function () {
-            if (homeServicesVideoHeading.getBoundingClientRect().top < window.innerHeight) {
-                homeServicesVideoHeading.classList.add("text-show-animation__show");
-                homeServicesVideoHeadingShown = true;
-            }
-            if (!homeServicesVideoHeadingShown) {
-                animateHeadings();
-            }
-        }, 500);
+    const animateText = () => {
+        for (let i = 0; i < textShowAnimation.length; i++) {
+            intervalArray[i] = setInterval(function () {
+                if (textShowAnimation[i].getBoundingClientRect().bottom < window.innerHeight && textShowAnimation[i].getBoundingClientRect().bottom >= 0) {
+                    textShowAnimation[i].classList.add("text-show-animation__show");
+                    clearInterval(intervalArray[i])
+                }
+            }, 500);
+        }
     };
 
     const init = () => {
-        animateHeadings();
+        animateText();
     };
 
-    window.addEventListener("load",init);
+    window.addEventListener("load", init);
 })();
