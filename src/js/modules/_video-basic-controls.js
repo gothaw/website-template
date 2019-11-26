@@ -1,40 +1,40 @@
+/**
+ *  Script for videos with basic controls. Basic controls include play and stop button. Does not include header video.
+ *  This script applies to videos between website sections.
+ */
 (function () {
 
-    // Home services variables
-    const homeServices = document.querySelector(".home-services");
-    const servicesVideo = document.querySelector(".home-services__video");
-    const videoControls = homeServices.querySelectorAll(".video-controls__control[data-control]");
-    const playAndPauseIcon = homeServices.querySelector(".video-controls__control[data-control=play-pause] .fas");
+    const basicVideoWrappers = document.querySelectorAll(".basic-video-wrapper");
 
-    let servicesVideoPlaying = false;
+    let videoArray = [];
 
     /**
      * @name            playAndPauseVideo
      * @desc            Plays and pauses services video.
      */
-    const playAndPauseVideo = () => {
-        if (!servicesVideoPlaying) {
-            playAndPauseIcon.classList.remove("fa-play");
-            playAndPauseIcon.classList.add("fa-pause");
-            servicesVideo.play();
+    const playAndPauseVideo = (video) => {
+        if (!video.isPlaying) {
+            video.iconPlayAndPause.classList.remove("fa-play");
+            video.iconPlayAndPause.classList.add("fa-pause");
+            video.media.play();
         } else {
-            playAndPauseIcon.classList.remove("fa-pause");
-            playAndPauseIcon.classList.add("fa-play");
-            servicesVideo.pause();
+            video.iconPlayAndPause.classList.remove("fa-pause");
+            video.iconPlayAndPause.classList.add("fa-play");
+            video.media.pause();
         }
-        servicesVideoPlaying = !servicesVideoPlaying;
+        video.isPlaying = !video.isPlaying;
     };
 
     /**
      * @name            stopVideo
      * @desc            Stops services video.
      */
-    const stopVideo = () => {
-        playAndPauseIcon.classList.remove("fa-pause");
-        playAndPauseIcon.classList.add("fa-play");
-        servicesVideo.pause();
-        servicesVideo.currentTime = 0;
-        servicesVideoPlaying = false;
+    const stopVideo = (video) => {
+        video.iconPlayAndPause.classList.remove("fa-pause");
+        video.iconPlayAndPause.classList.add("fa-play");
+        video.media.pause();
+        video.media.currentTime = 0;
+        video.isPlaying = false;
     };
 
     /**
@@ -42,25 +42,36 @@
      * @desc            Function binds services video controls using switch statement.
      */
     const bindVideoControls = () => {
-        for (let control of videoControls) {
-            control.addEventListener("click", function () {
-                const controlName = control.getAttribute("data-control");
-                switch (controlName) {
-                    case 'play-pause':
-                        playAndPauseVideo();
-                        break;
-                    case 'stop':
-                        stopVideo();
-                        break;
-                }
+        for (let video of videoArray) {
+            video.buttonPlayAndPause.addEventListener("click", function () {
+                playAndPauseVideo(video);
+            });
+            video.buttonStop.addEventListener("click", function () {
+                stopVideo(video);
             })
         }
     };
 
+    /**
+     *
+     */
+    const createArrayOfVideos = () => {
+        for (let wrapper of basicVideoWrappers) {
+            videoArray.push({
+                media: wrapper.querySelector(".basic-video"),
+                buttonPlayAndPause: wrapper.querySelector(".basic-video-control[data-control=play-pause]"),
+                iconPlayAndPause: wrapper.querySelector(".basic-video-control[data-control=play-pause] .fas"),
+                buttonStop: wrapper.querySelector(".basic-video-control[data-control=stop]"),
+                isPlaying: false
+            });
+        }
+    };
+
     const init = () => {
+        createArrayOfVideos();
         bindVideoControls();
     };
 
-    window.addEventListener("load",init);
+    window.addEventListener("load", init);
 
 })();
