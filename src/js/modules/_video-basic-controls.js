@@ -21,86 +21,89 @@
  *  </div>
  *
  */
-(function () {
 
-    const basicVideoWrappers = document.querySelectorAll(".basic-video-wrapper");
+if(document.getElementsByClassName("basic-video-wrapper").length){
+    (function () {
 
-    // array of video objects created using createArrayOfVideos
-    let videoArray = [];
+        const basicVideoWrappers = document.querySelectorAll(".basic-video-wrapper");
 
-    /**
-     * @name            playAndPauseVideo
-     * @param           video - video object from videoArray
-     * @desc            Plays and pauses video.
-     */
-    const playAndPauseVideo = (video) => {
-        if (!video.isPlaying) {
-            video.iconPlayAndPause.classList.remove("fa-play");
-            video.iconPlayAndPause.classList.add("fa-pause");
-            video.media.play();
-        } else {
+        // array of video objects created using createArrayOfVideos
+        let videoArray = [];
+
+        /**
+         * @name            playAndPauseVideo
+         * @param           video - video object from videoArray
+         * @desc            Plays and pauses video.
+         */
+        const playAndPauseVideo = (video) => {
+            if (!video.isPlaying) {
+                video.iconPlayAndPause.classList.remove("fa-play");
+                video.iconPlayAndPause.classList.add("fa-pause");
+                video.media.play();
+            } else {
+                video.iconPlayAndPause.classList.remove("fa-pause");
+                video.iconPlayAndPause.classList.add("fa-play");
+                video.media.pause();
+            }
+            video.isPlaying = !video.isPlaying;
+        };
+
+        /**
+         * @name            stopVideo
+         * @param           video - video object from videoArray
+         * @desc            Stops video.
+         */
+        const stopVideo = (video) => {
             video.iconPlayAndPause.classList.remove("fa-pause");
             video.iconPlayAndPause.classList.add("fa-play");
             video.media.pause();
-        }
-        video.isPlaying = !video.isPlaying;
-    };
+            video.media.currentTime = 0;
+            video.isPlaying = false;
+        };
 
-    /**
-     * @name            stopVideo
-     * @param           video - video object from videoArray
-     * @desc            Stops video.
-     */
-    const stopVideo = (video) => {
-        video.iconPlayAndPause.classList.remove("fa-pause");
-        video.iconPlayAndPause.classList.add("fa-play");
-        video.media.pause();
-        video.media.currentTime = 0;
-        video.isPlaying = false;
-    };
+        /**
+         * @name            bindVideoControls
+         * @desc            Function binds buttonPlayAndPause and buttonStop for video object. It invokes playAndPauseVideo and stopVideo when buttons are clicked.
+         */
+        const bindVideoControls = () => {
+            for (let video of videoArray) {
+                video.buttonPlayAndPause.addEventListener("click", function () {
+                    playAndPauseVideo(video);
+                });
+                video.buttonStop.addEventListener("click", function () {
+                    stopVideo(video);
+                })
+            }
+        };
 
-    /**
-     * @name            bindVideoControls
-     * @desc            Function binds buttonPlayAndPause and buttonStop for video object. It invokes playAndPauseVideo and stopVideo when buttons are clicked.
-     */
-    const bindVideoControls = () => {
-        for (let video of videoArray) {
-            video.buttonPlayAndPause.addEventListener("click", function () {
-                playAndPauseVideo(video);
-            });
-            video.buttonStop.addEventListener("click", function () {
-                stopVideo(video);
-            })
-        }
-    };
+        /**
+         * @name            createArrayOfVideos
+         * @desc            Function creates array of video objects.
+         *                  Video object includes following properties:
+         *                  media - <video> tag
+         *                  buttonPlayAndPause - <div> tag that contains play icon
+         *                  iconPlayAndPause - <i> tag with play symbol
+         *                  buttonStop - <div> tag that contains stop icon
+         *                  isPlaying - boolean that indicates if video is playing
+         */
+        const createArrayOfVideos = () => {
+            for (let wrapper of basicVideoWrappers) {
+                videoArray.push({
+                    media: wrapper.querySelector(".basic-video"),
+                    buttonPlayAndPause: wrapper.querySelector(".basic-video-control[data-control=play-pause]"),
+                    iconPlayAndPause: wrapper.querySelector(".basic-video-control[data-control=play-pause] .fas"),
+                    buttonStop: wrapper.querySelector(".basic-video-control[data-control=stop]"),
+                    isPlaying: false
+                });
+            }
+        };
 
-    /**
-     * @name            createArrayOfVideos
-     * @desc            Function creates array of video objects.
-     *                  Video object includes following properties:
-     *                  media - <video> tag
-     *                  buttonPlayAndPause - <div> tag that contains play icon
-     *                  iconPlayAndPause - <i> tag with play symbol
-     *                  buttonStop - <div> tag that contains stop icon
-     *                  isPlaying - boolean that indicates if video is playing
-     */
-    const createArrayOfVideos = () => {
-        for (let wrapper of basicVideoWrappers) {
-            videoArray.push({
-                media: wrapper.querySelector(".basic-video"),
-                buttonPlayAndPause: wrapper.querySelector(".basic-video-control[data-control=play-pause]"),
-                iconPlayAndPause: wrapper.querySelector(".basic-video-control[data-control=play-pause] .fas"),
-                buttonStop: wrapper.querySelector(".basic-video-control[data-control=stop]"),
-                isPlaying: false
-            });
-        }
-    };
+        const init = () => {
+            createArrayOfVideos();
+            bindVideoControls();
+        };
 
-    const init = () => {
-        createArrayOfVideos();
-        bindVideoControls();
-    };
+        window.addEventListener("load", init);
 
-    window.addEventListener("load", init);
-
-})();
+    })();
+}
