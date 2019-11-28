@@ -1,5 +1,6 @@
 /**
  *  Script for show animation of text/headings over videos and images. Text shows up when it shows up on the viewport.
+ *  The HTML for text animation should include a <div> tag with class text-show-animation.
  */
 (function () {
 
