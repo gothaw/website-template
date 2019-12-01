@@ -15265,26 +15265,35 @@ readers do not read off random characters that represent icons */
 /* ------------------- MOBILE SECTION ------------------- */
 @media only screen and (max-width: 767px) {
   .header {
-    background: url("../../../dist/img/header-poster/header-video-1-poster-mobile.jpg") no-repeat 50% 50%;
     background-size: cover; }
     .header__video {
-      height: 400px; } }
+      height: 400px; }
+  .header-poster-1 {
+    background: url("../../../dist/img/header-poster/header-video-1-poster-mobile.jpg") no-repeat 50% 50%; }
+  .header-poster-2 {
+    background: url("../../../dist/img/header-poster/header-video-2-poster-mobile.jpg") no-repeat 50% 50%; } }
 
 /* ------------------- TABLET SECTION ------------------- */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header {
-    background: url("../../../dist/img/header-poster/header-video-1-poster-tablet.jpg") no-repeat 50% 50%;
     background-size: cover; }
     .header__video {
-      height: 600px; } }
+      height: 600px; }
+  .header-poster-1 {
+    background: url("../../../dist/img/header-poster/header-video-1-poster-tablet.jpg") no-repeat 50% 50%; }
+  .header-poster-2 {
+    background: url("../../../dist/img/header-poster/header-video-2-poster-tablet.jpg") no-repeat 50% 50%; } }
 
 /* ------------------- DESKTOP SECTION ------------------ */
 @media only screen and (min-width: 992px) {
   .header {
-    background: url("../../../dist/img/header-poster/header-video-1-poster-desktop.jpg") no-repeat 50% 50%;
     background-size: cover; }
     .header__video {
-      height: 800px; } }
+      height: 800px; }
+  .header-poster-1 {
+    background: url("../../../dist/img/header-poster/header-video-1-poster-desktop.jpg") no-repeat 50% 50%; }
+  .header-poster-2 {
+    background: url("../../../dist/img/header-poster/header-video-2-poster-desktop.jpg") no-repeat 50% 50%; } }
 
 @keyframes svg-line-animation {
   to {

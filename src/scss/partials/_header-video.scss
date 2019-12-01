@@ -35,35 +35,50 @@
 /* ------------------- MOBILE SECTION ------------------- */
 @include mobile {
   .header {
-    background: url("../../../dist/img/header-poster/header-video-1-poster-mobile.jpg") no-repeat 50% 50%;
     background-size: cover;
 
     &__video {
       height: 400px;
     }
   }
+  .header-poster-1{
+    background: url("../../../dist/img/header-poster/header-video-1-poster-mobile.jpg") no-repeat 50% 50%;
+  }
+  .header-poster-2{
+    background: url("../../../dist/img/header-poster/header-video-2-poster-mobile.jpg") no-repeat 50% 50%;
+  }
 }
 
 /* ------------------- TABLET SECTION ------------------- */
 @include tablet {
   .header {
-    background: url("../../../dist/img/header-poster/header-video-1-poster-tablet.jpg") no-repeat 50% 50%;
     background-size: cover;
 
     &__video {
       height: 600px;
     }
   }
+  .header-poster-1 {
+    background: url("../../../dist/img/header-poster/header-video-1-poster-tablet.jpg") no-repeat 50% 50%;
+  }
+  .header-poster-2 {
+    background: url("../../../dist/img/header-poster/header-video-2-poster-tablet.jpg") no-repeat 50% 50%;
+  }
 }
 
 /* ------------------- DESKTOP SECTION ------------------ */
 @include desktop {
   .header {
-    background: url("../../../dist/img/header-poster/header-video-1-poster-desktop.jpg") no-repeat 50% 50%;
     background-size: cover;
 
     &__video {
       height: 800px;
     }
+  }
+  .header-poster-1{
+    background: url("../../../dist/img/header-poster/header-video-1-poster-desktop.jpg") no-repeat 50% 50%;
+  }
+  .header-poster-2{
+    background: url("../../../dist/img/header-poster/header-video-2-poster-desktop.jpg") no-repeat 50% 50%;
   }
 }
