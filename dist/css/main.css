@@ -16178,6 +16178,58 @@ readers do not read off random characters that represent icons */
   .footer {
     padding: 55px 0; } }
 
+@keyframes svg-line-animation {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes svg-fill-animation {
+  from {
+    fill: transparent; }
+  to {
+    fill: white; } }
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1.0; } }
+
+/*======================================================================================================*/
+/*====================================== Home Services Styling =========================================*/
+/*======================================================================================================*/
+@media only screen and (max-width: 767px) {
+  .services__intro {
+    padding-top: 4rem; } }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .services__intro {
+    padding-top: 6rem; } }
+
+@media only screen and (min-width: 992px) {
+  .services__intro {
+    padding-top: 8rem; } }
+
+@media only screen and (max-width: 767px) {
+  .services__intro .intro__title {
+    font-size: 1.8em; } }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .services__intro .intro__title {
+    font-size: 2em; } }
+
+@media only screen and (min-width: 992px) {
+  .services__intro .intro__title {
+    font-size: 2.5em; } }
+
+@media only screen and (min-width: 768px) {
+  .services__intro .intro__text {
+    font-size: 1.2em; } }
+
+/* ------------------- MOBILE SECTION ------------------- */
+/* ------------- MOBILE AND TABLET SECTION -------------- */
+/* ------------------- TABLET SECTION ------------------- */
+/* --------------TABLET AND DESKTOP SECTION ------------ */
+/* ----------------- DESKTOP SECTION ------------------- */
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
 /*========================================================================================================*/
