@@ -6,12 +6,46 @@
 .services__intro {
   @include section-spacing;
 
-  .intro__title{
+  .intro__title {
     @include section-title-font-size;
   }
 
-  .intro__text{
+  .intro__text {
     @include text-font-size;
+  }
+
+  .intro__cards-wrapper {
+    perspective: 2000px;
+    height: 200px;
+  }
+
+  .intro__card {
+    color: color(white);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    &:hover{
+      transform: rotateY(180deg);
+    }
+
+    .card__face{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      backface-visibility: hidden;
+
+    }
+
+    .card__front-face {
+      background-color: color(dark-blue);
+    }
+
+    .card__back-face {
+      background-color: color(light-blue);
+      transform: rotateY( 180deg );
+    }
   }
 
 
