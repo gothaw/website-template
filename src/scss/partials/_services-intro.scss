@@ -27,10 +27,6 @@
     height: 100%;
     min-height: 250px;
 
-    &:active{
-      transform: rotateY(180deg);
-    }
-
     .card__face{
       position: absolute;
       top: 0;
@@ -41,18 +37,27 @@
       border-radius: 15px;
       padding: 15px;
     }
+  }
 
+  .intro__card-light {
+    .card__front-face{
+      background-color: color(light-blue);
+    }
+    .card__back-face {
+      background-color: color(dark-blue);
+      transform: rotateY( 180deg );
+    }
+  }
+
+  .intro__card-dark {
     .card__front-face{
       background-color: color(dark-blue);
     }
-
     .card__back-face {
       background-color: color(light-blue);
       transform: rotateY( 180deg );
     }
-
   }
-
 
 }
 

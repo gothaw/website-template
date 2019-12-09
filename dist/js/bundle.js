@@ -218,7 +218,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("if (document.getElementById(\"services\")) {\r\n    (function () {\r\n\r\n    })();\r\n}\r\n\n\n//# sourceURL=webpack:///./src/js/modules/_services.js?");
+eval("if (document.getElementById(\"services\")) {\r\n    (function () {\r\n\r\n        const cards = document.querySelectorAll(\".intro__card\");\r\n\r\n        const flipCardOnClick = () => {\r\n            for(let card of cards){\r\n                card.addEventListener(\"click\", function (e) {\r\n                    const targetCard = e.target;\r\n\r\n                    /*for(card of cards){\r\n                        card.querySelector(\"\").classList.remove(\"intro__card--flipped\");\r\n                    }\r\n                    targetCard.classList.add(\"intro__card--flipped\");*/\r\n                });\r\n            }\r\n        };\r\n\r\n        const init = () => {\r\n            flipCardOnClick();\r\n        };\r\n\r\n        window.addEventListener(\"load\", init)\r\n\r\n    })();\r\n}\r\n\n\n//# sourceURL=webpack:///./src/js/modules/_services.js?");
 
 /***/ }),
 
