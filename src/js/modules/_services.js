@@ -1,17 +1,30 @@
+import $ from "../lib/jquery-3.4.1.js"
+
 if (document.getElementById("services")) {
     (function () {
 
         const cards = document.querySelectorAll(".intro__card");
+        const cardFaces = document.querySelectorAll(".card__face");
 
         const flipCardOnClick = () => {
             for(let card of cards){
                 card.addEventListener("click", function (e) {
-                    const targetCard = e.target;
+                    const target = e.target;
 
-                    /*for(card of cards){
-                        card.querySelector("").classList.remove("intro__card--flipped");
+                    const targetCard = target.closest(".intro__card");
+
+                    console.log(cardFaces);
+
+                    for (let cardFace of cardFaces){
+                        cardFace.classList.remove("card__front-face--flip");
+                        cardFace.classList.remove("card__back-face--flip");
                     }
-                    targetCard.classList.add("intro__card--flipped");*/
+
+                    targetCard.children[0].classList.add("card__front-face--flip");
+                    targetCard.children[1].classList.add("card__back-face--flip");
+
+                    // console.log(targetCard.children[0]);
+
                 });
             }
         };
