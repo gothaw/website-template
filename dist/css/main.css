@@ -16086,7 +16086,7 @@ readers do not read off random characters that represent icons */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10; }
+  z-index: 5; }
 
 .home-contact__heading {
   text-align: center;
@@ -16228,23 +16228,34 @@ readers do not read off random characters that represent icons */
 .services__intro .intro__cards-wrapper {
   perspective: 3000px; }
 
+.services__intro .intro__card-background {
+  perspective: 3000px; }
+
 .services__intro .intro__card {
   color: white;
   position: relative;
   width: 100%;
   height: 100%; }
+  .services__intro .intro__card:hover {
+    transform: rotateY(180deg); }
   .services__intro .intro__card .card__face {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
     border-radius: 15px;
     padding: 15px;
     transition: transform 0.5s;
-    transform-style: preserve-3d; }
+    transform-style: preserve-3d;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; }
+  .services__intro .intro__card .front-face__content, .services__intro .intro__card .back-face__content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
   .services__intro .intro__card .card__front-face {
     transform: rotateY(0); }
     .services__intro .intro__card .card__front-face--flip {

@@ -397,7 +397,7 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10;
+  z-index: 5;
 }
 
 @mixin spacer-image($mobile-height, $tablet-height, $desktop-height) {
