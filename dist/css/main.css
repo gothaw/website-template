@@ -16228,15 +16228,12 @@ readers do not read off random characters that represent icons */
 .services__intro .intro__cards-wrapper {
   perspective: 3000px; }
 
-.services__intro .intro__card-background {
-  perspective: 3000px; }
-
 .services__intro .intro__card {
   color: white;
   position: relative;
-  width: 100%;
-  height: 100%; }
-  .services__intro .intro__card:hover {
+  transition: transform 0.5s;
+  transform-style: preserve-3d; }
+  .services__intro .intro__card--flip {
     transform: rotateY(180deg); }
   .services__intro .intro__card .card__face {
     position: absolute;
@@ -16246,8 +16243,6 @@ readers do not read off random characters that represent icons */
     width: 100%;
     border-radius: 15px;
     padding: 15px;
-    transition: transform 0.5s;
-    transform-style: preserve-3d;
     overflow: hidden;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden; }
@@ -16258,24 +16253,14 @@ readers do not read off random characters that represent icons */
     transform: translate(-50%, -50%); }
   .services__intro .intro__card .card__front-face {
     transform: rotateY(0); }
-    .services__intro .intro__card .card__front-face--flip {
-      transform: rotateY(180deg); }
   .services__intro .intro__card .card__back-face {
     transform: rotateY(180deg); }
-    .services__intro .intro__card .card__back-face--flip {
-      transform: rotateY(0); }
 
-.services__intro .intro__card-light .card__front-face {
+.services__intro .card__face--light {
   background-color: #258CD1; }
 
-.services__intro .intro__card-light .card__back-face {
+.services__intro .card__face--dark {
   background-color: #2C3E50; }
-
-.services__intro .intro__card-dark .card__front-face {
-  background-color: #2C3E50; }
-
-.services__intro .intro__card-dark .card__back-face {
-  background-color: #258CD1; }
 
 /* ------------------- MOBILE SECTION ------------------- */
 @media only screen and (max-width: 767px) {

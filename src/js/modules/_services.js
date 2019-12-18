@@ -13,16 +13,17 @@ if (document.getElementById("services")) {
 
                     const targetCard = target.closest(".intro__card");
 
+                    targetCard.classList.add("intro__card--flip");
+
                     console.log(cardFaces);
 
                     for (let cardFace of cardFaces){
-                        cardFace.classList.remove("card__front-face--flip");
+                        cards.classList.remove("card__front-face--flip");
                         cardFace.classList.remove("card__back-face--flip");
                     }
 
                     targetCard.children[0].classList.add("card__front-face--flip");
                     targetCard.children[1].classList.add("card__back-face--flip");
-
                     // console.log(targetCard.children[0]);
 
                 });

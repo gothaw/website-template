@@ -18,17 +18,13 @@
     perspective: 3000px;
   }
 
-  .intro__card-background{
-    perspective: 3000px;
-
-  }
-
   .intro__card {
     color: color(white);
     position: relative;
-    width: 100%;
-    height: 100%;
-    &:hover{
+    transition: transform duration(medium);
+    transform-style: preserve-3d;
+
+    &--flip {
       transform: rotateY(180deg);
     }
 
@@ -40,57 +36,33 @@
       width: 100%;
       border-radius: 15px;
       padding: 15px;
-      transition: transform 0.5s;
-      transform-style: preserve-3d;
       overflow: hidden;
       backface-visibility: hidden;
-
     }
 
-    .front-face__content, .back-face__content{
+    .front-face__content, .back-face__content {
       position: relative;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
 
     .card__front-face {
       transform: rotateY(0);
-
-      &--flip {
-        transform: rotateY(180deg);
-      }
     }
 
     .card__back-face {
       transform: rotateY(180deg);
-
-      &--flip {
-        transform: rotateY(0);
-      }
     }
   }
 
-  .intro__card-light {
-    .card__front-face {
-      background-color: color(light-blue);
-    }
-
-    .card__back-face {
-      background-color: color(dark-blue);
-    }
+  .card__face--light {
+    background-color: color(light-blue);
   }
 
-  .intro__card-dark {
-    .card__front-face {
-      background-color: color(dark-blue);
-    }
-
-    .card__back-face {
-      background-color: color(light-blue);
-    }
+  .card__face--dark {
+    background-color: color(dark-blue);
   }
-
 }
 
 /* ------------------- MOBILE SECTION ------------------- */
