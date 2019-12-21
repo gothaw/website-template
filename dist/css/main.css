@@ -16321,9 +16321,113 @@ readers do not read off random characters that represent icons */
   .services__videos {
     padding-top: 8rem; } }
 
+.services__videos .services__video-wrapper {
+  position: relative; }
+
+.services__videos .services__video {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+.services__videos .services__video-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5; }
+  @media only screen and (max-width: 767px) {
+    .services__videos .services__video-controls {
+      padding: 0 0 16px 16px; } }
+  @media only screen and (min-width: 768px) {
+    .services__videos .services__video-controls {
+      padding: 0 0 31px 31px; } }
+  .services__videos .services__video-controls .video-controls__control {
+    color: white;
+    font-size: 12px;
+    padding: 4px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.25rem;
+    margin-right: 5px;
+    transition: 0.5s color;
+    cursor: pointer; }
+    .services__videos .services__video-controls .video-controls__control:hover {
+      color: #258CD1; }
+
+.services__videos .services__video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.1; }
+
+.services__videos .services__video-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: white; }
+
+.services__videos .services__video-heading {
+  padding-bottom: 15px; }
+  @media only screen and (max-width: 767px) {
+    .services__videos .services__video-heading {
+      font-size: 1.8em; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .services__videos .services__video-heading {
+      font-size: 2em; } }
+  @media only screen and (min-width: 992px) {
+    .services__videos .services__video-heading {
+      font-size: 2.5em; } }
+
+@media only screen and (min-width: 768px) {
+  .services__videos .services__video-text {
+    font-size: 1.2em; } }
+
+.services__videos .services__quote {
+  font-family: 'Kaushan Script', cursive; }
+  @media only screen and (max-width: 767px) {
+    .services__videos .services__quote {
+      font-size: 1.5em; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .services__videos .services__quote {
+      font-size: 2em; } }
+  @media only screen and (min-width: 992px) {
+    .services__videos .services__quote {
+      font-size: 3em; } }
+
 /* ------------------- MOBILE SECTION ------------------- */
+@media only screen and (max-width: 767px) {
+  .services__videos .services__video {
+    height: 550px; }
+  .services__videos .services__video-wrapper {
+    background: url("../../../dist/img/services-videos-posters/services-video-1-poster-mobile.jpg") no-repeat 50% 50%;
+    background-size: cover; }
+  .services__videos .services__quote {
+    font-size: 1.5em; } }
+
 /* ------------------- TABLET SECTION ------------------- */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .services__videos .services__video {
+    height: 600px; }
+  .services__videos .services__video-wrapper {
+    background: url("../../../dist/img/services-videos-posters/services-video-1-poster-tablet.jpg") no-repeat 50% 50%;
+    background-size: cover; }
+  .services__videos .services__quote {
+    font-size: 2em; } }
+
 /* ----------------- DESKTOP SECTION ------------------- */
+@media only screen and (min-width: 992px) {
+  .services__videos .services__video {
+    height: 700px; }
+  .services__videos .services__quote {
+    font-size: 2.5em; }
+  .services__videos .services__video-wrapper {
+    background: url("../../../dist/img/services-videos-posters/services-video-1-poster-desktop.jpg") no-repeat 50% 50%;
+    background-size: cover; } }
+
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
 /*========================================================================================================*/
@@ -16343,7 +16447,4 @@ li {
   transition: opacity 2s; }
   .text-show-animation__show {
     opacity: 1; }
-
-.test {
-  margin: 250px 0; }
 

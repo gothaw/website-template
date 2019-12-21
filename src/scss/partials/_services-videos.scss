@@ -6,26 +6,117 @@
 .services__videos {
   @include section-spacing;
 
+  .services__video-wrapper {
+    position: relative;
+  }
+
+  .services__video {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .services__video-controls {
+    @include video-controls-wrapper;
+
+    .video-controls__control {
+      @include video-controls;
+    }
+  }
+
+  .services__video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.1;
+  }
+
+  .services__video-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: color(white);
+  }
+
+  .services__video-heading {
+    @include section-title-font-size;
+    padding-bottom: 15px;
+  }
+
+  .services__video-text {
+    @include text-font-size;
+  }
+
+  .services__quote {
+    font-family: 'Kaushan Script', cursive;
+    @include mobile {
+      font-size: subtitle-font-size(small);
+    }
+    @include tablet {
+      font-size: subtitle-font-size(medium);
+    }
+    @include desktop {
+      font-size: subtitle-font-size(v-large);
+    }
+  }
 
 }
 
 /* ------------------- MOBILE SECTION ------------------- */
 @include mobile {
   .services__videos {
+    .services__video {
+      height: 550px;
+    }
 
+    .services__video-wrapper {
+      background: url("../../../dist/img/services-videos-posters/services-video-1-poster-mobile.jpg") no-repeat 50% 50%;
+      background-size: cover;
+    }
+
+    .services__quote {
+      font-size: subtitle-font-size(small);
+    }
   }
 }
 
 /* ------------------- TABLET SECTION ------------------- */
 @include tablet {
   .services__videos {
+    .services__video {
+      height: 600px;
+    }
 
+    .services__video-wrapper {
+      background: url("../../../dist/img/services-videos-posters/services-video-1-poster-tablet.jpg") no-repeat 50% 50%;
+      background-size: cover;
+    }
+
+    .services__quote {
+      font-size: subtitle-font-size(medium);
+    }
   }
 }
 
 /* ----------------- DESKTOP SECTION ------------------- */
 @include desktop {
   .services__videos {
+    .services__video {
+      height: 700px;
+    }
 
+    .services__quote {
+      font-size: subtitle-font-size(large);
+    }
+
+    .services__video-wrapper {
+      background: url("../../../dist/img/services-videos-posters/services-video-1-poster-desktop.jpg") no-repeat 50% 50%;
+      background-size: cover;
+    }
   }
 }
