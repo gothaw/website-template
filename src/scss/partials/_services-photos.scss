@@ -1,0 +1,114 @@
+//============================================= Imports ==================================================
+@import '_utilities';
+/*======================================================================================================*/
+/*====================================== Services Photos Styling =======================================*/
+/*======================================================================================================*/
+.services-photos {
+
+  &__description {
+    background-color: color(dark-blue);
+    color: color(white);
+  }
+
+  &__heading {
+    @include section-title-font-size;
+  }
+
+  &__text {
+    @include text-font-size;
+  }
+
+  &__img-wrapper {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__img-overlay {
+    @include img-overlay;
+
+    span {
+      @include text-font-size;
+    }
+  }
+
+  &__lightbox {
+    @include lightbox;
+
+    .lightbox__img-wrapper {
+      @include lightbox-img-wrapper;
+    }
+
+    .lightbox__description {
+      @include lightbox-description;
+
+      &-subheading, &-text {
+        @include text-font-size;
+      }
+    }
+
+    .lightbox__arrow {
+      @include lightbox-arrow;
+    }
+
+    .lightbox__close {
+      @include lightbox-close;
+    }
+  }
+
+
+}
+
+/* ------------------- MOBILE SECTION ------------------- */
+@include mobile {
+  .services-photos {
+    &__text {
+      padding-top: 12px;
+    }
+  }
+}
+
+/* ------------- MOBILE AND TABLET SECTION -------------- */
+@include mobile-and-tablet {
+  .services-photos {
+    &__gallery {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+/* ------------------- TABLET SECTION ------------------- */
+@include tablet {
+  .services-photos {
+    &__text {
+      padding-top: 24px;
+    }
+
+    &__img-wrapper {
+      width: 50%;
+    }
+  }
+}
+
+/* --------------TABLET AND DESKTOP SECTION ------------ */
+@include tablet-and-desktop {
+  .services-photos {
+    &__gallery {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__img-wrapper:hover .services-photos__img-overlay {
+      opacity: 1;
+    }
+  }
+}
+
+/* ----------------- DESKTOP SECTION ------------------- */
+@include desktop {
+  .services-photos {
+    &__img-wrapper {
+      width: 100%;
+    }
+  }
+}

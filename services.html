@@ -276,34 +276,84 @@
 
             </div> <!--/intro__cards-wrapper-->
         </div> <!--/services__intro-->
-        <div class="services__videos">
-            <div class="services__video-wrapper basic-video-wrapper">
-                <video class="services__video basic-video" loop src="dist/vid/services_video_1.mp4" preload="none"></video> <!--/services__video basic-video-->
-                <div class="services__video-overlay"></div> <!--/services__video-overlay-->
-                <div class="services__video-controls d-flex">
+        <div class="services-videos">
+            <div class="services-videos__wrapper basic-video-wrapper">
+                <video class="services-videos__video basic-video" loop src="dist/vid/services_video_1.mp4" preload="none"></video> <!--/services-videos__video basic-video-->
+                <div class="services-videos__overlay"></div> <!--/services-videos__overlay-->
+                <div class="services-videos__video-controls d-flex">
                     <div class="video-controls__control basic-video-control" data-control="play-pause">
                         <i class="fas fa-play"></i>
                     </div> <!--/video-controls__control-->
                     <div class="video-controls__control basic-video-control" data-control="stop">
                         <i class="fas fa-stop"></i>
                     </div> <!--/video-controls__control-->
-                </div> <!--/home-services__video-controls-->
-                <div class="services__video-content">
+                </div> <!--/services-videos__video-controls-->
+                <div class="services-videos__content">
                     <div class="container text-center">
-                        <h2 class="services__video-heading">Recent Videos</h2>
+                        <h2 class="services-videos__heading">Recent Videos</h2>
                         <div class="row">
-                            <div class="services__quote col-lg-6">
+                            <div class="services-videos__quote col-lg-6">
                                 "Consectetur adipisicing elit. Assumenda beatae blanditiis consequatur culpa."
-                            </div> <!--/services__video-text-->
-                            <div class="services__video-text col-lg-6">
+                            </div> <!--/services-videos__quote-->
+                            <div class="services-videos__text col-lg-6">
                                 Doloribus eos et exercitationem fugiat in, inventore maiores molestias non odio officia qui similique, sint tenetur unde? Aliquam aliquid deserunt facere labore maxime nulla obcaecati perspiciatis, quos. Adipisci alias, aliquam amet assumenda at blanditiis commodi cupiditate dolor dolores dolorum impedit inventore ipsam iste itaque, magni, nobis non perferendis quibusdam sint suscipit temporibus vero voluptates. A aliquam autem commodi consequuntur.
-                            </div> <!--/services__video-text-->
+                            </div> <!--/services-videos__text-->
                         </div>
                     </div>
-                </div> <!--/services__video-text-->
-
-            </div> <!--/services__video-wrapper basic-video-wrapper-->
-        </div> <!--/services__videos-->
+                </div> <!--/services-videos__content-->
+            </div> <!--/services-videos__wrapper basic-video-wrapper-->
+        </div> <!--/services-videos-->
+        <div class="services-photos">
+            <div class="services-photos__description py-5">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <h3 class="services-photos__heading col-lg-6">Recent Photos</h3>
+                        <!--/services-photos__heading-->
+                        <div class="services-photos__text col-lg-6">
+                            Neque possimus quae repudiandae veniam vitae. Commodi ducimus exercitationem illo laboriosam, libero nobis omnis quidem sint voluptate? Beatae, delectus earum enim id illum, inventore iste laborum laudantium magnam non officia pariatur placeat quam quas qui quis quod reiciendis tenetur veniam voluptas voluptates!
+                        </div> <!--/services-photos__text-->
+                    </div>
+                </div>
+            </div> <!--/services__photos-description-->
+            <div class="services-photos__gallery">
+                <div class="services-photos__img-wrapper gallery__item">
+                    <picture>
+                        <source media="print" srcset="dist/img/services/photo-services-1-1920.jpg">
+                        <source media="(max-width: 992px)" srcset="dist/img/services/photo-services-1-768.jpg">
+                        <img class="img-responsive services-photos__img" src="dist/img/services/photo-services-1-1920.jpg"
+                             width="1920" height="1280" alt="group of people looking at the valley">
+                    </picture>
+                    <div class="services-photos__img-overlay">
+                        <h4>Project 1</h4>
+                        <span>River Valley Photos</span>
+                    </div> <!--/services-photos__img-overlay-->
+                </div> <!--/services-photos__img-wrapper gallery__item-->
+                <div class="services-photos__img-wrapper gallery__item">
+                    <picture>
+                        <source media="print" srcset="dist/img/services/photo-services-2-1920.jpg">
+                        <source media="(max-width: 992px)" srcset="dist/img/services/photo-services-2-768.jpg">
+                        <img class="img-responsive services-photos__img" src="dist/img/services/photo-services-2-1920.jpg"
+                             width="1920" height="1280" alt="couple in mountains">
+                    </picture>
+                    <div class="services-photos__img-overlay">
+                        <h4>Project 2</h4>
+                        <span>Mountains Photos</span>
+                    </div> <!--/services-photos__img-overlay-->
+                </div> <!--/services-photos__img-wrapper gallery__item-->
+                <div class="services-photos__img-wrapper gallery__item">
+                    <picture>
+                        <source media="print" srcset="dist/img/services/photo-services-3-1920.jpg">
+                        <source media="(max-width: 992px)" srcset="dist/img/services/photo-services-3-768.jpg">
+                        <img class="img-responsive services-photos__img" src="dist/img/services/photo-services-3-1920.jpg"
+                             width="1920" height="1280" alt="family on pier looking at sunset">
+                    </picture>
+                    <div class="services-photos__img-overlay">
+                        <h4>Project 3</h4>
+                        <span>Beach Sunset Photos</span>
+                    </div> <!--/services-photos__img-overlay-->
+                </div> <!--/services-photos__img-wrapper gallery__item-->
+            </div> <!--/services-photos__gallery-->
+        </div> <!--/services-photos-->
     </main> <!--/services-->
     <footer class="footer text-center">
         <div class="container">

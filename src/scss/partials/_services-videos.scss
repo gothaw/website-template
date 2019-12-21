@@ -3,20 +3,20 @@
 /*======================================================================================================*/
 /*====================================== Services Videos Styling =======================================*/
 /*======================================================================================================*/
-.services__videos {
+.services-videos {
   @include section-spacing;
 
-  .services__video-wrapper {
+  &__wrapper {
     position: relative;
   }
 
-  .services__video {
+  &__video {
     width: 100%;
     display: block;
     object-fit: cover;
   }
 
-  .services__video-controls {
+  &__video-controls {
     @include video-controls-wrapper;
 
     .video-controls__control {
@@ -24,7 +24,7 @@
     }
   }
 
-  .services__video-overlay {
+  &__overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -34,7 +34,7 @@
     opacity: 0.1;
   }
 
-  .services__video-content {
+  &__content {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -43,16 +43,16 @@
     color: color(white);
   }
 
-  .services__video-heading {
+  &__heading {
     @include section-title-font-size;
     padding-bottom: 15px;
   }
 
-  .services__video-text {
+  &__text {
     @include text-font-size;
   }
 
-  .services__quote {
+  &__quote {
     font-family: 'Kaushan Script', cursive;
     @include mobile {
       font-size: subtitle-font-size(small);
@@ -69,17 +69,17 @@
 
 /* ------------------- MOBILE SECTION ------------------- */
 @include mobile {
-  .services__videos {
-    .services__video {
+  .services-videos {
+    &__video {
       height: 550px;
     }
 
-    .services__video-wrapper {
+    &__wrapper {
       background: url("../../../dist/img/services-videos-posters/services-video-1-poster-mobile.jpg") no-repeat 50% 50%;
       background-size: cover;
     }
 
-    .services__quote {
+    &__quote {
       font-size: subtitle-font-size(small);
     }
   }
@@ -87,17 +87,17 @@
 
 /* ------------------- TABLET SECTION ------------------- */
 @include tablet {
-  .services__videos {
-    .services__video {
+  .services-videos {
+    &__video {
       height: 600px;
     }
 
-    .services__video-wrapper {
+    &__wrapper {
       background: url("../../../dist/img/services-videos-posters/services-video-1-poster-tablet.jpg") no-repeat 50% 50%;
       background-size: cover;
     }
 
-    .services__quote {
+    &__quote {
       font-size: subtitle-font-size(medium);
     }
   }
@@ -105,16 +105,16 @@
 
 /* ----------------- DESKTOP SECTION ------------------- */
 @include desktop {
-  .services__videos {
-    .services__video {
+  .services-videos {
+    &__video {
       height: 700px;
     }
 
-    .services__quote {
+    &__quote {
       font-size: subtitle-font-size(large);
     }
 
-    .services__video-wrapper {
+    &__wrapper {
       background: url("../../../dist/img/services-videos-posters/services-video-1-poster-desktop.jpg") no-repeat 50% 50%;
       background-size: cover;
     }
