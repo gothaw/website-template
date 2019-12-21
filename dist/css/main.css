@@ -16195,7 +16195,7 @@ readers do not read off random characters that represent icons */
     opacity: 1.0; } }
 
 /*======================================================================================================*/
-/*====================================== Home Services Styling =========================================*/
+/*===================================== Services Intro Styling =========================================*/
 /*======================================================================================================*/
 @media only screen and (max-width: 767px) {
   .services__intro {
@@ -16232,7 +16232,8 @@ readers do not read off random characters that represent icons */
   color: white;
   position: relative;
   transition: transform 0.5s;
-  transform-style: preserve-3d; }
+  transform-style: preserve-3d;
+  cursor: pointer; }
   .services__intro .intro__card--flip {
     transform: rotateY(180deg); }
   .services__intro .intro__card .card__face {
@@ -16267,20 +16268,62 @@ readers do not read off random characters that represent icons */
   .services__intro .intro__card {
     min-height: 250px;
     width: 250px;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .services__intro .intro__cards-wrapper div:nth-child(2) {
+    padding-top: 15px; }
+  .services__intro .intro__cards-wrapper div:nth-child(3) {
+    padding-top: 15px; }
+  .services__intro .intro__cards-wrapper div:nth-child(4) {
+    padding-top: 15px; } }
 
-/* ------------- MOBILE AND TABLET SECTION -------------- */
 /* ------------------- TABLET SECTION ------------------- */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .services__intro .intro__card {
-    min-height: 240px; } }
+    min-height: 240px; }
+  .services__intro .intro__cards-wrapper div:nth-child(3) {
+    padding-top: 15px; }
+  .services__intro .intro__cards-wrapper div:nth-child(4) {
+    padding-top: 15px; } }
 
-/* --------------TABLET AND DESKTOP SECTION ------------ */
 /* ----------------- DESKTOP SECTION ------------------- */
 @media only screen and (min-width: 992px) {
   .services__intro .intro__card {
-    min-height: 280px; } }
+    min-height: 300px; } }
 
+@keyframes svg-line-animation {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes svg-fill-animation {
+  from {
+    fill: transparent; }
+  to {
+    fill: white; } }
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1.0; } }
+
+/*======================================================================================================*/
+/*====================================== Services Videos Styling =======================================*/
+/*======================================================================================================*/
+@media only screen and (max-width: 767px) {
+  .services__videos {
+    padding-top: 4rem; } }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .services__videos {
+    padding-top: 6rem; } }
+
+@media only screen and (min-width: 992px) {
+  .services__videos {
+    padding-top: 8rem; } }
+
+/* ------------------- MOBILE SECTION ------------------- */
+/* ------------------- TABLET SECTION ------------------- */
+/* ----------------- DESKTOP SECTION ------------------- */
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
 /*========================================================================================================*/

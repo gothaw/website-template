@@ -1,7 +1,7 @@
 //============================================= Imports ==================================================
 @import '_utilities';
 /*======================================================================================================*/
-/*====================================== Home Services Styling =========================================*/
+/*===================================== Services Intro Styling =========================================*/
 /*======================================================================================================*/
 .services__intro {
   @include section-spacing;
@@ -23,6 +23,7 @@
     position: relative;
     transition: transform duration(medium);
     transform-style: preserve-3d;
+    cursor: pointer;
 
     &--flip {
       transform: rotateY(180deg);
@@ -73,13 +74,11 @@
       width: 250px;
       margin: 0 auto;
     }
-  }
-}
-
-/* ------------- MOBILE AND TABLET SECTION -------------- */
-@include mobile-and-tablet {
-  .services__intro {
-
+    @for $i from 2 through 4 {
+      .intro__cards-wrapper div:nth-child(#{$i}) {
+        padding-top: 15px;
+      }
+    }
   }
 }
 
@@ -89,13 +88,11 @@
     .intro__card {
       min-height: 240px;
     }
-  }
-}
-
-/* --------------TABLET AND DESKTOP SECTION ------------ */
-@include tablet-and-desktop {
-  .services__intro {
-
+    @for $i from 3 through 4 {
+      .intro__cards-wrapper div:nth-child(#{$i}) {
+        padding-top: 15px;
+      }
+    }
   }
 }
 
@@ -103,7 +100,7 @@
 @include desktop {
   .services__intro {
     .intro__card {
-      min-height: 280px;
+      min-height: 300px;
     }
   }
 }
