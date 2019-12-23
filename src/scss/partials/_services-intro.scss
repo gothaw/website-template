@@ -3,22 +3,22 @@
 /*======================================================================================================*/
 /*===================================== Services Intro Styling =========================================*/
 /*======================================================================================================*/
-.services__intro {
+.services-intro {
   @include section-spacing;
 
-  .intro__title {
+  &__heading {
     @include section-title-font-size;
   }
 
-  .intro__text {
+  &__text {
     @include text-font-size;
   }
 
-  .intro__cards-wrapper {
+  &__cards-wrapper {
     perspective: 3000px;
   }
 
-  .intro__card {
+  &__card {
     color: color(white);
     position: relative;
     transition: transform duration(medium);
@@ -68,14 +68,14 @@
 
 /* ------------------- MOBILE SECTION ------------------- */
 @include mobile {
-  .services__intro {
-    .intro__card {
+  .services-intro {
+    &__card {
       min-height: 250px;
       width: 250px;
       margin: 0 auto;
     }
     @for $i from 2 through 4 {
-      .intro__cards-wrapper div:nth-child(#{$i}) {
+      &__cards-wrapper div:nth-child(#{$i}) {
         padding-top: 15px;
       }
     }
@@ -84,12 +84,12 @@
 
 /* ------------------- TABLET SECTION ------------------- */
 @include tablet {
-  .services__intro {
-    .intro__card {
+  .services-intro {
+    &__card {
       min-height: 240px;
     }
     @for $i from 3 through 4 {
-      .intro__cards-wrapper div:nth-child(#{$i}) {
+      &__cards-wrapper div:nth-child(#{$i}) {
         padding-top: 15px;
       }
     }
@@ -98,8 +98,8 @@
 
 /* ----------------- DESKTOP SECTION ------------------- */
 @include desktop {
-  .services__intro {
-    .intro__card {
+  .services-intro {
+    &__card {
       min-height: 300px;
     }
   }
