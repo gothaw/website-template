@@ -5,6 +5,37 @@
 /*======================================================================================================*/
 .services-opinions {
 
+  &__carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__carousel {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 600%;
+    height: 100%;
+    display: flex;
+    transition: left duration(fast);
+  }
+
+  .carousel {
+    &__item {
+      width: 100%;
+      transition: opacity duration(v-slow);
+      opacity: 0.1;
+    }
+
+    &__item--selected {
+      opacity: 1;
+    }
+
+    &__text {
+      @include text-font-size;
+
+    }
+  }
 }
 
 /* ------------------- MOBILE SECTION ------------------- */
@@ -24,6 +55,8 @@
 /* ----------------- DESKTOP SECTION ------------------- */
 @include desktop {
   .services-opinions {
+    .carousel{
 
+    }
   }
 }

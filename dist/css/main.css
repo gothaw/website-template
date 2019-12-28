@@ -16608,6 +16608,53 @@ readers do not read off random characters that represent icons */
   .services-photos__img-wrapper {
     width: 100%; } }
 
+@keyframes svg-line-animation {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes svg-fill-animation {
+  from {
+    fill: transparent; }
+  to {
+    fill: white; } }
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1.0; } }
+
+/*======================================================================================================*/
+/*===================================== Services Opinions Styling ======================================*/
+/*======================================================================================================*/
+.services-opinions__carousel-wrapper {
+  width: 100%;
+  overflow: hidden; }
+
+.services-opinions__carousel {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 600%;
+  height: 100%;
+  display: flex;
+  transition: left 0.3s; }
+
+.services-opinions .carousel__item {
+  width: 100%;
+  transition: opacity 1s;
+  opacity: 0.1; }
+
+.services-opinions .carousel__item--selected {
+  opacity: 1; }
+
+@media only screen and (min-width: 768px) {
+  .services-opinions .carousel__text {
+    font-size: 1.2em; } }
+
+/* ------------------- MOBILE SECTION ------------------- */
+/* ------------------- TABLET SECTION ------------------- */
+/* ----------------- DESKTOP SECTION ------------------- */
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
 /*========================================================================================================*/
