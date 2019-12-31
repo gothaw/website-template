@@ -76,23 +76,16 @@
 @include mobile {
   .services-opinions {
 
-    &__carousel-controls-wrapper {
-      display: flex;
-      justify-content: space-between;
-    }
-
     &__carousel-control {
-      position: relative;
+      position: absolute;
+      bottom: 0;
       font-size: 3.0em;
-      top: 0;
     }
-  }
-}
 
-/* ------------------- TABLET SECTION ------------------- */
-@include tablet {
-  .services-opinions {
-
+    .carousel__client-name {
+      width: 50%;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -104,15 +97,6 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-    }
-  }
-}
-
-/* ----------------- DESKTOP SECTION ------------------- */
-@include desktop {
-  .services-opinions {
-    .carousel {
-
     }
   }
 }
