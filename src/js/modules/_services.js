@@ -49,12 +49,6 @@ if (document.getElementById("services")) {
 
                 let isAnyCardFlipped = false;
 
-                if(!isAnyCardFlipped) {
-                    const cardToFlipIndex = getRandomIntInclusive(0, numberOfCards - 1);
-                    const cardToFlip = cards[cardToFlipIndex];
-                    cardToFlip.classList.add("services-intro__card--flip");
-                }
-
                 for (let card of cards) {
                     if (card.classList.contains("services-intro__card--flip")) {
                         isAnyCardFlipped = true;
@@ -63,8 +57,14 @@ if (document.getElementById("services")) {
                     }
                 }
 
+                if(!isAnyCardFlipped) {
+                    const cardToFlipIndex = getRandomIntInclusive(0, numberOfCards - 1);
+                    const cardToFlip = cards[cardToFlipIndex];
+                    cardToFlip.classList.add("services-intro__card--flip");
+                }
+
                 flipCardTimeout();
-            }, 10000);
+            }, 1000);
         };
 
         /**

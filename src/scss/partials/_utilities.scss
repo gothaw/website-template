@@ -150,6 +150,11 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
   }
 }
 
+//mixin for top spacing between website sections - smaller spacing
+@mixin section-spacing-small {
+  padding-top: 4rem;
+}
+
 //mixin for a subheading over videos or images
 @mixin subheading {
   text-align: center;

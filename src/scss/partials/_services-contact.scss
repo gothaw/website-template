@@ -1,0 +1,35 @@
+//============================================= Imports ==================================================
+@import '_utilities';
+/*======================================================================================================*/
+/*==================================== Services Contact Styling ========================================*/
+/*======================================================================================================*/
+
+// Using spacer image mixin
+
+.services-contact {
+  @include section-spacing-small;
+  &__img-wrapper {
+    @include spacer-image-wrapper;
+  }
+
+  &__img {
+    @include spacer-image(400px, 600px, 800px);
+  }
+
+  &__heading-wrapper {
+    @include spacer-image-heading-wrapper;
+  }
+
+  &__heading {
+    @include subheading;
+    padding-bottom: 15px;
+  }
+
+  &__button-wrapper button {
+    @include read-more-btn-img-video;
+  }
+
+  &__img-overlay {
+    @include spacer-image-overlay;
+  }
+}

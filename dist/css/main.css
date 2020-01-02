@@ -16697,6 +16697,85 @@ readers do not read off random characters that represent icons */
     top: 50%;
     transform: translateY(-50%); } }
 
+@keyframes svg-line-animation {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes svg-fill-animation {
+  from {
+    fill: transparent; }
+  to {
+    fill: white; } }
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1.0; } }
+
+/*======================================================================================================*/
+/*==================================== Services Contact Styling ========================================*/
+/*======================================================================================================*/
+.services-contact {
+  padding-top: 4rem; }
+  .services-contact__img-wrapper {
+    position: relative;
+    overflow: hidden; }
+  .services-contact__img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%; }
+    @media only screen and (max-width: 767px) {
+      .services-contact__img {
+        height: 400px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .services-contact__img {
+        height: 600px; } }
+    @media only screen and (min-width: 992px) {
+      .services-contact__img {
+        height: 800px; } }
+  .services-contact__heading-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5; }
+  .services-contact__heading {
+    text-align: center;
+    color: white;
+    font-family: 'Kaushan Script', cursive;
+    padding-bottom: 15px; }
+    @media only screen and (max-width: 767px) {
+      .services-contact__heading {
+        font-size: 1.5em; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .services-contact__heading {
+        font-size: 2em; } }
+    @media only screen and (min-width: 992px) {
+      .services-contact__heading {
+        font-size: 3em; } }
+  .services-contact__button-wrapper button {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: 0.3s all; }
+    .services-contact__button-wrapper button:hover {
+      opacity: 1;
+      border-color: #258CD1 !important;
+      background-color: transparent !important; }
+    .services-contact__button-wrapper button:active {
+      color: #258CD1 !important;
+      background-color: transparent !important; }
+    .services-contact__button-wrapper button:focus {
+      box-shadow: none !important; }
+  .services-contact__img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.2); }
+
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
 /*========================================================================================================*/
