@@ -1,8 +1,11 @@
+import {getRandomIntInclusive} from "./_utilities";
+
 if (document.getElementById("services")) {
     (function () {
 
         // cards variables
         const cards = document.querySelectorAll(".services-intro__card");
+        const numberOfCards = cards.length;
         // carousel variables
         const carousel = document.querySelector(".services-opinions__carousel");
         const carouselItems = document.querySelectorAll(".carousel__item");
@@ -34,6 +37,34 @@ if (document.getElementById("services")) {
                     }
                 });
             }
+        };
+
+        /**
+         * @name            flipCardTimeout
+         * @desc            Flips card every 10 seconds by adding services-intro__card--flip css class.
+         *                  If there is already a flipped card, this card is flipped back and a new card is not flipped.
+         */
+        const flipCardTimeout = () => {
+            setTimeout(function () {
+
+                let isAnyCardFlipped = false;
+
+                if(!isAnyCardFlipped) {
+                    const cardToFlipIndex = getRandomIntInclusive(0, numberOfCards - 1);
+                    const cardToFlip = cards[cardToFlipIndex];
+                    cardToFlip.classList.add("services-intro__card--flip");
+                }
+
+                for (let card of cards) {
+                    if (card.classList.contains("services-intro__card--flip")) {
+                        isAnyCardFlipped = true;
+                        card.classList.remove("services-intro__card--flip");
+                        break;
+                    }
+                }
+
+                flipCardTimeout();
+            }, 10000);
         };
 
         /**
@@ -69,6 +100,7 @@ if (document.getElementById("services")) {
 
         const init = () => {
             flipCardOnClick();
+            flipCardTimeout();
             bindCarouselControls();
         };
 
