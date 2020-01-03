@@ -64,7 +64,7 @@ if (document.getElementById("services")) {
                 }
 
                 flipCardTimeout();
-            }, 1000);
+            }, 10000);
         };
 
         /**
