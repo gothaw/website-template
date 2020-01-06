@@ -14,24 +14,8 @@
 /* ------------------- MOBILE SECTION ------------------- */
 @include mobile {
   .news {
-    &__post a{
-    }
     &__post-title{
       padding-top: 16px;
     }
-  }
-}
-
-/* ------------------- TABLET SECTION ------------------- */
-@include tablet {
-  .news {
-
-  }
-}
-
-/* ----------------- DESKTOP SECTION ------------------- */
-@include desktop {
-  .news {
-
   }
 }

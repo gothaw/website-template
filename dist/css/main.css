@@ -16805,8 +16805,6 @@ readers do not read off random characters that represent icons */
   .news__post-title {
     padding-top: 16px; } }
 
-/* ------------------- TABLET SECTION ------------------- */
-/* ----------------- DESKTOP SECTION ------------------- */
 @keyframes svg-line-animation {
   to {
     stroke-dashoffset: 0; } }
@@ -16826,6 +16824,44 @@ readers do not read off random characters that represent icons */
 /*======================================================================================================*/
 /*===================================== News Sidebar Styling ===========================================*/
 /*======================================================================================================*/
+.side-bar {
+  padding-top: 4rem; }
+  .side-bar__categories .categories__item {
+    width: 50%;
+    margin-bottom: 5px; }
+    .side-bar__categories .categories__item-count {
+      width: 50%;
+      text-align: right; }
+    .side-bar__categories .categories__item-link {
+      color: black;
+      transition: all 0.2s; }
+      .side-bar__categories .categories__item-link:hover {
+        text-decoration: none;
+        color: #258CD1; }
+      .side-bar__categories .categories__item-link:active {
+        text-decoration: underline; }
+  .side-bar__tags .tags__item {
+    font-size: 1em;
+    font-weight: normal;
+    margin-bottom: 5px;
+    margin-right: 5px; }
+    .side-bar__tags .tags__item-link {
+      color: black;
+      transition: all 0.2s; }
+      .side-bar__tags .tags__item-link:hover {
+        text-decoration: none;
+        color: #258CD1; }
+      .side-bar__tags .tags__item-link:active {
+        text-decoration: underline; }
+
+/* ------------------- MOBILE SECTION ------------------- */
+/* ------------------- TABLET SECTION ------------------- */
+/* ----------------- DESKTOP SECTION ------------------- */
+@media only screen and (min-width: 992px) {
+  .side-bar__wrapper {
+    padding-left: 15px;
+    border-left: solid 1px #ECF0F1; } }
+
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
 /*========================================================================================================*/

@@ -3,3 +3,56 @@
 /*======================================================================================================*/
 /*===================================== News Sidebar Styling ===========================================*/
 /*======================================================================================================*/
+.side-bar {
+  @include section-spacing-small;
+
+  &__categories {
+    .categories__item{
+      width: 50%;
+      margin-bottom: 5px;
+      &-count{
+        width: 50%;
+        text-align: right;
+      }
+      &-link{
+        @include link-styling;
+      }
+    }
+  }
+
+  &__tags {
+    .tags__item{
+      font-size: 1em;
+      font-weight: normal;
+      margin-bottom: 5px;
+      margin-right: 5px;
+      &-link{
+        @include link-styling;
+      }
+    }
+  }
+}
+
+/* ------------------- MOBILE SECTION ------------------- */
+@include mobile {
+  .side-bar {
+
+  }
+}
+
+/* ------------------- TABLET SECTION ------------------- */
+@include tablet {
+  .side-bar {
+
+  }
+}
+
+/* ----------------- DESKTOP SECTION ------------------- */
+@include desktop {
+  .side-bar {
+    &__wrapper{
+      padding-left: 15px;
+      border-left: solid 1px color(grey);
+    }
+  }
+}

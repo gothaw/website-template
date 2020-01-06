@@ -16,6 +16,7 @@ $desktop-large: 1200px;
 
 $colors: (
         white: white,
+        grey: #ECF0F1,
         light-green: #18BC9C,
         light-blue: #258CD1,
         dark-blue: #2C3E50,
@@ -191,6 +192,19 @@ $svg-title-path-lengths: (298.1695556640625, 282.69970703125, 240.484375, 301.03
   }
   @include tablet-and-desktop {
     font-size: text-font-size(large);
+  }
+}
+
+//mixin for link <a> tag styling
+@mixin link-styling {
+  color: black;
+  transition: all duration(v-fast);
+  &:hover{
+    text-decoration: none;
+    color: color(light-blue);
+  }
+  &:active{
+    text-decoration: underline;
   }
 }
 
