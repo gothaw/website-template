@@ -9,13 +9,47 @@
   &__post {
     padding: 30px 15px;
   }
+
+  .pagination {
+    .page-item {
+      .page-link {
+        background-color: color(dark-blue);
+        transition: background-color duration(v-fast);
+
+        &:hover {
+          background-color: color(light-blue);
+        }
+      }
+    }
+
+    .disabled {
+      .page-link {
+        background-color: color(light-blue);
+      }
+    }
+
+    .active {
+      .page-link {
+        background-color: color(light-blue);
+      }
+    }
+  }
 }
 
 /* ------------------- MOBILE SECTION ------------------- */
 @include mobile {
   .news {
-    &__post-title{
+    &__post-title {
       padding-top: 16px;
+    }
+  }
+}
+
+/* ------------------- DESKTOP SECTION ------------------- */
+@include desktop {
+  .news {
+    .pagination {
+      padding-bottom: 50px;
     }
   }
 }

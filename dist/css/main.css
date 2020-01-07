@@ -16799,11 +16799,25 @@ readers do not read off random characters that represent icons */
   padding-top: 4rem; }
   .news__post {
     padding: 30px 15px; }
+  .news .pagination .page-item .page-link {
+    background-color: #2C3E50;
+    transition: background-color 0.2s; }
+    .news .pagination .page-item .page-link:hover {
+      background-color: #258CD1; }
+  .news .pagination .disabled .page-link {
+    background-color: #258CD1; }
+  .news .pagination .active .page-link {
+    background-color: #258CD1; }
 
 /* ------------------- MOBILE SECTION ------------------- */
 @media only screen and (max-width: 767px) {
   .news__post-title {
     padding-top: 16px; } }
+
+/* ------------------- DESKTOP SECTION ------------------- */
+@media only screen and (min-width: 992px) {
+  .news .pagination {
+    padding-bottom: 50px; } }
 
 @keyframes svg-line-animation {
   to {
@@ -16824,43 +16838,72 @@ readers do not read off random characters that represent icons */
 /*======================================================================================================*/
 /*===================================== News Sidebar Styling ===========================================*/
 /*======================================================================================================*/
-.side-bar {
-  padding-top: 4rem; }
-  .side-bar__categories .categories__item {
-    width: 50%;
-    margin-bottom: 5px; }
-    .side-bar__categories .categories__item-count {
-      width: 50%;
-      text-align: right; }
-    .side-bar__categories .categories__item-link {
-      color: black;
-      transition: all 0.2s; }
-      .side-bar__categories .categories__item-link:hover {
-        text-decoration: none;
-        color: #258CD1; }
-      .side-bar__categories .categories__item-link:active {
-        text-decoration: underline; }
-  .side-bar__tags .tags__item {
-    font-size: 1em;
-    font-weight: normal;
-    margin-bottom: 5px;
-    margin-right: 5px; }
-    .side-bar__tags .tags__item-link {
-      color: black;
-      transition: all 0.2s; }
-      .side-bar__tags .tags__item-link:hover {
-        text-decoration: none;
-        color: #258CD1; }
-      .side-bar__tags .tags__item-link:active {
-        text-decoration: underline; }
+.side-bar__title {
+  padding: 20px 0 5px; }
 
-/* ------------------- MOBILE SECTION ------------------- */
-/* ------------------- TABLET SECTION ------------------- */
+.side-bar__experience .progress {
+  margin-bottom: 10px; }
+
+.side-bar__popular-posts .popular-posts__item {
+  padding-top: 15px; }
+
+.side-bar__popular-posts .popular-posts__text {
+  padding-left: 10px;
+  width: 60%; }
+  .side-bar__popular-posts .popular-posts__text a {
+    color: black;
+    transition: all 0.2s; }
+    .side-bar__popular-posts .popular-posts__text a:hover {
+      text-decoration: none;
+      color: #258CD1; }
+    .side-bar__popular-posts .popular-posts__text a:active {
+      text-decoration: underline; }
+
+.side-bar__categories .categories__item {
+  width: 50%;
+  margin-bottom: 5px; }
+  .side-bar__categories .categories__item-count {
+    width: 50%;
+    text-align: right; }
+  .side-bar__categories .categories__item-link {
+    color: black;
+    transition: all 0.2s; }
+    .side-bar__categories .categories__item-link:hover {
+      text-decoration: none;
+      color: #258CD1; }
+    .side-bar__categories .categories__item-link:active {
+      text-decoration: underline; }
+
+.side-bar__tags .tags__item {
+  font-size: 1em;
+  font-weight: normal;
+  margin-bottom: 5px;
+  margin-right: 5px; }
+  .side-bar__tags .tags__item-link {
+    color: black;
+    transition: all 0.2s; }
+    .side-bar__tags .tags__item-link:hover {
+      text-decoration: none;
+      color: #258CD1; }
+    .side-bar__tags .tags__item-link:active {
+      text-decoration: underline; }
+
+/* ---------- MOBILE AND TABLET SECTION ----------------- */
+@media only screen and (max-width: 991px) {
+  .side-bar {
+    padding-bottom: 4rem; } }
+
 /* ----------------- DESKTOP SECTION ------------------- */
 @media only screen and (min-width: 992px) {
-  .side-bar__wrapper {
-    padding-left: 15px;
-    border-left: solid 1px #ECF0F1; } }
+  .side-bar {
+    padding-top: 4rem; }
+    .side-bar__popular-posts .popular-posts__img-wrapper {
+      width: 50%; }
+    .side-bar__popular-posts .popular-posts__text {
+      width: 50%; }
+    .side-bar__wrapper {
+      padding-left: 15px;
+      border-left: solid 1px #ECF0F1; } }
 
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/

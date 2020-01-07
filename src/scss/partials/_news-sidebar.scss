@@ -4,53 +4,85 @@
 /*===================================== News Sidebar Styling ===========================================*/
 /*======================================================================================================*/
 .side-bar {
-  @include section-spacing-small;
+
+  &__title {
+    padding: 20px 0 5px;
+  }
+
+  &__experience {
+    .progress{
+      margin-bottom: 10px;
+    }
+  }
+
+  &__popular-posts {
+    .popular-posts__item {
+      padding-top: 15px;
+    }
+
+    .popular-posts__text {
+      padding-left: 10px;
+      width: 60%;
+
+      a {
+        @include link-styling;
+      }
+    }
+  }
 
   &__categories {
-    .categories__item{
+    .categories__item {
       width: 50%;
       margin-bottom: 5px;
-      &-count{
+
+      &-count {
         width: 50%;
         text-align: right;
       }
-      &-link{
+
+      &-link {
         @include link-styling;
       }
     }
   }
 
   &__tags {
-    .tags__item{
+    .tags__item {
       font-size: 1em;
       font-weight: normal;
       margin-bottom: 5px;
       margin-right: 5px;
-      &-link{
+
+      &-link {
         @include link-styling;
       }
     }
   }
 }
 
-/* ------------------- MOBILE SECTION ------------------- */
-@include mobile {
+/* ---------- MOBILE AND TABLET SECTION ----------------- */
+@include mobile-and-tablet {
   .side-bar {
-
-  }
-}
-
-/* ------------------- TABLET SECTION ------------------- */
-@include tablet {
-  .side-bar {
-
+    padding-bottom: 4rem;
   }
 }
 
 /* ----------------- DESKTOP SECTION ------------------- */
 @include desktop {
   .side-bar {
-    &__wrapper{
+    @include section-spacing-small;
+
+    &__popular-posts {
+      .popular-posts__img-wrapper {
+        width: 50%;
+      }
+
+      .popular-posts__text {
+        width: 50%;
+      }
+    }
+
+    &__wrapper {
       padding-left: 15px;
       border-left: solid 1px color(grey);
     }
