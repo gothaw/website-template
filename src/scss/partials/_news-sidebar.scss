@@ -4,6 +4,7 @@
 /*===================================== News Sidebar Styling ===========================================*/
 /*======================================================================================================*/
 .side-bar {
+  padding-bottom: 4rem;
 
   &__title {
     padding: 20px 0 5px;
@@ -82,13 +83,6 @@
         @include link-styling;
       }
     }
-  }
-}
-
-/* ---------- MOBILE AND TABLET SECTION ----------------- */
-@include mobile-and-tablet {
-  .side-bar {
-    padding-bottom: 4rem;
   }
 }
 

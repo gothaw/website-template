@@ -1,0 +1,75 @@
+//============================================= Imports ==================================================
+@import '_utilities';
+/*======================================================================================================*/
+/*====================================== Single Post Styling ===========================================*/
+/*======================================================================================================*/
+.post {
+  @include section-spacing-small;
+
+  &__info {
+    padding: 15px 0;
+
+    &-item:not(:last-child) {
+      padding-right: 15px;
+    }
+
+    i {
+      color: color(dark-blue);
+    }
+
+    span {
+      padding-left: 15px;
+    }
+  }
+
+  &__title {
+    padding: 15px 0;
+  }
+
+  &__body {
+    @include text-font-size;
+    padding-bottom: 15px;
+  }
+
+  &__comment {
+    padding: 15px;
+    margin-bottom: 10px;
+
+    .comment__author {
+      margin-bottom: 0;
+    }
+
+    .comment__details {
+      color: color(dark-grey);
+    }
+
+    .comment__text {
+      padding-top: 10px;
+      p:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}
+
+/* -------------------- MOBILE SECTION ------------------ */
+@include mobile {
+  .post {
+    &__info-item {
+      padding: 5px 0;
+    }
+  }
+}
+
+/* --------------TABLET AND DESKTOP SECTION ------------ */
+@include tablet-and-desktop {
+  .post {
+    padding-bottom: 4rem;
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+}

@@ -16838,76 +16838,65 @@ readers do not read off random characters that represent icons */
 /*======================================================================================================*/
 /*===================================== News Sidebar Styling ===========================================*/
 /*======================================================================================================*/
-.side-bar__title {
-  padding: 20px 0 5px; }
-
-.side-bar__accordion .accordion__item {
-  padding-bottom: 10px;
-  cursor: pointer; }
-
-.side-bar__accordion .accordion__item-title {
-  padding-bottom: 5px;
-  transition: color 0.3s; }
-  .side-bar__accordion .accordion__item-title i span {
-    font-family: var(--font-family-sans-serif);
-    padding-left: 10px; }
-  .side-bar__accordion .accordion__item-title:hover {
-    color: #258CD1; }
-
-.side-bar__accordion .accordion__item-text {
-  display: none; }
-
-.side-bar__experience .progress {
-  margin-bottom: 10px; }
-
-.side-bar__popular-posts .popular-posts__item {
-  padding-top: 15px; }
-
-.side-bar__popular-posts .popular-posts__text {
-  padding-left: 10px;
-  width: 60%; }
-  .side-bar__popular-posts .popular-posts__text a {
-    color: black;
-    transition: all 0.2s; }
-    .side-bar__popular-posts .popular-posts__text a:hover {
-      text-decoration: none;
+.side-bar {
+  padding-bottom: 4rem; }
+  .side-bar__title {
+    padding: 20px 0 5px; }
+  .side-bar__accordion .accordion__item {
+    padding-bottom: 10px;
+    cursor: pointer; }
+  .side-bar__accordion .accordion__item-title {
+    padding-bottom: 5px;
+    transition: color 0.3s; }
+    .side-bar__accordion .accordion__item-title i span {
+      font-family: var(--font-family-sans-serif);
+      padding-left: 10px; }
+    .side-bar__accordion .accordion__item-title:hover {
       color: #258CD1; }
-    .side-bar__popular-posts .popular-posts__text a:active {
-      text-decoration: underline; }
-
-.side-bar__categories .categories__item {
-  width: 50%;
-  margin-bottom: 5px; }
-  .side-bar__categories .categories__item-count {
+  .side-bar__accordion .accordion__item-text {
+    display: none; }
+  .side-bar__experience .progress {
+    margin-bottom: 10px; }
+  .side-bar__popular-posts .popular-posts__item {
+    padding-top: 15px; }
+  .side-bar__popular-posts .popular-posts__text {
+    padding-left: 10px;
+    width: 60%; }
+    .side-bar__popular-posts .popular-posts__text a {
+      color: black;
+      transition: all 0.2s; }
+      .side-bar__popular-posts .popular-posts__text a:hover {
+        text-decoration: none;
+        color: #258CD1; }
+      .side-bar__popular-posts .popular-posts__text a:active {
+        text-decoration: underline; }
+  .side-bar__categories .categories__item {
     width: 50%;
-    text-align: right; }
-  .side-bar__categories .categories__item-link {
-    color: black;
-    transition: all 0.2s; }
-    .side-bar__categories .categories__item-link:hover {
-      text-decoration: none;
-      color: #258CD1; }
-    .side-bar__categories .categories__item-link:active {
-      text-decoration: underline; }
-
-.side-bar__tags .tags__item {
-  font-size: 1em;
-  font-weight: normal;
-  margin-bottom: 5px;
-  margin-right: 5px; }
-  .side-bar__tags .tags__item-link {
-    color: black;
-    transition: all 0.2s; }
-    .side-bar__tags .tags__item-link:hover {
-      text-decoration: none;
-      color: #258CD1; }
-    .side-bar__tags .tags__item-link:active {
-      text-decoration: underline; }
-
-/* ---------- MOBILE AND TABLET SECTION ----------------- */
-@media only screen and (max-width: 991px) {
-  .side-bar {
-    padding-bottom: 4rem; } }
+    margin-bottom: 5px; }
+    .side-bar__categories .categories__item-count {
+      width: 50%;
+      text-align: right; }
+    .side-bar__categories .categories__item-link {
+      color: black;
+      transition: all 0.2s; }
+      .side-bar__categories .categories__item-link:hover {
+        text-decoration: none;
+        color: #258CD1; }
+      .side-bar__categories .categories__item-link:active {
+        text-decoration: underline; }
+  .side-bar__tags .tags__item {
+    font-size: 1em;
+    font-weight: normal;
+    margin-bottom: 5px;
+    margin-right: 5px; }
+    .side-bar__tags .tags__item-link {
+      color: black;
+      transition: all 0.2s; }
+      .side-bar__tags .tags__item-link:hover {
+        text-decoration: none;
+        color: #258CD1; }
+      .side-bar__tags .tags__item-link:active {
+        text-decoration: underline; }
 
 /* ----------------- DESKTOP SECTION ------------------- */
 @media only screen and (min-width: 992px) {
@@ -16920,6 +16909,68 @@ readers do not read off random characters that represent icons */
     .side-bar__wrapper {
       padding-left: 15px;
       border-left: solid 1px #ECF0F1; } }
+
+@keyframes svg-line-animation {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes svg-fill-animation {
+  from {
+    fill: transparent; }
+  to {
+    fill: white; } }
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1.0; } }
+
+/*======================================================================================================*/
+/*====================================== Single Post Styling ===========================================*/
+/*======================================================================================================*/
+.post {
+  padding-top: 4rem; }
+  .post__info {
+    padding: 15px 0; }
+    .post__info-item:not(:last-child) {
+      padding-right: 15px; }
+    .post__info i {
+      color: #2C3E50; }
+    .post__info span {
+      padding-left: 15px; }
+  .post__title {
+    padding: 15px 0; }
+  .post__body {
+    padding-bottom: 15px; }
+    @media only screen and (min-width: 768px) {
+      .post__body {
+        font-size: 1.2em; } }
+  .post__comment {
+    padding: 15px;
+    margin-bottom: 10px; }
+    .post__comment .comment__author {
+      margin-bottom: 0; }
+    .post__comment .comment__details {
+      color: #727677; }
+    .post__comment .comment__text {
+      padding-top: 10px; }
+      .post__comment .comment__text p:last-child {
+        margin-bottom: 0; }
+
+/* -------------------- MOBILE SECTION ------------------ */
+@media only screen and (max-width: 767px) {
+  .post__info-item {
+    padding: 5px 0; } }
+
+/* --------------TABLET AND DESKTOP SECTION ------------ */
+@media only screen and (min-width: 768px) {
+  .post {
+    padding-bottom: 4rem; }
+    .post__info {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; } }
 
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
