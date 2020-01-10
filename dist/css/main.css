@@ -16841,6 +16841,22 @@ readers do not read off random characters that represent icons */
 .side-bar__title {
   padding: 20px 0 5px; }
 
+.side-bar__accordion .accordion__item {
+  padding-bottom: 10px;
+  cursor: pointer; }
+
+.side-bar__accordion .accordion__item-title {
+  padding-bottom: 5px;
+  transition: color 0.3s; }
+  .side-bar__accordion .accordion__item-title i span {
+    font-family: var(--font-family-sans-serif);
+    padding-left: 10px; }
+  .side-bar__accordion .accordion__item-title:hover {
+    color: #258CD1; }
+
+.side-bar__accordion .accordion__item-text {
+  display: none; }
+
 .side-bar__experience .progress {
   margin-bottom: 10px; }
 

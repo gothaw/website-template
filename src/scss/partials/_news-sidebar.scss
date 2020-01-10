@@ -9,8 +9,33 @@
     padding: 20px 0 5px;
   }
 
+  &__accordion {
+    .accordion__item {
+      padding-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .accordion__item-title {
+      padding-bottom: 5px;
+      transition: color duration(fast);
+
+      i span {
+        font-family: var(--font-family-sans-serif);
+        padding-left: 10px;
+      }
+
+      &:hover {
+        color: color(light-blue);
+      }
+    }
+
+    .accordion__item-text {
+      display: none;
+    }
+  }
+
   &__experience {
-    .progress{
+    .progress {
       margin-bottom: 10px;
     }
   }

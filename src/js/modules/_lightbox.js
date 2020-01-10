@@ -1,5 +1,5 @@
 import {getChildIndexInParent} from "../modules/_utilities.js";
-import $ from "../lib/jquery-3.4.1.js"
+import $ from "../lib/jquery-3.4.1.js";
 
 if(document.getElementsByClassName("lightbox").length){
     (function () {
@@ -40,6 +40,7 @@ if(document.getElementsByClassName("lightbox").length){
             } else if (!isNaN(index)) {
                 targetGalleryItem = galleryItems[index].closest(".gallery__item");
             }
+            // prepend the image
             if (e || !isNaN(index)) {
                 const mainImage = targetGalleryItem.querySelector("picture");
                 if (lightboxImageWrapper.children.length > 2) {
