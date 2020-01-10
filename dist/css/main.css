@@ -16972,6 +16972,75 @@ readers do not read off random characters that represent icons */
       justify-content: space-between;
       flex-wrap: wrap; } }
 
+@keyframes svg-line-animation {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes svg-fill-animation {
+  from {
+    fill: transparent; }
+  to {
+    fill: white; } }
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1.0; } }
+
+/*======================================================================================================*/
+/*======================================== Contact Page Styling ========================================*/
+/*======================================================================================================*/
+.contact {
+  padding-top: 4rem; }
+  .contact__details {
+    padding-top: 2rem;
+    text-align: center; }
+    .contact__details .details__item {
+      padding: 0 5px; }
+    @media only screen and (min-width: 768px) {
+      .contact__details .details__text {
+        font-size: 1.2em; } }
+    .contact__details .details__text p {
+      margin-bottom: 5px; }
+    .contact__details .details__icons {
+      font-size: 1.4em; }
+      .contact__details .details__icons a {
+        color: #2C3E50; }
+      .contact__details .details__icons i {
+        padding-right: 8px; }
+  .contact__form-wrapper {
+    margin: 2rem 0; }
+  .contact__map {
+    margin-top: 2rem; }
+    .contact__map iframe {
+      width: 100%;
+      height: 400px;
+      display: block; }
+  @media only screen and (min-width: 768px) {
+    .contact__form-text {
+      font-size: 1.2em; } }
+
+/* ------------------- MOBILE SECTION ------------------- */
+@media only screen and (max-width: 767px) {
+  .contact .details__item:not(:first-child) {
+    margin-top: 2rem; }
+  .contact__form {
+    margin-top: 2rem; } }
+
+/* ------------- MOBILE AND TABLET SECTION ------------- */
+@media only screen and (max-width: 991px) {
+  .contact__form {
+    margin-top: 2rem; } }
+
+/* ------------- TABLET AND DESKTOP SECTION ------------- */
+@media only screen and (min-width: 768px) {
+  .contact__details {
+    display: flex;
+    justify-content: space-between; }
+    .contact__details .details__item {
+      width: 100%; } }
+
 /*========================================================================================================*/
 /*========================================== General Styling =============================================*/
 /*========================================================================================================*/
